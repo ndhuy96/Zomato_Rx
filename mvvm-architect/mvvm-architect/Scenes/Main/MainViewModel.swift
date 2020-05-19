@@ -11,11 +11,17 @@ final class MainViewModel: ViewModelType {
         let ready: Driver<Void>
         let refreshing: Driver<Void>
         let selected: Driver<IndexPath>
+        let indexPathWillDisplay: Driver<IndexPath>
     }
 
     struct Output {
         let loading: Driver<Bool>
-        let results: Driver<[Restaurants]>
+        let restaurants: Driver<[Restaurants]>
+        let isLoadingMore: Driver<Bool>
+        let isRefreshing: Driver<Bool>
+        let fetchItems: Driver<Void>
+        let isEmpty: Driver<Bool>
+        let indexPathWillDisplayDriver: Driver<Void>
         let selected: Driver<Void>
         let error: Driver<Error>
     }
@@ -27,33 +33,32 @@ final class MainViewModel: ViewModelType {
     }
 
     private let dependencies: Dependencies
+    private let loadMoreTrigger = PublishRelay<Void>()
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
     }
 
     func transform(input: Input) -> Output {
-        let activityIndicator = ActivityIndicator()
-        let loading = activityIndicator.asDriver()
-        let errorTracker = ErrorTracker()
-
-        let results = Observable.of(input.ready, input.refreshing)
-            .merge()
-            .flatMapLatest { _ in
-                self.dependencies.api.fetchRestaurants(self.dependencies.count)
-                    .trackActivity(activityIndicator)
-                    .trackError(errorTracker)
-            }
-            .map { listRestaurants -> [Restaurants] in
-                listRestaurants.restaurants ?? []
-            }
-            .asDriverOnErrorJustComplete()
-
-        let errors = errorTracker.asDriver()
-
+        let dataInfo = setUpLoadMorePaging(loadTrigger: input.ready,
+                                           getItems: dependencies.api.fetchRestaurants,
+                                           refreshTrigger: input.refreshing,
+                                           refreshItems: dependencies.api.fetchRestaurants,
+                                           loadMoreTrigger: loadMoreTrigger.asDriverOnErrorJustComplete(),
+                                           loadMoreItems: dependencies.api.fetchRestaurants)
+        let (pagingInfo, fetchItems, errors, isLoading, isRefreshing, isLoadingMore) = dataInfo
+        let restaurants = pagingInfo.map { $0.items }.asDriverOnErrorJustComplete()
+        let isEmpty = restaurants.map { $0.isEmpty }
+        let indexPathWillDisplayDriver = input.indexPathWillDisplay
+            .withLatestFrom(pagingInfo.asDriver()) { ($0, $1) }
+            .filter { $0.0.row >= $0.1.getItemsDisplayed() - 1 }
+            .do(onNext: { [weak self] _ in
+                self?.loadMoreTrigger.accept(())
+            })
+            .mapToVoid()
         let selected = input.selected
             .asObservable()
-            .withLatestFrom(results) { ($0, $1) }
+            .withLatestFrom(restaurants) { ($0, $1) }
             .do(onNext: { [weak self] (indexPath: IndexPath, restaurants: [Restaurants]) in
                 guard let self = self,
                     let resId = restaurants[indexPath.row].restaurant?.id else { return }
@@ -62,6 +67,14 @@ final class MainViewModel: ViewModelType {
             .mapToVoid()
             .asDriverOnErrorJustComplete()
 
-        return Output(loading: loading, results: results, selected: selected, error: errors)
+        return Output(loading: isLoading,
+                      restaurants: restaurants,
+                      isLoadingMore: isLoadingMore,
+                      isRefreshing: isRefreshing,
+                      fetchItems: fetchItems,
+                      isEmpty: isEmpty,
+                      indexPathWillDisplayDriver: indexPathWillDisplayDriver,
+                      selected: selected,
+                      error: errors)
     }
 }

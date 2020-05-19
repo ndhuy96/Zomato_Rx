@@ -43,20 +43,41 @@ final class MainViewController: UIViewController {
     }
 
     private func bindViewModel() {
+        let indexPathWillDisplay = restaurantsTableView.rx.willDisplayCell
+            .map { $0.indexPath }
+            .asDriverOnErrorJustComplete()
         let input = MainViewModel.Input(ready: rx.viewWillAppear.asDriver(),
                                         refreshing: refreshControl.rx.controlEvent(.valueChanged).asDriver(),
-                                        selected: restaurantsTableView.rx.itemSelected.asDriver())
+                                        selected: restaurantsTableView.rx.itemSelected.asDriver(),
+                                        indexPathWillDisplay: indexPathWillDisplay)
         let output = viewModel.transform(input: input)
 
         output.loading
             .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
             .disposed(by: disposeBag)
 
-        output.loading
+        output.isRefreshing
             .drive(refreshControl.rx.isRefreshing)
             .disposed(by: disposeBag)
 
-        output.results
+        output.isLoadingMore
+            .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
+            .disposed(by: disposeBag)
+
+        output.fetchItems
+            .drive()
+            .disposed(by: disposeBag)
+
+        output.indexPathWillDisplayDriver
+            .drive()
+            .disposed(by: disposeBag)
+
+        // TODO: display empty view if had
+        output.isEmpty
+            .drive()
+            .disposed(by: disposeBag)
+
+        output.restaurants
             .drive(restaurantsTableView.rx.items) { tableView, _, restaurants -> UITableViewCell in
                 let cell = tableView.dequeueReusableCell(RestaurantCell.self)
                 guard let restaurant = restaurants.restaurant else { return UITableViewCell() }

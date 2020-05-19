@@ -19,6 +19,7 @@ final class APIServiceImpl: APIService {
         if !Reachability.isConnectedToNetwork() {
             return Single.error(APIError.networkError)
         }
+        Log.debug(message: "API url: \(router.url)")
         return Single<T>.create { singleEvent in
             let request = AF.request(router)
                 .responseJSON { [weak self] response in
@@ -45,6 +46,7 @@ final class APIServiceImpl: APIService {
             case .success:
                 do {
                     guard let responseData = response.data else { return }
+                    Log.debug(message: "RESPONSE FROM SERVER: \(response.result)")
                     let object = try JSONDecoder().decode(T.self, from: responseData)
                     singleEvent(.success(object))
                 } catch {

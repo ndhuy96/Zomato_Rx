@@ -7,7 +7,7 @@
 //
 
 import Alamofire
-
+let kDefaultRequestItemNumber: Int = 20
 enum Environment {
     case dev
 //    case staging
@@ -31,7 +31,7 @@ enum Environment {
 
 enum APIRouter: URLRequestConvertible {
     case fetchCategories
-    case search(count: Int)
+    case search(start: Int, count: Int = kDefaultRequestItemNumber)
     case fetchResDetail(resId: String)
 
     static let baseURL = Environment.dev.baseUrl
@@ -83,8 +83,9 @@ extension APIRouter {
         // For any other method (such as POST), JSONEncoding.default encodes the parameters as a query string and sent as the body of the HTTP request.
 
         switch self {
-        case let .search(count):
+        case let .search(start, count):
             let params = [
+                "start": start,
                 "count": count,
             ]
             urlRequest = try encoding.encode(urlRequest, with: params)

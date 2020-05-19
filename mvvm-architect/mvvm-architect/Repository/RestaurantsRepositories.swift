@@ -7,7 +7,8 @@
 //
 
 protocol RestaurantsRepository {
-    func fetchRestaurants(_ count: Int) -> Single<ListRestaurants>
+    func fetchRestaurants() -> Single<PagingInfo<Restaurants>>
+    func fetchRestaurants(start: Int, count: Int) -> Single<PagingInfo<Restaurants>>
     func fetchRestaurantDetail(with resId: String) -> Single<RestaurantDetail>
 }
 
@@ -18,9 +19,22 @@ final class RestaurantsRepositoryImpl: RestaurantsRepository {
         self.api = api
     }
 
-    func fetchRestaurants(_ count: Int) -> Single<ListRestaurants> {
-        let router = APIRouter.search(count: count)
-        return api.request(router: router)
+    func fetchRestaurants() -> Single<PagingInfo<Restaurants>> {
+        let router = APIRouter.search(start: 0)
+        let restaurantResults: Single<ListRestaurants> = api.request(router: router)
+        return restaurantResults.map { PagingInfo(items: $0.restaurants ?? [],
+                                                  startItemIndex: $0.resultsStart ?? 0,
+                                                  totalItems: $0.resultsFound ?? 0)
+        }
+    }
+
+    func fetchRestaurants(start: Int, count _: Int) -> Single<PagingInfo<Restaurants>> {
+        let router = APIRouter.search(start: start)
+        let restaurantResults: Single<ListRestaurants> = api.request(router: router)
+        return restaurantResults.map { PagingInfo(items: $0.restaurants ?? [],
+                                                  startItemIndex: $0.resultsStart ?? 0,
+                                                  totalItems: $0.resultsFound ?? 0)
+        }
     }
 
     func fetchRestaurantDetail(with resId: String) -> Single<RestaurantDetail> {

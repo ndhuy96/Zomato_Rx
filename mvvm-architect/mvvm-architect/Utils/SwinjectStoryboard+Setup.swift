@@ -16,6 +16,7 @@ extension SwinjectStoryboard {
         }
         .inObjectScope(.container)
 
+        // swiftlint:disable force_unwrapping
         defaultContainer.register(RestaurantsRepository.self) { r in
             let api = r.resolve(APIService.self)!
             return RestaurantsRepositoryImpl(api)
@@ -24,7 +25,7 @@ extension SwinjectStoryboard {
 
         defaultContainer.storyboardInitCompleted(MainViewController.self) { r, c in
             c.api = r.resolve(RestaurantsRepository.self)
-            c.count = 10
+            c.count = kDefaultRequestItemNumber
         }
     }
 }

@@ -38,7 +38,6 @@
 		04CEA6B224459B8700F10935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CEA6B024459B8700F10935 /* Main.storyboard */; };
 		04CEA6B424459B8800F10935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CEA6B324459B8800F10935 /* Assets.xcassets */; };
 		04CEA6B724459B8800F10935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CEA6B524459B8800F10935 /* LaunchScreen.storyboard */; };
-		04CEA6CA2447468100F10935 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEA6C92447468100F10935 /* R.generated.swift */; };
 		04CEA6DA24488CEF00F10935 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CEA6D924488CEF00F10935 /* Tabbar.storyboard */; };
 		04CEA6DC24488EB500F10935 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CEA6DB24488EB500F10935 /* Map.storyboard */; };
 		04CEA6DE24488ED100F10935 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEA6DD24488ED100F10935 /* MapViewController.swift */; };
@@ -49,6 +48,10 @@
 		04EB97A3244F2CE800C80A68 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB97A2244F2CE800C80A68 /* DetailViewController.swift */; };
 		04EB97A5244F30A700C80A68 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB97A4244F30A700C80A68 /* MainNavigator.swift */; };
 		19C03941379B42991245EB3A /* Pods_mvvm_architect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B2A3D49CC48E9E1D189A95 /* Pods_mvvm_architect.framework */; };
+		618131C9246E85BF0059BDB6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEA6C92447468100F10935 /* R.generated.swift */; };
+		618131CB246E8B6E0059BDB6 /* ViewModelType+LoadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618131CA246E8B6D0059BDB6 /* ViewModelType+LoadMore.swift */; };
+		618131CD246E8BCD0059BDB6 /* PagingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618131CC246E8BCD0059BDB6 /* PagingInfo.swift */; };
+		618131CF246E8C270059BDB6 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618131CE246E8C270059BDB6 /* Log.swift */; };
 		8E3F231F24625D5100ED3155 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F231E24625D5100ED3155 /* Reachability.swift */; };
 		8E3F23212462608400ED3155 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F23202462608400ED3155 /* APIRouter.swift */; };
 		8E3F23232462654000ED3155 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F23222462654000ED3155 /* Constants.swift */; };
@@ -104,6 +107,9 @@
 		04EB97A2244F2CE800C80A68 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		04EB97A4244F30A700C80A68 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		12B2A3D49CC48E9E1D189A95 /* Pods_mvvm_architect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvm_architect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		618131CA246E8B6D0059BDB6 /* ViewModelType+LoadMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelType+LoadMore.swift"; sourceTree = "<group>"; };
+		618131CC246E8BCD0059BDB6 /* PagingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingInfo.swift; sourceTree = "<group>"; };
+		618131CE246E8C270059BDB6 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		7A24B59C4C89E06AE5BCC275 /* Pods-mvvm-architect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-architect.debug.xcconfig"; path = "Target Support Files/Pods-mvvm-architect/Pods-mvvm-architect.debug.xcconfig"; sourceTree = "<group>"; };
 		8E3F231E24625D5100ED3155 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8E3F23202462608400ED3155 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				045905CC244FEF12007B64DA /* Restaurants */,
+				618131CC246E8BCD0059BDB6 /* PagingInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,6 +269,7 @@
 				8E50546B24600955004DCCFC /* SwinjectStoryboard+Setup.swift */,
 				8E3F231E24625D5100ED3155 /* Reachability.swift */,
 				8E3F23222462654000ED3155 /* Constants.swift */,
+				618131CE246E8C270059BDB6 /* Log.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -364,6 +372,7 @@
 				04096FB7244EA96C003E167F /* ErrorTracker.swift */,
 				04096FB5244DF1A5003E167F /* ActivityIndicator.swift */,
 				8E3F23252463FFB600ED3155 /* UIRefreshControl+Rx.swift */,
+				618131CA246E8B6D0059BDB6 /* ViewModelType+LoadMore.swift */,
 			);
 			path = RxExtension;
 			sourceTree = "<group>";
@@ -571,7 +580,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618131C9246E85BF0059BDB6 /* R.generated.swift in Sources */,
 				045905ED244FF068007B64DA /* Reviews.swift in Sources */,
+				618131CF246E8C270059BDB6 /* Log.swift in Sources */,
 				8E3F23212462608400ED3155 /* APIRouter.swift in Sources */,
 				8E80C2742469496400B5E732 /* UITableView+Extension.swift in Sources */,
 				045905C3244FE598007B64DA /* RestaurantsRepositories.swift in Sources */,
@@ -581,7 +592,6 @@
 				045905F0244FF068007B64DA /* AllReviews.swift in Sources */,
 				04CEA6AB24459B8700F10935 /* AppDelegate.swift in Sources */,
 				045905F2244FF068007B64DA /* RatingObj.swift in Sources */,
-				04CEA6CA2447468100F10935 /* R.generated.swift in Sources */,
 				045905F6244FFA49007B64DA /* UserRating.swift in Sources */,
 				045905F1244FF068007B64DA /* HasMenuStatus.swift in Sources */,
 				04955BC5244C8AFD0009FD2E /* GoogleMapService.swift in Sources */,
@@ -590,6 +600,7 @@
 				8E50546C24600955004DCCFC /* SwinjectStoryboard+Setup.swift in Sources */,
 				045905EF244FF068007B64DA /* Photos.swift in Sources */,
 				8E3F231F24625D5100ED3155 /* Reachability.swift in Sources */,
+				618131CB246E8B6E0059BDB6 /* ViewModelType+LoadMore.swift in Sources */,
 				04096FB8244EA96C003E167F /* ErrorTracker.swift in Sources */,
 				045905EB244FF068007B64DA /* Location.swift in Sources */,
 				04EB97A5244F30A700C80A68 /* MainNavigator.swift in Sources */,
@@ -603,6 +614,7 @@
 				045905EE244FF068007B64DA /* BgColor.swift in Sources */,
 				04CEA6DE24488ED100F10935 /* MapViewController.swift in Sources */,
 				045905E9244FF068007B64DA /* RestaurantInfo.swift in Sources */,
+				618131CD246E8BCD0059BDB6 /* PagingInfo.swift in Sources */,
 				045905F3244FF068007B64DA /* Restaurant.swift in Sources */,
 				04096FB2244DEDA9003E167F /* MainViewModel.swift in Sources */,
 				04096FB6244DF1A5003E167F /* ActivityIndicator.swift in Sources */,

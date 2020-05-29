@@ -1,0 +1,34 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+def pods
+	# Core
+	pod 'RxSwift'
+  pod 'RxCocoa'
+
+	# Networking
+	pod 'Alamofire'
+
+	# Convention
+	pod 'SwiftLint'
+	pod 'SwiftFormat/CLI'
+
+	# Resources
+	pod 'R.swift'
+  pod 'Swinject', '~> 2.6.2'
+  pod 'SwinjectStoryboard'
+  pod 'NSObject+Rx'
+	
+	# Map
+	pod 'GoogleMaps'
+	pod 'GooglePlaces'
+end
+
+target 'mvvm-architect' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  inhibit_all_warnings!
+  
+  # Pods for mvvm-architect
+  pods
+end

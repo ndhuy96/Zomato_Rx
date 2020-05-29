@@ -10,7 +10,6 @@ final class DetailViewController: UIViewController {
     @IBOutlet var addressLabel: UILabel!
 
     var viewModel: DetailViewModel!
-    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,20 +18,20 @@ final class DetailViewController: UIViewController {
     }
 
     private func bindViewModel() {
-        let input = DetailViewModel.Input(ready: rx.viewWillAppear.asDriver())
+        let input = DetailViewModel.Input(ready: Driver.just(()))
         let output = viewModel.transform(input: input)
 
         output.loading
             .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
         output.data
             .drive(onNext: { [weak self] data in
-                guard let address = data.location?.address,
-                    let self = self else { return }
+                guard let self = self else { return }
+                let address = data.location.address
                 self.addressLabel.text = address
             })
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
         output.error
             .drive(onNext: { [weak self] error in
@@ -40,6 +39,6 @@ final class DetailViewController: UIViewController {
                     let error = error as? APIError else { return }
                 self.showAlert(message: error.errorMessage ?? "")
             })
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
     }
 }

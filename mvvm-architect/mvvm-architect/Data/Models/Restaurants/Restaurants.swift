@@ -7,7 +7,7 @@
 //
 
 struct Restaurants: Codable {
-    let restaurant: Restaurant?
+    let restaurant: Restaurant
 
     enum CodingKeys: String, CodingKey {
         case restaurant

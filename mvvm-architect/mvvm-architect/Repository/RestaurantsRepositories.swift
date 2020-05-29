@@ -22,18 +22,18 @@ final class RestaurantsRepositoryImpl: RestaurantsRepository {
     func fetchRestaurants() -> Single<PagingInfo<Restaurants>> {
         let router = APIRouter.search(start: 0)
         let restaurantResults: Single<ListRestaurants> = api.request(router: router)
-        return restaurantResults.map { PagingInfo(items: $0.restaurants ?? [],
-                                                  startItemIndex: $0.resultsStart ?? 0,
-                                                  totalItems: $0.resultsFound ?? 0)
+        return restaurantResults.map { PagingInfo(items: $0.restaurants,
+                                                  startItemIndex: $0.resultsStart,
+                                                  totalItems: $0.resultsFound)
         }
     }
 
     func fetchRestaurants(start: Int, count _: Int) -> Single<PagingInfo<Restaurants>> {
         let router = APIRouter.search(start: start)
         let restaurantResults: Single<ListRestaurants> = api.request(router: router)
-        return restaurantResults.map { PagingInfo(items: $0.restaurants ?? [],
-                                                  startItemIndex: $0.resultsStart ?? 0,
-                                                  totalItems: $0.resultsFound ?? 0)
+        return restaurantResults.map { PagingInfo(items: $0.restaurants,
+                                                  startItemIndex: $0.resultsStart,
+                                                  totalItems: $0.resultsFound)
         }
     }
 

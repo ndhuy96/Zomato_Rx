@@ -7,8 +7,8 @@
 //
 
 struct RatingObj: Codable {
-    let title: Title?
-    let bgColor: BgColor?
+    let title: Title
+    let bgColor: BgColor
 
     enum CodingKeys: String, CodingKey {
         case title

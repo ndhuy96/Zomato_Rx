@@ -7,7 +7,7 @@
 //
 
 struct AllReviews: Codable {
-    let reviews: [Reviews]?
+    let reviews: [Reviews]
 
     enum CodingKeys: String, CodingKey {
         case reviews

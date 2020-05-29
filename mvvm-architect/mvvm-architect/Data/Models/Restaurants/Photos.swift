@@ -7,7 +7,7 @@
 //
 
 struct Photos: Codable {
-    let photo: Photo?
+    let photo: Photo
 
     enum CodingKeys: String, CodingKey {
         case photo

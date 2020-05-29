@@ -6,12 +6,12 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
-final class MainViewModel: ViewModelType {
+struct MainViewModel: ViewModelType {
     struct Input {
         let ready: Driver<Void>
         let refreshing: Driver<Void>
+        let loadingMore: Driver<Void>
         let selected: Driver<IndexPath>
-        let indexPathWillDisplay: Driver<IndexPath>
     }
 
     struct Output {
@@ -21,7 +21,6 @@ final class MainViewModel: ViewModelType {
         let isRefreshing: Driver<Bool>
         let fetchItems: Driver<Void>
         let isEmpty: Driver<Bool>
-        let indexPathWillDisplayDriver: Driver<Void>
         let selected: Driver<Void>
         let error: Driver<Error>
     }
@@ -33,7 +32,7 @@ final class MainViewModel: ViewModelType {
     }
 
     private let dependencies: Dependencies
-    private let loadMoreTrigger = PublishRelay<Void>()
+    let loadMoreTrigger = PublishRelay<Void>()
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -44,24 +43,20 @@ final class MainViewModel: ViewModelType {
                                            getItems: dependencies.api.fetchRestaurants,
                                            refreshTrigger: input.refreshing,
                                            refreshItems: dependencies.api.fetchRestaurants,
-                                           loadMoreTrigger: loadMoreTrigger.asDriverOnErrorJustComplete(),
+                                           loadMoreTrigger: input.loadingMore,
                                            loadMoreItems: dependencies.api.fetchRestaurants)
+
         let (pagingInfo, fetchItems, errors, isLoading, isRefreshing, isLoadingMore) = dataInfo
+
         let restaurants = pagingInfo.map { $0.items }.asDriverOnErrorJustComplete()
+
         let isEmpty = restaurants.map { $0.isEmpty }
-        let indexPathWillDisplayDriver = input.indexPathWillDisplay
-            .withLatestFrom(pagingInfo.asDriver()) { ($0, $1) }
-            .filter { $0.0.row >= $0.1.getItemsDisplayed() - 1 }
-            .do(onNext: { [weak self] _ in
-                self?.loadMoreTrigger.accept(())
-            })
-            .mapToVoid()
+
         let selected = input.selected
             .asObservable()
             .withLatestFrom(restaurants) { ($0, $1) }
-            .do(onNext: { [weak self] (indexPath: IndexPath, restaurants: [Restaurants]) in
-                guard let self = self,
-                    let resId = restaurants[indexPath.row].restaurant?.id else { return }
+            .do(onNext: { (indexPath: IndexPath, restaurants: [Restaurants]) in
+                let resId = restaurants[indexPath.row].restaurant.id
                 self.dependencies.navigator.navigateToDetailScreen(with: resId, api: self.dependencies.api)
             })
             .mapToVoid()
@@ -73,7 +68,6 @@ final class MainViewModel: ViewModelType {
                       isRefreshing: isRefreshing,
                       fetchItems: fetchItems,
                       isEmpty: isEmpty,
-                      indexPathWillDisplayDriver: indexPathWillDisplayDriver,
                       selected: selected,
                       error: errors)
     }

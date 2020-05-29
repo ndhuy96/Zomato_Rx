@@ -55,9 +55,10 @@
 		8E3F231F24625D5100ED3155 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F231E24625D5100ED3155 /* Reachability.swift */; };
 		8E3F23212462608400ED3155 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F23202462608400ED3155 /* APIRouter.swift */; };
 		8E3F23232462654000ED3155 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F23222462654000ED3155 /* Constants.swift */; };
-		8E3F23262463FFB600ED3155 /* UIRefreshControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F23252463FFB600ED3155 /* UIRefreshControl+Rx.swift */; };
 		8E50546C24600955004DCCFC /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50546B24600955004DCCFC /* SwinjectStoryboard+Setup.swift */; };
+		8E7564E52480EF66004BC5CE /* UIScrollView+BottomRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564E42480EF66004BC5CE /* UIScrollView+BottomRefreshControl.m */; };
 		8E80C2742469496400B5E732 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E80C2732469496400B5E732 /* UITableView+Extension.swift */; };
+		8EC1833A2477B3D200EFC34E /* JSONAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC183392477B3D100EFC34E /* JSONAny.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,9 +115,11 @@
 		8E3F231E24625D5100ED3155 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8E3F23202462608400ED3155 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		8E3F23222462654000ED3155 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8E3F23252463FFB600ED3155 /* UIRefreshControl+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Rx.swift"; sourceTree = "<group>"; };
 		8E50546B24600955004DCCFC /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
+		8E7564E32480EF66004BC5CE /* UIScrollView+BottomRefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+BottomRefreshControl.h"; sourceTree = "<group>"; };
+		8E7564E42480EF66004BC5CE /* UIScrollView+BottomRefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+BottomRefreshControl.m"; sourceTree = "<group>"; };
 		8E80C2732469496400B5E732 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		8EC183392477B3D100EFC34E /* JSONAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAny.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 			children = (
 				045905CC244FEF12007B64DA /* Restaurants */,
 				618131CC246E8BCD0059BDB6 /* PagingInfo.swift */,
+				8EC183392477B3D100EFC34E /* JSONAny.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +269,7 @@
 		04CEA6C22446D4A800F10935 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8E7564E62480F10C004BC5CE /* BottomRefreshControl */,
 				04096FB3244DEDD5003E167F /* ViewModelType.swift */,
 				8E50546B24600955004DCCFC /* SwinjectStoryboard+Setup.swift */,
 				8E3F231E24625D5100ED3155 /* Reachability.swift */,
@@ -371,10 +376,18 @@
 				04E72C5C244ECCAB00F64558 /* UIViewController+Rx.swift */,
 				04096FB7244EA96C003E167F /* ErrorTracker.swift */,
 				04096FB5244DF1A5003E167F /* ActivityIndicator.swift */,
-				8E3F23252463FFB600ED3155 /* UIRefreshControl+Rx.swift */,
 				618131CA246E8B6D0059BDB6 /* ViewModelType+LoadMore.swift */,
 			);
 			path = RxExtension;
+			sourceTree = "<group>";
+		};
+		8E7564E62480F10C004BC5CE /* BottomRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				8E7564E32480EF66004BC5CE /* UIScrollView+BottomRefreshControl.h */,
+				8E7564E42480EF66004BC5CE /* UIScrollView+BottomRefreshControl.m */,
+			);
+			path = BottomRefreshControl;
 			sourceTree = "<group>";
 		};
 		CD92BF8691AF638F28ADCF21 /* Frameworks */ = {
@@ -597,6 +610,7 @@
 				04955BC5244C8AFD0009FD2E /* GoogleMapService.swift in Sources */,
 				04EB97A3244F2CE800C80A68 /* DetailViewController.swift in Sources */,
 				04955BC7244C8BA60009FD2E /* APIKey.swift in Sources */,
+				8EC1833A2477B3D200EFC34E /* JSONAny.swift in Sources */,
 				8E50546C24600955004DCCFC /* SwinjectStoryboard+Setup.swift in Sources */,
 				045905EF244FF068007B64DA /* Photos.swift in Sources */,
 				8E3F231F24625D5100ED3155 /* Reachability.swift in Sources */,
@@ -620,10 +634,10 @@
 				04096FB6244DF1A5003E167F /* ActivityIndicator.swift in Sources */,
 				045905BF244FDECA007B64DA /* ListRestaurants.swift in Sources */,
 				04955BD1244C983C0009FD2E /* APIError.swift in Sources */,
+				8E7564E52480EF66004BC5CE /* UIScrollView+BottomRefreshControl.m in Sources */,
 				04E72C5D244ECCAB00F64558 /* UIViewController+Rx.swift in Sources */,
 				045905FA2450137E007B64DA /* RestaurantDetail.swift in Sources */,
 				04096FB4244DEDD5003E167F /* ViewModelType.swift in Sources */,
-				8E3F23262463FFB600ED3155 /* UIRefreshControl+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

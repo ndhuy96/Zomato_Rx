@@ -17,6 +17,7 @@ def pods
 	pod 'R.swift'
   pod 'Swinject', '~> 2.6.2'
   pod 'SwinjectStoryboard'
+  pod 'NSObject+Rx'
 	
 	# Map
 	pod 'GoogleMaps'

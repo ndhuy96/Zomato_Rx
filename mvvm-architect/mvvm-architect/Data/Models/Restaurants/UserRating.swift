@@ -7,14 +7,14 @@
 //
 
 struct UserRating: Codable {
-    let aggregateRating: Int?
-    let ratingText: String?
-    let ratingColor: String?
-    let ratingObj: RatingObj?
-    let votes: Int?
-    var customRatingText: String?
-    var customRatingTextBackground: String?
-    var ratingToolTip: String?
+    let aggregateRating: JSONAny
+    let ratingText: String
+    let ratingColor: String
+    let ratingObj: RatingObj
+    let votes: JSONAny
+    var customRatingText: String
+    var customRatingTextBackground: String
+    var ratingToolTip: String
 
     enum CodingKeys: String, CodingKey {
         case aggregateRating = "aggregate_rating"
@@ -29,13 +29,13 @@ struct UserRating: Codable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        aggregateRating = (try? values.decode(Int.self, forKey: .aggregateRating)) ?? 0
-        ratingText = (try? values.decode(String.self, forKey: .ratingText)) ?? ""
-        ratingColor = (try? values.decode(String.self, forKey: .ratingColor)) ?? ""
-        ratingObj = try? values.decode(RatingObj.self, forKey: .ratingObj)
-        votes = (try? values.decode(Int.self, forKey: .votes)) ?? 0
-        customRatingText = (try? values.decode(String.self, forKey: .customRatingText)) ?? ""
-        customRatingTextBackground = (try? values.decode(String.self, forKey: .customRatingTextBackground)) ?? ""
-        ratingToolTip = (try? values.decode(String.self, forKey: .ratingToolTip)) ?? ""
+        aggregateRating = try values.decode(JSONAny.self, forKey: .aggregateRating)
+        ratingText = try values.decodeIfPresent(String.self, forKey: .ratingText) ?? ""
+        ratingColor = try values.decodeIfPresent(String.self, forKey: .ratingColor) ?? ""
+        ratingObj = try values.decode(RatingObj.self, forKey: .ratingObj)
+        votes = try values.decode(JSONAny.self, forKey: .votes)
+        customRatingText = try values.decodeIfPresent(String.self, forKey: .customRatingText) ?? ""
+        customRatingTextBackground = try values.decodeIfPresent(String.self, forKey: .customRatingTextBackground) ?? ""
+        ratingToolTip = try values.decodeIfPresent(String.self, forKey: .ratingToolTip) ?? ""
     }
 }

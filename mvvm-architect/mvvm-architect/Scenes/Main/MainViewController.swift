@@ -9,10 +9,10 @@
 final class MainViewController: UIViewController {
     @IBOutlet private var restaurantsTableView: UITableView!
     private var refreshControl: UIRefreshControl!
+    private var bottomRefreshControl: UIRefreshControl!
 
     private var viewModel: MainViewModel!
 
-    private var disposeBag = DisposeBag()
     var api: RestaurantsRepository?
     var count: Int?
 
@@ -40,51 +40,49 @@ final class MainViewController: UIViewController {
         // TableView's refresh control
         refreshControl = UIRefreshControl()
         restaurantsTableView.refreshControl = refreshControl
+
+        // TableView's loadmore
+        bottomRefreshControl = UIRefreshControl()
+        refreshControl.triggerVerticalOffset = 100
+        restaurantsTableView.bottomRefreshControl = bottomRefreshControl
     }
 
     private func bindViewModel() {
-        let indexPathWillDisplay = restaurantsTableView.rx.willDisplayCell
-            .map { $0.indexPath }
-            .asDriverOnErrorJustComplete()
-        let input = MainViewModel.Input(ready: rx.viewWillAppear.asDriver(),
+        let input = MainViewModel.Input(ready: Driver.just(()),
                                         refreshing: refreshControl.rx.controlEvent(.valueChanged).asDriver(),
-                                        selected: restaurantsTableView.rx.itemSelected.asDriver(),
-                                        indexPathWillDisplay: indexPathWillDisplay)
+                                        loadingMore: bottomRefreshControl.rx.controlEvent(.valueChanged).asDriver(),
+                                        selected: restaurantsTableView.rx.itemSelected.asDriver())
         let output = viewModel.transform(input: input)
 
         output.loading
             .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
         output.isRefreshing
             .drive(refreshControl.rx.isRefreshing)
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
         output.isLoadingMore
-            .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-            .disposed(by: disposeBag)
+            .drive(bottomRefreshControl.rx.isRefreshing)
+            .disposed(by: rx.disposeBag)
 
         output.fetchItems
             .drive()
-            .disposed(by: disposeBag)
-
-        output.indexPathWillDisplayDriver
-            .drive()
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
         // TODO: display empty view if had
         output.isEmpty
             .drive()
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
         output.restaurants
             .drive(restaurantsTableView.rx.items) { tableView, _, restaurants -> UITableViewCell in
                 let cell = tableView.dequeueReusableCell(RestaurantCell.self)
-                guard let restaurant = restaurants.restaurant else { return UITableViewCell() }
+                let restaurant = restaurants.restaurant
                 cell.configCell(restaurant)
                 return cell
             }
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
         output.error
             .drive(onNext: { [weak self] error in
@@ -92,11 +90,11 @@ final class MainViewController: UIViewController {
                     let error = error as? APIError else { return }
                 self.showAlert(message: error.errorMessage ?? "")
             })
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
         output.selected
             .drive()
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
     }
 }
 

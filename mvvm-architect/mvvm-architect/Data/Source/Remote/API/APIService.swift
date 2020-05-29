@@ -19,7 +19,7 @@ final class APIServiceImpl: APIService {
         if !Reachability.isConnectedToNetwork() {
             return Single.error(APIError.networkError)
         }
-        Log.debug(message: "API url: \(router.url)")
+        Log.debug(message: "🌎 \(router.method.rawValue) \(router.url)")
         return Single<T>.create { singleEvent in
             let request = AF.request(router)
                 .responseJSON { [weak self] response in
@@ -46,13 +46,16 @@ final class APIServiceImpl: APIService {
             case .success:
                 do {
                     guard let responseData = response.data else { return }
+                    Log.debug(message: "👍 [\(code)] " + (response.request?.url?.absoluteString ?? ""))
                     Log.debug(message: "RESPONSE FROM SERVER: \(response.result)")
                     let object = try JSONDecoder().decode(T.self, from: responseData)
                     singleEvent(.success(object))
                 } catch {
+                    Log.debug(message: "❌ \(error.localizedDescription)")
                     singleEvent(.error(APIError.apiFailure))
                 }
             default:
+                Log.debug(message: "❌ [\(code)] " + (response.request?.url?.absoluteString ?? ""))
                 singleEvent(.error(APIError.httpError(httpCode: statusCode)))
             }
         case let .failure(error):

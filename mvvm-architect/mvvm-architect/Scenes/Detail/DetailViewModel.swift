@@ -6,7 +6,7 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
-final class DetailViewModel: ViewModelType {
+struct DetailViewModel: ViewModelType {
     struct Input {
         let ready: Driver<Void>
     }

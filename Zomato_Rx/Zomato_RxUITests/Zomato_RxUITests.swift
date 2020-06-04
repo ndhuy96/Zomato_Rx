@@ -8,8 +8,7 @@
 
 import XCTest
 
-class Zomato_RxUITests: XCTestCase {
-
+final class Zomato_RxUITests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 

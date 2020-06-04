@@ -1,0 +1,33 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+def pods
+	# Core
+	pod 'RxSwift'
+  	pod 'RxCocoa'
+
+	# Networking
+	pod 'Alamofire'
+
+	# Convention
+        pod 'SwiftLint'
+	pod 'SwiftFormat/CLI'
+
+	# Resources
+	pod 'R.swift'
+
+  pod 'Swinject', '~> 2.6.2'
+  pod 'SwinjectStoryboard'
+  pod 'NSObject+Rx'
+
+end
+
+target 'Zomato_Rx' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  inhibit_all_warnings!
+
+  # Pods for Zomato_Rx
+  pods
+
+end

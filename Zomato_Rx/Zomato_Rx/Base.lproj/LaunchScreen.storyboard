@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +13,26 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_bg_normal" translatesAutoresizingMaskIntoConstraints="NO" id="pPR-po-9kt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_white_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Ry9-6n-Exp">
+                                <rect key="frame" x="41.333333333333343" y="416" width="331.33333333333326" height="64"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ry9-6n-Exp" firstAttribute="centerX" secondItem="pPR-po-9kt" secondAttribute="centerX" id="1LC-7B-TN9"/>
+                            <constraint firstItem="pPR-po-9kt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="DNe-Uf-dep"/>
+                            <constraint firstItem="pPR-po-9kt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZiB-TE-per"/>
+                            <constraint firstItem="Ry9-6n-Exp" firstAttribute="centerY" secondItem="pPR-po-9kt" secondAttribute="centerY" id="cQL-IG-pib"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pPR-po-9kt" secondAttribute="trailing" id="gqJ-JI-qdL"/>
+                            <constraint firstAttribute="bottom" secondItem="pPR-po-9kt" secondAttribute="bottom" id="owg-c9-93N"/>
+                            <constraint firstItem="Ry9-6n-Exp" firstAttribute="width" secondItem="pPR-po-9kt" secondAttribute="width" multiplier="0.8" id="tMh-bo-FFh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +41,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_white_normal" width="300.66665649414062" height="64.333335876464844"/>
+        <image name="splash_bg_normal" width="375" height="812"/>
+    </resources>
 </document>

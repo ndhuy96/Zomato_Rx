@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0495066C248946C90051C1C9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495066B248946C90051C1C9 /* R.generated.swift */; };
+		0495066F248A8AC50051C1C9 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495066E248A8AC50051C1C9 /* TabBar.storyboard */; };
+		04950671248A8B690051C1C9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04950670248A8B690051C1C9 /* Profile.storyboard */; };
+		04950673248A8C800051C1C9 /* NightLife.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04950672248A8C800051C1C9 /* NightLife.storyboard */; };
+		04950677248B5FCA0051C1C9 /* Dining.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04950676248B5FCA0051C1C9 /* Dining.storyboard */; };
 		326E15E2C1BA7848E00DE6EF /* Pods_Zomato_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033976A291543CED00ED957E /* Pods_Zomato_Rx.framework */; };
 		8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564F9248119D4004BC5CE /* AppDelegate.swift */; };
-		8E7564FE248119D4004BC5CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564FD248119D4004BC5CE /* ViewController.swift */; };
-		8E756501248119D4004BC5CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7564FF248119D4004BC5CE /* Main.storyboard */; };
+		8E7564FE248119D4004BC5CE /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564FD248119D4004BC5CE /* DiningViewController.swift */; };
 		8E756503248119D7004BC5CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E756502248119D7004BC5CE /* Assets.xcassets */; };
 		8E756506248119D7004BC5CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E756504248119D7004BC5CE /* LaunchScreen.storyboard */; };
 		8E756511248119D7004BC5CE /* Zomato_RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E756510248119D7004BC5CE /* Zomato_RxTests.swift */; };
@@ -38,12 +41,15 @@
 /* Begin PBXFileReference section */
 		033976A291543CED00ED957E /* Pods_Zomato_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zomato_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0495066B248946C90051C1C9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		0495066E248A8AC50051C1C9 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		04950670248A8B690051C1C9 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		04950672248A8C800051C1C9 /* NightLife.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NightLife.storyboard; sourceTree = "<group>"; };
+		04950676248B5FCA0051C1C9 /* Dining.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dining.storyboard; sourceTree = "<group>"; };
 		04E1CF9B2487ECA1004DEEA7 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		893A1449224C1A7635B8AE8B /* Pods-Zomato_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.debug.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.debug.xcconfig"; sourceTree = "<group>"; };
-		8E7564F6248119D4004BC5CE /* Zomato_Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zomato_Rx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E7564F6248119D4004BC5CE /* Zomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7564F9248119D4004BC5CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E7564FD248119D4004BC5CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E756500248119D4004BC5CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E7564FD248119D4004BC5CE /* DiningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningViewController.swift; sourceTree = "<group>"; };
 		8E756502248119D7004BC5CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E756505248119D7004BC5CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E756507248119D7004BC5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +88,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0495066D248A8AA30051C1C9 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				0495066E248A8AC50051C1C9 /* TabBar.storyboard */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		04950674248A8FC40051C1C9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				04950670248A8B690051C1C9 /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		04950675248A8FD20051C1C9 /* NightLife */ = {
+			isa = PBXGroup;
+			children = (
+				04950672248A8C800051C1C9 /* NightLife.storyboard */,
+			);
+			path = NightLife;
+			sourceTree = "<group>";
+		};
 		04E1CF942487EA7F004DEEA7 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,17 +151,21 @@
 		04E1CF992487EABF004DEEA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				04E1CF9A2487EAF9004DEEA7 /* Main */,
+				0495066D248A8AA30051C1C9 /* Tabbar */,
+				04E1CF9A2487EAF9004DEEA7 /* Dining */,
+				04950675248A8FD20051C1C9 /* NightLife */,
+				04950674248A8FC40051C1C9 /* Profile */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		04E1CF9A2487EAF9004DEEA7 /* Main */ = {
+		04E1CF9A2487EAF9004DEEA7 /* Dining */ = {
 			isa = PBXGroup;
 			children = (
-				8E7564FD248119D4004BC5CE /* ViewController.swift */,
+				04950676248B5FCA0051C1C9 /* Dining.storyboard */,
+				8E7564FD248119D4004BC5CE /* DiningViewController.swift */,
 			);
-			path = Main;
+			path = Dining;
 			sourceTree = "<group>";
 		};
 		461C7642511ABAA5C92B9317 /* Pods */ = {
@@ -168,7 +202,7 @@
 		8E7564F7248119D4004BC5CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E7564F6248119D4004BC5CE /* Zomato_Rx.app */,
+				8E7564F6248119D4004BC5CE /* Zomato.app */,
 				8E75650C248119D7004BC5CE /* Zomato_RxTests.xctest */,
 				8E756517248119D7004BC5CE /* Zomato_RxUITests.xctest */,
 			);
@@ -184,7 +218,6 @@
 				04E1CF972487EAA7004DEEA7 /* Repository */,
 				04E1CF982487EABA004DEEA7 /* Data */,
 				04E1CF992487EABF004DEEA7 /* Scenes */,
-				8E7564FF248119D4004BC5CE /* Main.storyboard */,
 				8E756502248119D7004BC5CE /* Assets.xcassets */,
 				8E756504248119D7004BC5CE /* LaunchScreen.storyboard */,
 				8E756507248119D7004BC5CE /* Info.plist */,
@@ -232,7 +265,7 @@
 			);
 			name = Zomato_Rx;
 			productName = Zomato_Rx;
-			productReference = 8E7564F6248119D4004BC5CE /* Zomato_Rx.app */;
+			productReference = 8E7564F6248119D4004BC5CE /* Zomato.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8E75650B248119D7004BC5CE /* Zomato_RxTests */ = {
@@ -319,9 +352,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0495066F248A8AC50051C1C9 /* TabBar.storyboard in Resources */,
 				8E756506248119D7004BC5CE /* LaunchScreen.storyboard in Resources */,
+				04950671248A8B690051C1C9 /* Profile.storyboard in Resources */,
+				04950677248B5FCA0051C1C9 /* Dining.storyboard in Resources */,
 				8E756503248119D7004BC5CE /* Assets.xcassets in Resources */,
-				8E756501248119D4004BC5CE /* Main.storyboard in Resources */,
+				04950673248A8C800051C1C9 /* NightLife.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7564FE248119D4004BC5CE /* ViewController.swift in Sources */,
+				8E7564FE248119D4004BC5CE /* DiningViewController.swift in Sources */,
 				8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */,
 				0495066C248946C90051C1C9 /* R.generated.swift in Sources */,
 			);
@@ -482,14 +518,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8E7564FF248119D4004BC5CE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E756500248119D4004BC5CE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E756504248119D7004BC5CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -632,7 +660,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sunasterisk.Zomato-Rx";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Zomato;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -652,7 +680,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sunasterisk.Zomato-Rx";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Zomato;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -68,9 +68,9 @@ extension Driver {
      - parameter variable: Target variable for sequence elements.
      - returns: The source sequence with the side-effecting behavior applied.
      */
-    func `do`(_ variable: Variable<E>) -> SharedSequence<SharingStrategy, E> {
+    func `do`(_ variable: BehaviorRelay<Element>) -> SharedSequence<SharingStrategy, Element> {
         return `do`(onNext: { e in
-            variable.value = e
+            variable.accept(e)
         })
     }
 
@@ -81,9 +81,9 @@ extension Driver {
      - parameter variable: Target variable for sequence elements.
      - returns: The source sequence with the side-effecting behavior applied.
      */
-    func `do`(_ variable: Variable<E?>) -> SharedSequence<SharingStrategy, E> {
+    func `do`(_ variable: BehaviorRelay<Element?>) -> SharedSequence<SharingStrategy, Element> {
         return `do`(onNext: { e in
-            variable.value = e
+            variable.accept(e)
         })
     }
 }

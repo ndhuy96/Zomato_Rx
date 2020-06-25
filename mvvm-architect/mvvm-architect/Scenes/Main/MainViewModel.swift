@@ -26,13 +26,11 @@ struct MainViewModel: ViewModelType {
     }
 
     struct Dependencies {
-        let api: RestaurantsRepository
-        let count: Int
         let navigator: MainNavigatable
+        let useCase: MainUseCaseType
     }
 
     private let dependencies: Dependencies
-    let loadMoreTrigger = PublishRelay<Void>()
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -40,11 +38,11 @@ struct MainViewModel: ViewModelType {
 
     func transform(input: Input) -> Output {
         let dataInfo = setUpLoadMorePaging(loadTrigger: input.ready,
-                                           getItems: dependencies.api.fetchRestaurants,
+                                           getItems: dependencies.useCase.getRestaurantsList,
                                            refreshTrigger: input.refreshing,
-                                           refreshItems: dependencies.api.fetchRestaurants,
+                                           refreshItems: dependencies.useCase.getRestaurantsList,
                                            loadMoreTrigger: input.loadingMore,
-                                           loadMoreItems: dependencies.api.fetchRestaurants)
+                                           loadMoreItems: dependencies.useCase.loadMoreRestaurantsList)
 
         let (pagingInfo, fetchItems, errors, isLoading, isRefreshing, isLoadingMore) = dataInfo
 
@@ -57,7 +55,7 @@ struct MainViewModel: ViewModelType {
             .withLatestFrom(restaurants) { ($0, $1) }
             .do(onNext: { (indexPath: IndexPath, restaurants: [Restaurants]) in
                 let resId = restaurants[indexPath.row].restaurant.id
-                self.dependencies.navigator.navigateToDetailScreen(with: resId, api: self.dependencies.api)
+                self.dependencies.navigator.navigateToDetailScreen(with: resId)
             })
             .mapToVoid()
             .asDriverOnErrorJustComplete()

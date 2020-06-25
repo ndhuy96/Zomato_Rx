@@ -14,7 +14,7 @@ struct PagingInfo<T> {
     let startItemIndex: Int
     let items: [T]
 
-    init(items: [T], startItemIndex: Int, shownItems: Int = kDefaultRequestItemNumber, totalItems: Int) {
+    init(items: [T], startItemIndex: Int, shownItems: Int, totalItems: Int) {
         self.startItemIndex = startItemIndex
         self.shownItems = shownItems
         self.totalItems = totalItems

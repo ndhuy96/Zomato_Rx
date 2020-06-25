@@ -6,8 +6,8 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
-struct Constants {
-    struct Network {
+enum Constants {
+    enum Network {
         static let timeout: Double = 30
     }
 }

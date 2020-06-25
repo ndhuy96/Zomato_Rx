@@ -23,9 +23,11 @@ extension SwinjectStoryboard {
         }
         .inObjectScope(.container)
 
-        defaultContainer.storyboardInitCompleted(MainViewController.self) { r, c in
-            c.api = r.resolve(RestaurantsRepository.self)
-            c.count = kDefaultRequestItemNumber
+        defaultContainer.storyboardInitCompleted(MainViewController.self) { _, c in
+            let assembler = Assembler([MainAssembler()],
+                                      container: defaultContainer)
+            guard let vm = assembler.resolver.resolve(MainViewModel.self, argument: c) else { return }
+            c.bindViewModel(to: vm)
         }
     }
 }

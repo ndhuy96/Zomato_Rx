@@ -6,17 +6,14 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
-import Foundation
-
 // swiftlint:disable large_tuple
-// swiftlint:disable function_parameter_count
 extension ViewModelType {
     func setUpLoadMorePaging<T>(loadTrigger: Driver<Void>,
                                 getItems: @escaping () -> Single<PagingInfo<T>>,
                                 refreshTrigger: Driver<Void>,
                                 refreshItems: @escaping () -> Single<PagingInfo<T>>,
                                 loadMoreTrigger: Driver<Void>,
-                                loadMoreItems: @escaping (Int, Int) -> Single<PagingInfo<T>>)
+                                loadMoreItems: @escaping (Int) -> Single<PagingInfo<T>>)
         -> (page: BehaviorRelay<PagingInfo<T>>,
             fetchItems: Driver<Void>,
             error: Driver<Error>,
@@ -33,8 +30,8 @@ extension ViewModelType {
                 refreshItems()
             },
             loadMoreTrigger: loadMoreTrigger,
-            loadMoreItems: { _, start, shown in
-                loadMoreItems(start, shown)
+            loadMoreItems: { _, start in
+                loadMoreItems(start)
             }
         )
     }
@@ -46,7 +43,7 @@ extension ViewModelType {
                                             refreshTrigger: Driver<U>,
                                             refreshItems: @escaping (U) -> Single<PagingInfo<T>>,
                                             loadMoreTrigger: Driver<U>,
-                                            loadMoreItems: @escaping (U, Int, Int) -> Single<PagingInfo<T>>)
+                                            loadMoreItems: @escaping (U, Int) -> Single<PagingInfo<T>>)
         -> (page: BehaviorRelay<PagingInfo<T>>,
             fetchItems: Driver<Void>,
             error: Driver<Error>,
@@ -112,7 +109,7 @@ extension ViewModelType {
             .filter { _ in !pageSubject.value.items.isEmpty }
             .flatMapLatest { arg -> Driver<PagingInfo<T>> in
                 let start = pageSubject.value.getItemsDisplayed()
-                return loadMoreItems(arg, start, kDefaultRequestItemNumber)
+                return loadMoreItems(arg, start)
                     .trackError(errorTracker)
                     .trackActivity(loadingMoreActivityIndicator)
                     .asDriverOnErrorJustComplete()

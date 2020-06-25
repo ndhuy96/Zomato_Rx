@@ -11,8 +11,8 @@ import GoogleMaps
 final class MapViewController: UIViewController {
     @IBOutlet private var mapView: GMSMapView!
 
-    private let lat = 21.0227788
-    private let long = 105.8194112
+    private let lat: Double = 21.022
+    private let long: Double = 105.819
 
     override func viewDidLoad() {
         super.viewDidLoad()

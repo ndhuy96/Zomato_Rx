@@ -19,7 +19,7 @@ struct DetailViewModel: ViewModelType {
 
     struct Dependencies {
         let id: String
-        let api: RestaurantsRepository
+        let useCase: DetailUseCaseType
     }
 
     private let dependencies: Dependencies
@@ -36,7 +36,7 @@ struct DetailViewModel: ViewModelType {
         let data = input.ready
             .asObservable()
             .flatMapLatest { _ in
-                self.dependencies.api.fetchRestaurantDetail(with: self.dependencies.id)
+                self.dependencies.useCase.getRestaurantDetail(with: self.dependencies.id)
                     .trackActivity(activityIndicator)
                     .trackError(errorTracker)
             }

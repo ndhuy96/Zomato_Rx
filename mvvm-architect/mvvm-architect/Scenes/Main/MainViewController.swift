@@ -6,51 +6,29 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
-final class MainViewController: UIViewController {
-    @IBOutlet private var restaurantsTableView: UITableView!
-    private var refreshControl: UIRefreshControl!
-    private var bottomRefreshControl: UIRefreshControl!
+final class MainViewController: UIViewController, BindableType {
+    @IBOutlet private var restaurantsTableView: LoadMoreTableView!
 
-    private var viewModel: MainViewModel!
-
-    var api: RestaurantsRepository?
-    var count: Int?
+    var viewModel: MainViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
-        bindViewModel()
     }
 
     private func config() {
-        guard let mainNavigation = navigationController,
-            let api = api,
-            let count = count else { return }
-
-        let mainNavigator = MainNavigator(mainNavigation)
-        viewModel = MainViewModel(dependencies: MainViewModel.Dependencies(api: api,
-                                                                           count: count,
-                                                                           navigator: mainNavigator))
-
         // TableView's settings
         restaurantsTableView.registerNib(RestaurantCell.self)
-        restaurantsTableView.delegate = self
+        restaurantsTableView.rx
+            .setDelegate(self)
+            .disposed(by: rx.disposeBag)
         restaurantsTableView.tableFooterView = UIView()
-
-        // TableView's refresh control
-        refreshControl = UIRefreshControl()
-        restaurantsTableView.refreshControl = refreshControl
-
-        // TableView's loadmore
-        bottomRefreshControl = UIRefreshControl()
-        refreshControl.triggerVerticalOffset = 100
-        restaurantsTableView.bottomRefreshControl = bottomRefreshControl
     }
 
-    private func bindViewModel() {
+    func bindViewModel() {
         let input = MainViewModel.Input(ready: Driver.just(()),
-                                        refreshing: refreshControl.rx.controlEvent(.valueChanged).asDriver(),
-                                        loadingMore: bottomRefreshControl.rx.controlEvent(.valueChanged).asDriver(),
+                                        refreshing: restaurantsTableView.refreshTrigger,
+                                        loadingMore: restaurantsTableView.loadMoreTrigger,
                                         selected: restaurantsTableView.rx.itemSelected.asDriver())
         let output = viewModel.transform(input: input)
 
@@ -59,11 +37,11 @@ final class MainViewController: UIViewController {
             .disposed(by: rx.disposeBag)
 
         output.isRefreshing
-            .drive(refreshControl.rx.isRefreshing)
+            .drive(restaurantsTableView.refreshing)
             .disposed(by: rx.disposeBag)
 
         output.isLoadingMore
-            .drive(bottomRefreshControl.rx.isRefreshing)
+            .drive(restaurantsTableView.loadingMore)
             .disposed(by: rx.disposeBag)
 
         output.fetchItems

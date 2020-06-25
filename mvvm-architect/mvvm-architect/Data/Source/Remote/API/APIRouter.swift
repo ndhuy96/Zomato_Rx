@@ -8,9 +8,6 @@
 
 import Alamofire
 
-let kDefaultRequestStartNumber: Int = 0
-let kDefaultRequestItemNumber: Int = 20
-
 enum Environment {
     case dev
 //    case staging
@@ -33,23 +30,20 @@ enum Environment {
 }
 
 enum APIRouter: URLRequestConvertible {
-    case fetchCategories
-    case search(start: Int = kDefaultRequestStartNumber, count: Int = kDefaultRequestItemNumber)
+    case search(start: Int, count: Int)
     case fetchResDetail(resId: String)
 
     static let baseURL = Environment.dev.baseUrl
 
     var method: HTTPMethod {
         switch self {
-        case .fetchCategories, .search, .fetchResDetail:
+        case .search, .fetchResDetail:
             return .get
         }
     }
 
     var path: String {
         switch self {
-        case .fetchCategories:
-            return "/categories"
         case .search:
             return "/search"
         case .fetchResDetail:
@@ -63,7 +57,7 @@ enum APIRouter: URLRequestConvertible {
 
     var encoding: ParameterEncoding {
         switch self {
-        case .fetchCategories, .search, .fetchResDetail:
+        case .search, .fetchResDetail:
             return URLEncoding.default
         default:
             return JSONEncoding.default

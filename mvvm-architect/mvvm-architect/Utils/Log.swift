@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Log {
+enum Log {
     static func debug(message: String, function: String = #function) {
         #if !NDEBUG
             let formatter = DateFormatter()

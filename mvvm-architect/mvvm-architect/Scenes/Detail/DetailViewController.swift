@@ -6,7 +6,7 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
-final class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController, BindableType {
     @IBOutlet var addressLabel: UILabel!
 
     var viewModel: DetailViewModel!
@@ -14,10 +14,9 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Address"
-        bindViewModel()
     }
 
-    private func bindViewModel() {
+    func bindViewModel() {
         let input = DetailViewModel.Input(ready: Driver.just(()))
         let output = viewModel.transform(input: input)
 

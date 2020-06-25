@@ -7,6 +7,7 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (3.8.0):
     - GoogleMaps/Base (= 3.8.0)
+  - MJRefresh (3.4.3)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
   - R.swift (5.1.0):
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - Alamofire
   - GoogleMaps
   - GooglePlaces
+  - MJRefresh
   - "NSObject+Rx"
   - R.swift
   - RxCocoa
@@ -42,6 +44,7 @@ SPEC REPOS:
     - Alamofire
     - GoogleMaps
     - GooglePlaces
+    - MJRefresh
     - "NSObject+Rx"
     - R.swift
     - R.swift.Library
@@ -57,6 +60,7 @@ SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
   GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
@@ -68,6 +72,6 @@ SPEC CHECKSUMS:
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 27865d48cad44e6af7d9eab98764e442e41f68a8
+PODFILE CHECKSUM: e98ba63c05200bad59d479957b172aa52f385b41
 
 COCOAPODS: 1.8.1

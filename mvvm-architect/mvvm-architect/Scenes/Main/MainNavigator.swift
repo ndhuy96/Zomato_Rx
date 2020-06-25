@@ -7,7 +7,7 @@
 //
 
 protocol MainNavigatable {
-    func navigateToDetailScreen(with resId: String, api: RestaurantsRepository)
+    func navigateToDetailScreen(with resId: String)
 }
 
 final class MainNavigator: MainNavigatable {
@@ -17,11 +17,12 @@ final class MainNavigator: MainNavigatable {
         self.navigationController = navigationController
     }
 
-    func navigateToDetailScreen(with resId: String, api: RestaurantsRepository) {
-        let restaurantDetailVM = DetailViewModel(dependencies: DetailViewModel.Dependencies(id: resId,
-                                                                                            api: api))
+    func navigateToDetailScreen(with resId: String) {
         guard let vc = R.storyboard.main.detailViewController() else { return }
-        vc.viewModel = restaurantDetailVM
+        let assembler = Assembler([DetailAssembler()],
+                                  container: SwinjectStoryboard.defaultContainer)
+        guard let vm = assembler.resolver.resolve(DetailViewModel.self, argument: resId) else { return }
+        vc.bindViewModel(to: vm)
         navigationController.pushViewController(vc, animated: true)
     }
 }

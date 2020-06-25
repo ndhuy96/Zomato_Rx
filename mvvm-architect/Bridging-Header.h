@@ -13,5 +13,3 @@
 @import Swinject;
 @import SwinjectStoryboard;
 @import NSObject_Rx;
-
-#import "UIScrollView+BottomRefreshControl.h"

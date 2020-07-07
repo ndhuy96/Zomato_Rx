@@ -20,5 +20,9 @@ final class HomeNavigator: HomeNavigatable {
 
     func navigateToTabBarScreen() {}
 
-    func navigateToRegisterScreen() {}
+    func navigateToRegisterScreen() {
+        guard let vc = R.storyboard.register.registerViewController() else { return }
+        vc.modalPresentationStyle = .fullScreen
+        navigationController.present(vc, animated: true, completion: nil)
+    }
 }

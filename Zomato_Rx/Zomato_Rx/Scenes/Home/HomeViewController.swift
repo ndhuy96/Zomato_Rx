@@ -6,26 +6,19 @@
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 
-let kCollectionViewNumberOfSets: Int = 4
-let kCollectionViewLineSpacing: CGFloat = 4.0
-let kMaxAutoScrollSpeed: CGFloat = 100
-let kMinAutoScrollSpeed: CGFloat = 0
-let kCentimeterOf1Inch: CGFloat = 2.54
-let kAutoScrollDefaultTimerInterval: CGFloat = 0.01
-
-final class HomeViewController: UIViewController {
+final class HomeViewController: AutoScrollViewController, AutoScrollControllerType {
     @IBOutlet private var skipButton: UIButton!
     @IBOutlet private var registerButton: UIButton!
     @IBOutlet private var loginWithFBButton: UIButton!
     @IBOutlet private var loginWithGgButton: UIButton!
     @IBOutlet private var dishesCollectionView: InfinityCollectionView!
 
+    var collectionView: InfinityCollectionView {
+        return dishesCollectionView
+    }
+
     private var viewModel: HomeViewModel!
     private var bannerItems: [String] = []
-    private var autoScrollSpeed: CGFloat!
-    private var timerInterval: CGFloat!
-    private var movePointAmountForTimerInterval: CGFloat!
-    private var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,19 +47,14 @@ final class HomeViewController: UIViewController {
 
         // CollectionView's Settings
         dishesCollectionView.dataSource = self
-        dishesCollectionView.showsVerticalScrollIndicator = false
-        dishesCollectionView.showsHorizontalScrollIndicator = false
-        dishesCollectionView.scrollsToTop = false
-        dishesCollectionView.isUserInteractionEnabled = false
-        dishesCollectionView.numberOfSets = kCollectionViewNumberOfSets
-
-        setAutoScrollSpeed(8)
     }
 
     private func bindViewModel() {
         let input = HomeViewModel.Input(skipTrigger: skipButton.rx.tap.asDriver(),
                                         registerTrigger: registerButton.rx.tap.asDriver(),
-                                        loginWithFBTrigger: loginWithFBButton.rx.tap.asDriver(),
+                                        loginWithFBTrigger: loginWithFBButton.rx.tap
+                                            .map { [unowned self] _ in self }
+                                            .asDriverOnErrorJustComplete(),
                                         loginWithGgTrigger: loginWithGgButton.rx.tap.asDriver())
 
         let output = viewModel.transform(input: input)
@@ -77,63 +65,22 @@ final class HomeViewController: UIViewController {
                 self.bannerItems = banners
             })
             .disposed(by: rx.disposeBag)
-    }
 
-    private func setAutoScrollSpeed(_ autoScrollSpeed: CGFloat) {
-        var availableAutoScrollSpeed: CGFloat
-        if autoScrollSpeed > kMaxAutoScrollSpeed {
-            availableAutoScrollSpeed = kMaxAutoScrollSpeed
-        } else if autoScrollSpeed < kMinAutoScrollSpeed {
-            availableAutoScrollSpeed = kMinAutoScrollSpeed
-        } else {
-            availableAutoScrollSpeed = autoScrollSpeed
-        }
+        output.skip
+            .drive()
+            .disposed(by: rx.disposeBag)
 
-        self.autoScrollSpeed = availableAutoScrollSpeed
-        if self.autoScrollSpeed > 0 {
-            let pixelPerInch = DeviceInfo.getPixelPerInch()
-            let movePixelAmountForOneSeconds = self.autoScrollSpeed * CGFloat(pixelPerInch) * 0.1 / kCentimeterOf1Inch
-            let movePointForOneSeconds = movePixelAmountForOneSeconds / UIScreen.main.scale
-            let movePointAmountForTimerInterval = movePointForOneSeconds * kAutoScrollDefaultTimerInterval
-            let floorMovePointAmountForTimerInterval = floor(movePointAmountForTimerInterval)
-            if floorMovePointAmountForTimerInterval < 1 {
-                self.movePointAmountForTimerInterval = 1
-            } else {
-                self.movePointAmountForTimerInterval = floorMovePointAmountForTimerInterval
-            }
-            timerInterval = self.movePointAmountForTimerInterval / movePointForOneSeconds
-        }
+        output.register
+            .drive()
+            .disposed(by: rx.disposeBag)
 
-        startAutoScroll()
-    }
+        output.loginWithFB
+            .drive()
+            .disposed(by: rx.disposeBag)
 
-    private func startAutoScroll() {
-        if timer.isValid {
-            return
-        }
-
-        if autoScrollSpeed == 0 {
-            stopAutoScroll()
-        } else {
-            timer = Timer.scheduledTimer(timeInterval: TimeInterval(timerInterval),
-                                         target: self,
-                                         selector: #selector(timerDidFire),
-                                         userInfo: nil,
-                                         repeats: true)
-        }
-    }
-
-    private func stopAutoScroll() {
-        if timer.isValid {
-            timer.invalidate()
-        }
-    }
-
-    @objc
-    private func timerDidFire() {
-        let nextContentOffset = CGPoint(x: dishesCollectionView.contentOffset.x + movePointAmountForTimerInterval,
-                                        y: dishesCollectionView.contentOffset.y)
-        dishesCollectionView.contentOffset = nextContentOffset
+        output.loginWithGg
+            .drive()
+            .disposed(by: rx.disposeBag)
     }
 }
 

@@ -4,21 +4,23 @@ platform :ios, '12.0'
 def pods
 	# Core
 	pod 'RxSwift'
-  	pod 'RxCocoa'
+  pod 'RxCocoa'
 
 	# Networking
 	pod 'Alamofire'
+	pod 'Firebase/Auth'
+  pod 'FBSDKLoginKit'
 
 	# Convention
-        pod 'SwiftLint'
+  pod 'SwiftLint'
 	pod 'SwiftFormat/CLI'
 
 	# Resources
 	pod 'R.swift'
-
   pod 'Swinject', '~> 2.6.2'
   pod 'SwinjectStoryboard'
   pod 'NSObject+Rx'
+  pod 'SVProgressHUD'
 
 end
 

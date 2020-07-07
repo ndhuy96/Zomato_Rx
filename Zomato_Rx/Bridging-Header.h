@@ -13,3 +13,4 @@
 @import Swinject;
 @import SwinjectStoryboard;
 @import NSObject_Rx;
+@import SVProgressHUD;

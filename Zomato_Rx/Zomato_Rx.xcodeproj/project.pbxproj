@@ -339,6 +339,7 @@
 		04E1CF942487EA7F004DEEA7 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				04A8053A249F0A0D00F50F96 /* AppServices */,
 				8E7564F9248119D4004BC5CE /* AppDelegate.swift */,
 				04D622D024B6032F007EBAFF /* App.swift */,
 			);

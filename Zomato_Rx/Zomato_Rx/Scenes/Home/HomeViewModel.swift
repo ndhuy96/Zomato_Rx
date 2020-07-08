@@ -9,15 +9,14 @@
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
-
-let kNumberOfBanners: Int = 6
+import GoogleSignIn
 
 struct HomeViewModel: ViewModelType {
     struct Input {
         let skipTrigger: Driver<Void>
         let registerTrigger: Driver<Void>
         let loginWithFBTrigger: Driver<UIViewController>
-        let loginWithGgTrigger: Driver<Void>
+        let loginWithGgTrigger: Driver<UIViewController>
     }
 
     struct Output {
@@ -33,6 +32,7 @@ struct HomeViewModel: ViewModelType {
     }
 
     private let dependencies: Dependencies
+    private let kNumberOfBanners: Int = 6
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -65,13 +65,14 @@ struct HomeViewModel: ViewModelType {
                 loginManager.logIn(permissions: [.publicProfile, .email], viewController: vc) { result in
                     switch result {
                     case .success(granted: _, declined: _, let token):
-                        print("Successfully logged in into Facebook")
+                        Log.debug(message: "Successfully logged in into Facebook")
                         self.signIntoFirebase(token)
                     case let .failed(err):
                         let errorMessage = "Failed to get Facebook user with error: \(err.localizedDescription)"
-                        SVProgressHUD.showError(withStatus: errorMessage)
+                        Log.debug(message: errorMessage)
+//                        SVProgressHUD.showError(withStatus: errorMessage)
                     case .cancelled:
-                        print("Cancelled getting Facebook user")
+                        Log.debug(message: "Cancelled getting Facebook user")
                         SVProgressHUD.dismiss(withDelay: 0.3)
                     }
                 }
@@ -79,8 +80,14 @@ struct HomeViewModel: ViewModelType {
             .mapToVoid()
             .asDriverOnErrorJustComplete()
 
-        let loginWithGg = input.loginWithGgTrigger
-            .do(onNext: {})
+        let loginWithGg = input.loginWithGgTrigger.asObservable()
+            .do(onNext: { vc in
+                UserDefaultsManager.shared.set(.loggedIn, value: true)
+                GIDSignIn.sharedInstance()?.presentingViewController = vc
+                GIDSignIn.sharedInstance().signIn()
+            })
+            .mapToVoid()
+            .asDriverOnErrorJustComplete()
 
         return Output(banners: banners,
                       skip: skip,
@@ -93,12 +100,13 @@ struct HomeViewModel: ViewModelType {
         let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
         Auth.auth().signIn(with: credential) { _, err in
             if let err = err {
-                print("Sign up error: \(err.localizedDescription)")
-                SVProgressHUD.showError(withStatus: "Sign up error: \(err.localizedDescription)")
+                Log.debug(message: "Sign up error: \(err.localizedDescription)")
+//                SVProgressHUD.showError(withStatus: "Sign up error: \(err.localizedDescription)")
                 return
             }
-            print("successfully authenticated with Firebase")
-            SVProgressHUD.showSuccess(withStatus: "Login successfully")
+            Log.debug(message: "successfully authenticated with Firebase")
+            UserDefaultsManager.shared.set(.loggedIn, value: true)
+            self.dependencies.navigator.navigateToTabBarScreen()
         }
     }
 }

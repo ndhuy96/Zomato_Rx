@@ -56,9 +56,13 @@
 		049506BD248BB17C0051C1C9 /* Okra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506B8248BB17C0051C1C9 /* Okra-Bold.ttf */; };
 		049506BE248BB17C0051C1C9 /* Okra-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506B9248BB17C0051C1C9 /* Okra-SemiBold.ttf */; };
 		049506BF248BB17C0051C1C9 /* Okra-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506BA248BB17C0051C1C9 /* Okra-Regular.ttf */; };
-		04A8053C249F0A2000F50F96 /* AuthenticationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8053B249F0A2000F50F96 /* AuthenticationServices.swift */; };
 		04D622CD24B35BAB007EBAFF /* FacebookSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622CC24B35BAB007EBAFF /* FacebookSDK+Rx.swift */; };
 		04D622CF24B4C5DD007EBAFF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */; };
+		04D622D124B6032F007EBAFF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D024B6032F007EBAFF /* App.swift */; };
+		04D622D324B60EDD007EBAFF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D224B60EDD007EBAFF /* TabBarController.swift */; };
+		04D622D524B75267007EBAFF /* HomeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D424B75267007EBAFF /* HomeAssembler.swift */; };
+		04D622D724B76136007EBAFF /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D624B76136007EBAFF /* BindableType.swift */; };
+		04D622D924B994B6007EBAFF /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D824B994B6007EBAFF /* UserDefaultsManager.swift */; };
 		04D90347249E69D500DC690B /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D90346249E69D500DC690B /* Register.storyboard */; };
 		04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D90348249E69FE00DC690B /* RegisterViewController.swift */; };
 		04E8E8EB24AE31F000560CCA /* AutoScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EA24AE31F000560CCA /* AutoScrollViewController.swift */; };
@@ -140,9 +144,13 @@
 		049506B8248BB17C0051C1C9 /* Okra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-Bold.ttf"; sourceTree = "<group>"; };
 		049506B9248BB17C0051C1C9 /* Okra-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-SemiBold.ttf"; sourceTree = "<group>"; };
 		049506BA248BB17C0051C1C9 /* Okra-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-Regular.ttf"; sourceTree = "<group>"; };
-		04A8053B249F0A2000F50F96 /* AuthenticationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServices.swift; sourceTree = "<group>"; };
 		04D622CC24B35BAB007EBAFF /* FacebookSDK+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FacebookSDK+Rx.swift"; sourceTree = "<group>"; };
 		04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		04D622D024B6032F007EBAFF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		04D622D224B60EDD007EBAFF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		04D622D424B75267007EBAFF /* HomeAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembler.swift; sourceTree = "<group>"; };
+		04D622D624B76136007EBAFF /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		04D622D824B994B6007EBAFF /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		04D90346249E69D500DC690B /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		04D90348249E69FE00DC690B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		04E1CF9B2487ECA1004DEEA7 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 			children = (
 				04E8E8EE24AE385D00560CCA /* AutoScrollViewController */,
 				043B1DBA249CF93E0044EAAD /* ViewModelType.swift */,
+				04D622D624B76136007EBAFF /* BindableType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				0495066E248A8AC50051C1C9 /* TabBar.storyboard */,
+				04D622D224B60EDD007EBAFF /* TabBarController.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -299,6 +309,7 @@
 				040987ED2494D06400EB220E /* HomeViewController.swift */,
 				043B1DB4249BB43F0044EAAD /* HomeViewModel.swift */,
 				043B1DB8249BB5300044EAAD /* HomeNavigator.swift */,
+				04D622D424B75267007EBAFF /* HomeAssembler.swift */,
 				043B1DAE249BAD7F0044EAAD /* Cell */,
 			);
 			path = Home;
@@ -316,14 +327,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		04A8053A249F0A0D00F50F96 /* AppServices */ = {
-			isa = PBXGroup;
-			children = (
-				04A8053B249F0A2000F50F96 /* AuthenticationServices.swift */,
-			);
-			path = AppServices;
-			sourceTree = "<group>";
-		};
 		04D90345249E69B400DC690B /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,8 +339,8 @@
 		04E1CF942487EA7F004DEEA7 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				04A8053A249F0A0D00F50F96 /* AppServices */,
 				8E7564F9248119D4004BC5CE /* AppDelegate.swift */,
+				04D622D024B6032F007EBAFF /* App.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				049506AE248BA3240051C1C9 /* Reachability.swift */,
 				049506B0248BA3810051C1C9 /* SwinjectStoryboard+Setup.swift */,
 				043B1DB2249BAE510044EAAD /* DeviceInfo.swift */,
+				04D622D824B994B6007EBAFF /* UserDefaultsManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -507,6 +511,7 @@
 				0495066A24893FFA0051C1C9 /* R-Swift Run Script */,
 				8E7564F2248119D4004BC5CE /* Sources */,
 				CD46E60D8AF411B7E829EDBA /* [CP] Embed Pods Frameworks */,
+				3080F4C7C0F9BC9F3C34F2F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -691,6 +696,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
+		3080F4C7C0F9BC9F3C34F2F3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9987FFC2247A2DD83943C872 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -741,6 +763,7 @@
 				049506A3248B9FAD0051C1C9 /* ListRestaurants.swift in Sources */,
 				049506B1248BA3810051C1C9 /* SwinjectStoryboard+Setup.swift in Sources */,
 				04950690248B9EC80051C1C9 /* RatingObj.swift in Sources */,
+				04D622D924B994B6007EBAFF /* UserDefaultsManager.swift in Sources */,
 				043B1DB0249BAD970044EAAD /* DishesCell.swift in Sources */,
 				049506AB248BA09E0051C1C9 /* Log.swift in Sources */,
 				0495068C248B9EA10051C1C9 /* Photo.swift in Sources */,
@@ -752,7 +775,6 @@
 				0495069A248B9F420051C1C9 /* Title.swift in Sources */,
 				049506AF248BA3240051C1C9 /* Reachability.swift in Sources */,
 				04D622CD24B35BAB007EBAFF /* FacebookSDK+Rx.swift in Sources */,
-				04A8053C249F0A2000F50F96 /* AuthenticationServices.swift in Sources */,
 				04E8E8EB24AE31F000560CCA /* AutoScrollViewController.swift in Sources */,
 				04950694248B9EFF0051C1C9 /* RestaurantInfo.swift in Sources */,
 				043B1DB9249BB5300044EAAD /* HomeNavigator.swift in Sources */,
@@ -762,9 +784,11 @@
 				04950692248B9EE60051C1C9 /* Restaurant.swift in Sources */,
 				049506AD248BA2B20051C1C9 /* Constants.swift in Sources */,
 				043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */,
+				04D622D324B60EDD007EBAFF /* TabBarController.swift in Sources */,
 				040987F02494EE4A00EB220E /* UIButton+Extension.swift in Sources */,
 				0495069C248B9F560051C1C9 /* User.swift in Sources */,
 				04950684248B9E400051C1C9 /* AllReviews.swift in Sources */,
+				04D622D124B6032F007EBAFF /* App.swift in Sources */,
 				04950686248B9E5D0051C1C9 /* BgColor.swift in Sources */,
 				0495067D248B9DB30051C1C9 /* APIService.swift in Sources */,
 				04D622CF24B4C5DD007EBAFF /* UIViewController+Extension.swift in Sources */,
@@ -773,6 +797,7 @@
 				049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */,
 				04950698248B9F250051C1C9 /* Reviews.swift in Sources */,
 				8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */,
+				04D622D524B75267007EBAFF /* HomeAssembler.swift in Sources */,
 				049506A9248BA02B0051C1C9 /* PagingInfo.swift in Sources */,
 				0495067B248B9D960051C1C9 /* APIKey.swift in Sources */,
 				04950696248B9F140051C1C9 /* Restaurants.swift in Sources */,
@@ -780,6 +805,7 @@
 				040987EE2494D06400EB220E /* HomeViewController.swift in Sources */,
 				049506A5248B9FC80051C1C9 /* RestaurantDetail.swift in Sources */,
 				040987EC2494CDCA00EB220E /* UIView+Designable.swift in Sources */,
+				04D622D724B76136007EBAFF /* BindableType.swift in Sources */,
 				0495066C248946C90051C1C9 /* R.generated.swift in Sources */,
 				04950681248B9DEE0051C1C9 /* APIError.swift in Sources */,
 				043B1DBB249CF93E0044EAAD /* ViewModelType.swift in Sources */,

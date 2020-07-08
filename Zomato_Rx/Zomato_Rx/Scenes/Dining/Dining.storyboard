@@ -15,7 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="vUs-ff-Mr7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUO-mD-6XL">
+                                <rect key="frame" x="177" y="460" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="handleSignOutButtonTapped:" destination="tBg-EF-Vxj" eventType="touchUpInside" id="9D8-pq-LcX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KUO-mD-6XL" firstAttribute="centerY" secondItem="Ykd-pG-1Ts" secondAttribute="centerY" id="7ZJ-YH-HZ5"/>
+                            <constraint firstItem="KUO-mD-6XL" firstAttribute="centerX" secondItem="Ykd-pG-1Ts" secondAttribute="centerX" id="kdZ-XE-RRu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ykd-pG-1Ts"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Mh-vA-N9Y"/>

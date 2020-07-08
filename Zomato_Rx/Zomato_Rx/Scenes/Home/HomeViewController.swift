@@ -6,7 +6,7 @@
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 
-final class HomeViewController: AutoScrollViewController, AutoScrollControllerType {
+final class HomeViewController: AutoScrollViewController, AutoScrollControllerType, BindableType {
     @IBOutlet private var skipButton: UIButton!
     @IBOutlet private var registerButton: UIButton!
     @IBOutlet private var loginWithFBButton: UIButton!
@@ -17,25 +17,23 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
         return dishesCollectionView
     }
 
-    private var viewModel: HomeViewModel!
+    var viewModel: HomeViewModel!
     private var bannerItems: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         config()
-        bindViewModel()
     }
 
     private func setupView() {
-        skipButton.setShadow()
+        guard let shadowColor = R.color.shadowColor()?.cgColor else { return }
+        skipButton.setShadow(shadowColor: shadowColor)
     }
 
     private func config() {
         guard let homeNavigation = navigationController else { return }
         homeNavigation.setNavigationBarHidden(true, animated: false)
-        let homeNavigator = HomeNavigator(homeNavigation)
-        viewModel = HomeViewModel(dependencies: HomeViewModel.Dependencies(navigator: homeNavigator))
 
         // CollectionView's Layout
         let layout = UICollectionViewFlowLayout()
@@ -49,13 +47,15 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
         dishesCollectionView.dataSource = self
     }
 
-    private func bindViewModel() {
+    func bindViewModel() {
         let input = HomeViewModel.Input(skipTrigger: skipButton.rx.tap.asDriver(),
                                         registerTrigger: registerButton.rx.tap.asDriver(),
                                         loginWithFBTrigger: loginWithFBButton.rx.tap
                                             .map { [unowned self] _ in self }
                                             .asDriverOnErrorJustComplete(),
-                                        loginWithGgTrigger: loginWithGgButton.rx.tap.asDriver())
+                                        loginWithGgTrigger: loginWithGgButton.rx.tap
+                                            .map { [unowned self] _ in self }
+                                            .asDriverOnErrorJustComplete())
 
         let output = viewModel.transform(input: input)
 

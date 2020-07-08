@@ -18,7 +18,9 @@ final class HomeNavigator: HomeNavigatable {
         self.navigationController = navigationController
     }
 
-    func navigateToTabBarScreen() {}
+    func navigateToTabBarScreen() {
+        App.shared.moveToTabBarScreen()
+    }
 
     func navigateToRegisterScreen() {
         guard let vc = R.storyboard.register.registerViewController() else { return }

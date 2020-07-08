@@ -6,27 +6,60 @@
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 
+import FBSDKCoreKit
+import Firebase
+import GoogleSignIn
+
 @UIApplicationMain
-final class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
 
-    // App services
-    var services: [UIApplicationDelegate] = [AuthenticationService()]
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        for service in services {
-            _ = service.application?(application, didFinishLaunchingWithOptions: launchOptions)
+        FirebaseApp.configure()
+        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance()?.delegate = self
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            App.shared.window = window
+            App.shared.startInterface()
         }
+
         return true
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        for service in services {
-            guard let service = service.application?(app, open: url, options: options) else {
-                return false
-            }
-            return service
+    func sign(_: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            Log.debug(message: error.localizedDescription)
+            return
         }
-        return false
+
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        // When user is signed in
+        SVProgressHUD.show()
+        Auth.auth().signIn(with: credential) { _, error in
+            SVProgressHUD.dismiss()
+            if let error = error {
+                Log.debug(message: "Google Authentification Fail \(error.localizedDescription)")
+                return
+            } else {
+                Log.debug(message: "Google Authentification Success")
+                App.shared.moveToTabBarScreen()
+            }
+        }
+    }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        let facebookDidHandle = ApplicationDelegate.shared
+            .application(app,
+                         open: url,
+                         sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                         annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+
+        let googleDidHandle = GIDSignIn.sharedInstance().handle(url)
+        return facebookDidHandle || googleDidHandle
     }
 }

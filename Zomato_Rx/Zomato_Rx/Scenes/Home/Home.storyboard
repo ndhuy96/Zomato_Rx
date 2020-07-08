@@ -20,7 +20,7 @@
         <!--Home View Controller-->
         <scene sceneID="jda-na-vGm">
             <objects>
-                <viewController id="gqT-KI-7FP" customClass="HomeViewController" customModule="Zomato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="gqT-KI-7FP" customClass="HomeViewController" customModule="Zomato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YPd-QF-aBD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,7 +233,7 @@
         <!--Navigation Controller-->
         <scene sceneID="1Rq-D9-Ui9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6Xe-zF-5Lx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6Xe-zF-5Lx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E5e-T8-TiG">
                         <autoresizingMask key="autoresizingMask"/>

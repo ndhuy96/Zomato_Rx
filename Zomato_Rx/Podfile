@@ -10,6 +10,7 @@ def pods
 	pod 'Alamofire'
 	pod 'Firebase/Auth'
   pod 'FBSDKLoginKit'
+  pod 'GoogleSignIn'
 
 	# Convention
   pod 'SwiftLint'

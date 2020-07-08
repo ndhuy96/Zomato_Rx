@@ -1,13 +1,10 @@
 PODS:
   - Alamofire (5.2.1)
-<<<<<<< HEAD
   - AppAuth (1.4.0):
     - AppAuth/Core (= 1.4.0)
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
-=======
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
   - FBSDKCoreKit (7.0.1):
     - FBSDKCoreKit/Basics (= 7.0.1)
     - FBSDKCoreKit/Core (= 7.0.1)
@@ -41,13 +38,10 @@ PODS:
   - GoogleDataTransportCCTSupport (3.2.0):
     - GoogleDataTransport (~> 6.1)
     - nanopb (~> 1.30905.0)
-<<<<<<< HEAD
   - GoogleSignIn (5.0.2):
     - AppAuth (~> 1.2)
     - GTMAppAuth (~> 1.0)
     - GTMSessionFetcher/Core (~> 1.1)
-=======
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
   - GoogleUtilities/AppDelegateSwizzler (6.6.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -63,7 +57,6 @@ PODS:
   - "GoogleUtilities/NSData+zlib (6.6.0)"
   - GoogleUtilities/Reachability (6.6.0):
     - GoogleUtilities/Logger
-<<<<<<< HEAD
   - GTMAppAuth (1.0.0):
     - AppAuth/Core (~> 1.0)
     - GTMSessionFetcher (~> 1.1)
@@ -72,9 +65,6 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
-=======
-  - GTMSessionFetcher/Core (1.4.0)
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -103,10 +93,7 @@ DEPENDENCIES:
   - Alamofire
   - FBSDKLoginKit
   - Firebase/Auth
-<<<<<<< HEAD
   - GoogleSignIn
-=======
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
   - "NSObject+Rx"
   - R.swift
   - RxCocoa
@@ -120,10 +107,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-<<<<<<< HEAD
     - AppAuth
-=======
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -132,13 +116,9 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
-<<<<<<< HEAD
     - GoogleSignIn
     - GoogleUtilities
     - GTMAppAuth
-=======
-    - GoogleUtilities
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
     - GTMSessionFetcher
     - nanopb
     - "NSObject+Rx"
@@ -156,10 +136,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-<<<<<<< HEAD
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
-=======
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
   FBSDKCoreKit: 9cc05bec0568a5955c82eb59ae95da0fe125b88d
   FBSDKLoginKit: ecc6fd43c81b60f5b5e9388d58f137aff4a5d00b
   Firebase: fc4cbf6f1592636431821ef9a3c557e4dfd9f268
@@ -168,13 +145,9 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 4505e4d4009b1d93f605088ee7d7764d5f0d1c84
   GoogleDataTransport: 9a8a16f79feffc7f42096743de2a7c4815e84020
   GoogleDataTransportCCTSupport: 489c1265d2c85b68187a83a911913d190012158d
-<<<<<<< HEAD
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
-=======
-  GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
@@ -190,10 +163,6 @@ SPEC CHECKSUMS:
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-<<<<<<< HEAD
 PODFILE CHECKSUM: e7b3c6c473669c170ce41e9757c0dffa5ee233f8
-=======
-PODFILE CHECKSUM: 56fc415c4490ffa25a1ec411e558b9d9ac7648c3
->>>>>>> [Task #3.1.2] Implement Facebook Login for Home Screen
 
 COCOAPODS: 1.8.4

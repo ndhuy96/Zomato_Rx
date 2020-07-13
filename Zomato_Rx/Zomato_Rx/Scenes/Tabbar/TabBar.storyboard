@@ -10,7 +10,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="jZu-gi-8Hb">
             <objects>
-                <tabBarController id="4Mp-WQ-TGZ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="4Mp-WQ-TGZ" customClass="TabBarController" customModule="Zomato" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sbD-OT-JXO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

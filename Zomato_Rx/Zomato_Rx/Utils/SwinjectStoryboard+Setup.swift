@@ -6,6 +6,7 @@
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 
+// swiftlint:disable force_unwrapping
 extension SwinjectStoryboard {
     @objc
     class func setup() {
@@ -16,15 +17,22 @@ extension SwinjectStoryboard {
         }
         .inObjectScope(.container)
 
-        // swiftlint:disable force_unwrapping
         defaultContainer.register(RestaurantsRepository.self) { r in
             let api = r.resolve(APIService.self)!
             return RestaurantsRepositoryImpl(api)
         }
         .inObjectScope(.container)
 
-        defaultContainer.storyboardInitCompleted(DiningViewController.self) { r, c in
-            c.api = r.resolve(RestaurantsRepository.self)
+        defaultContainer.storyboardInitCompleted(HomeViewController.self) { _, c in
+            let assembler = Assembler([HomeAssembler()],
+                                      container: defaultContainer)
+            guard let vm = assembler.resolver.resolve(HomeViewModel.self,
+                                                      argument: c) else { return }
+            c.bindViewModel(to: vm)
+        }
+
+        defaultContainer.storyboardInitCompleted(DiningViewController.self) { _, _ in
+//            c.api = r.resolve(RestaurantsRepository.self)
         }
     }
 }

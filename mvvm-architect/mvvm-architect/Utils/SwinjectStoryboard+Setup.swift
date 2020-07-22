@@ -23,10 +23,12 @@ extension SwinjectStoryboard {
         }
         .inObjectScope(.container)
 
-        defaultContainer.storyboardInitCompleted(MainViewController.self) { _, c in
-            let assembler = Assembler([MainAssembler()],
-                                      container: defaultContainer)
-            guard let vm = assembler.resolver.resolve(MainViewModel.self, argument: c) else { return }
+        defaultContainer.storyboardInitCompleted(MainViewController.self) { r, c in
+            let assembler = Assembler([MainAssembly()])
+            let restaurantsRepository = r.resolve(RestaurantsRepository.self)!
+            guard let vm = assembler.resolver.resolve(MainViewModel.self,
+                                                      arguments: c,
+                                                      restaurantsRepository) else { return }
             c.bindViewModel(to: vm)
         }
     }

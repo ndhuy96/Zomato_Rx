@@ -63,7 +63,7 @@
 		8E88BC0324A063D200DB05FF /* MainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88BC0224A063D200DB05FF /* MainUseCase.swift */; };
 		8E88BC0524A086DD00DB05FF /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88BC0424A086DD00DB05FF /* DetailUseCase.swift */; };
 		8E88BC1324A1A29C00DB05FF /* DetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88BC1224A1A29C00DB05FF /* DetailAssembler.swift */; };
-		8E88BC1724A1D0F100DB05FF /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88BC1624A1D0F100DB05FF /* MainAssembler.swift */; };
+		8E88BC1724A1D0F100DB05FF /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E88BC1624A1D0F100DB05FF /* MainAssembly.swift */; };
 		8EC1833A2477B3D200EFC34E /* JSONAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC183392477B3D100EFC34E /* JSONAny.swift */; };
 /* End PBXBuildFile section */
 
@@ -129,7 +129,7 @@
 		8E88BC0224A063D200DB05FF /* MainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUseCase.swift; sourceTree = "<group>"; };
 		8E88BC0424A086DD00DB05FF /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
 		8E88BC1224A1A29C00DB05FF /* DetailAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembler.swift; sourceTree = "<group>"; };
-		8E88BC1624A1D0F100DB05FF /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
+		8E88BC1624A1D0F100DB05FF /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		8EC183392477B3D100EFC34E /* JSONAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAny.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -324,7 +324,7 @@
 				04096FB1244DEDA9003E167F /* MainViewModel.swift */,
 				04EB97A4244F30A700C80A68 /* MainNavigator.swift */,
 				8E88BC0224A063D200DB05FF /* MainUseCase.swift */,
-				8E88BC1624A1D0F100DB05FF /* MainAssembler.swift */,
+				8E88BC1624A1D0F100DB05FF /* MainAssembly.swift */,
 				04E72C64244F158E00F64558 /* Cell */,
 			);
 			path = Main;
@@ -644,7 +644,7 @@
 				045905E8244FF068007B64DA /* Title.swift in Sources */,
 				8E88BC0324A063D200DB05FF /* MainUseCase.swift in Sources */,
 				8E3F23232462654000ED3155 /* Constants.swift in Sources */,
-				8E88BC1724A1D0F100DB05FF /* MainAssembler.swift in Sources */,
+				8E88BC1724A1D0F100DB05FF /* MainAssembly.swift in Sources */,
 				045905E7244FF068007B64DA /* Photo.swift in Sources */,
 				8E88BC1324A1A29C00DB05FF /* DetailAssembler.swift in Sources */,
 				045905EE244FF068007B64DA /* BgColor.swift in Sources */,

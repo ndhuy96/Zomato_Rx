@@ -6,17 +6,12 @@
 //  Copyright © 2020 sun. All rights reserved.
 //
 
-// swiftlint:disable force_unwrapping
-
 final class DetailAssembler: Assembly {
     func assemble(container: Container) {
-        container.register(DetailUseCaseType.self) { r in
-            DetailUseCase(repository: r.resolve(RestaurantsRepository.self)!)
-        }
-
-        container.register(DetailViewModel.self) { r, resId in
-            DetailViewModel(dependencies: DetailViewModel.Dependencies(id: resId,
-                                                                       useCase: r.resolve(DetailUseCaseType.self)!))
+        container.register(DetailViewModel.self) { (_, resId: String, restaurantsRepository: RestaurantsRepository) in
+            let detailUseCase = DetailUseCase(repository: restaurantsRepository)
+            return DetailViewModel(dependencies: DetailViewModel.Dependencies(id: resId,
+                                                                              useCase: detailUseCase))
         }
     }
 }

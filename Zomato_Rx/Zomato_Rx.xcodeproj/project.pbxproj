@@ -18,6 +18,8 @@
 		043B1DB9249BB5300044EAAD /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DB8249BB5300044EAAD /* HomeNavigator.swift */; };
 		043B1DBB249CF93E0044EAAD /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DBA249CF93E0044EAAD /* ViewModelType.swift */; };
 		043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */; };
+		048F2F6724C8468200D7674C /* GIDSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */; };
+		048F2F6924C87E3E00D7674C /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6824C87E3E00D7674C /* SignInError.swift */; };
 		0495066C248946C90051C1C9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495066B248946C90051C1C9 /* R.generated.swift */; };
 		0495066F248A8AC50051C1C9 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495066E248A8AC50051C1C9 /* TabBar.storyboard */; };
 		04950671248A8B690051C1C9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04950670248A8B690051C1C9 /* Profile.storyboard */; };
@@ -56,24 +58,28 @@
 		049506BD248BB17C0051C1C9 /* Okra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506B8248BB17C0051C1C9 /* Okra-Bold.ttf */; };
 		049506BE248BB17C0051C1C9 /* Okra-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506B9248BB17C0051C1C9 /* Okra-SemiBold.ttf */; };
 		049506BF248BB17C0051C1C9 /* Okra-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506BA248BB17C0051C1C9 /* Okra-Regular.ttf */; };
-		04D622CD24B35BAB007EBAFF /* FacebookSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622CC24B35BAB007EBAFF /* FacebookSDK+Rx.swift */; };
+		04D622CD24B35BAB007EBAFF /* FBSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622CC24B35BAB007EBAFF /* FBSignIn+Rx.swift */; };
 		04D622CF24B4C5DD007EBAFF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */; };
 		04D622D124B6032F007EBAFF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D024B6032F007EBAFF /* App.swift */; };
 		04D622D324B60EDD007EBAFF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D224B60EDD007EBAFF /* TabBarController.swift */; };
-		04D622D524B75267007EBAFF /* HomeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D424B75267007EBAFF /* HomeAssembler.swift */; };
+		04D622D524B75267007EBAFF /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D424B75267007EBAFF /* HomeAssembly.swift */; };
 		04D622D724B76136007EBAFF /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D624B76136007EBAFF /* BindableType.swift */; };
 		04D622D924B994B6007EBAFF /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D824B994B6007EBAFF /* UserDefaultsManager.swift */; };
+		04D622DB24BCA99A007EBAFF /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622DA24BCA99A007EBAFF /* LoginRepository.swift */; };
+		04D622DD24BCAB93007EBAFF /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622DC24BCAB93007EBAFF /* HomeUseCase.swift */; };
+		04D622DF24BCB072007EBAFF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622DE24BCB072007EBAFF /* ActivityIndicator.swift */; };
+		04D622E124BCB320007EBAFF /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622E024BCB320007EBAFF /* SVProgressHUD+Rx.swift */; };
 		04D90347249E69D500DC690B /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D90346249E69D500DC690B /* Register.storyboard */; };
 		04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D90348249E69FE00DC690B /* RegisterViewController.swift */; };
 		04E8E8EB24AE31F000560CCA /* AutoScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EA24AE31F000560CCA /* AutoScrollViewController.swift */; };
 		04E8E8ED24AE384A00560CCA /* AutoScrollControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EC24AE384A00560CCA /* AutoScrollControllerType.swift */; };
-		54F5D99BB4DEDEC9D1B055C6 /* Pods_Zomato_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02474E8266065C1EC07461A2 /* Pods_Zomato_Rx.framework */; };
 		8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564F9248119D4004BC5CE /* AppDelegate.swift */; };
 		8E7564FE248119D4004BC5CE /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564FD248119D4004BC5CE /* DiningViewController.swift */; };
 		8E756503248119D7004BC5CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E756502248119D7004BC5CE /* Assets.xcassets */; };
 		8E756506248119D7004BC5CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E756504248119D7004BC5CE /* LaunchScreen.storyboard */; };
 		8E756511248119D7004BC5CE /* Zomato_RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E756510248119D7004BC5CE /* Zomato_RxTests.swift */; };
 		8E75651C248119D7004BC5CE /* Zomato_RxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */; };
+		A4021073DAFCB63A6204D494 /* libPods-Zomato_Rx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFBF8A02E1949D7C1BCB074 /* libPods-Zomato_Rx.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +100,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02474E8266065C1EC07461A2 /* Pods_Zomato_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zomato_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		040987EB2494CDCA00EB220E /* UIView+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
 		040987ED2494D06400EB220E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		040987EF2494EE4A00EB220E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -106,6 +111,9 @@
 		043B1DB8249BB5300044EAAD /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		043B1DBA249CF93E0044EAAD /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		048F2F6224BDF96900D7674C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GIDSignIn+Rx.swift"; sourceTree = "<group>"; };
+		048F2F6824C87E3E00D7674C /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
 		0495066B248946C90051C1C9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		0495066E248A8AC50051C1C9 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		04950670248A8B690051C1C9 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -144,13 +152,17 @@
 		049506B8248BB17C0051C1C9 /* Okra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-Bold.ttf"; sourceTree = "<group>"; };
 		049506B9248BB17C0051C1C9 /* Okra-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-SemiBold.ttf"; sourceTree = "<group>"; };
 		049506BA248BB17C0051C1C9 /* Okra-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-Regular.ttf"; sourceTree = "<group>"; };
-		04D622CC24B35BAB007EBAFF /* FacebookSDK+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FacebookSDK+Rx.swift"; sourceTree = "<group>"; };
+		04D622CC24B35BAB007EBAFF /* FBSignIn+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBSignIn+Rx.swift"; sourceTree = "<group>"; };
 		04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		04D622D024B6032F007EBAFF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		04D622D224B60EDD007EBAFF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		04D622D424B75267007EBAFF /* HomeAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembler.swift; sourceTree = "<group>"; };
+		04D622D424B75267007EBAFF /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
 		04D622D624B76136007EBAFF /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		04D622D824B994B6007EBAFF /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		04D622DA24BCA99A007EBAFF /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		04D622DC24BCAB93007EBAFF /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		04D622DE24BCB072007EBAFF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		04D622E024BCB320007EBAFF /* SVProgressHUD+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Rx.swift"; sourceTree = "<group>"; };
 		04D90346249E69D500DC690B /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		04D90348249E69FE00DC690B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		04E1CF9B2487ECA1004DEEA7 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -170,6 +182,7 @@
 		8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zomato_RxUITests.swift; sourceTree = "<group>"; };
 		8E75651D248119D7004BC5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D17A8BE73A4C8F2C53EC3FA /* Pods-Zomato_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.release.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.release.xcconfig"; sourceTree = "<group>"; };
+		9DFBF8A02E1949D7C1BCB074 /* libPods-Zomato_Rx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zomato_Rx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F5D99BB4DEDEC9D1B055C6 /* Pods_Zomato_Rx.framework in Frameworks */,
+				A4021073DAFCB63A6204D494 /* libPods-Zomato_Rx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +233,11 @@
 			isa = PBXGroup;
 			children = (
 				043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */,
-				04D622CC24B35BAB007EBAFF /* FacebookSDK+Rx.swift */,
+				04D622CC24B35BAB007EBAFF /* FBSignIn+Rx.swift */,
+				04D622DE24BCB072007EBAFF /* ActivityIndicator.swift */,
+				04D622E024BCB320007EBAFF /* SVProgressHUD+Rx.swift */,
+				048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */,
+				048F2F6824C87E3E00D7674C /* SignInError.swift */,
 			);
 			path = RxExtensions;
 			sourceTree = "<group>";
@@ -309,7 +326,8 @@
 				040987ED2494D06400EB220E /* HomeViewController.swift */,
 				043B1DB4249BB43F0044EAAD /* HomeViewModel.swift */,
 				043B1DB8249BB5300044EAAD /* HomeNavigator.swift */,
-				04D622D424B75267007EBAFF /* HomeAssembler.swift */,
+				04D622D424B75267007EBAFF /* HomeAssembly.swift */,
+				04D622DC24BCAB93007EBAFF /* HomeUseCase.swift */,
 				043B1DAE249BAD7F0044EAAD /* Cell */,
 			);
 			path = Home;
@@ -373,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				049506A6248B9FF00051C1C9 /* RestaurantsRepository.swift */,
+				04D622DA24BCA99A007EBAFF /* LoginRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -430,7 +449,8 @@
 		73E8093090330A9015A66BD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02474E8266065C1EC07461A2 /* Pods_Zomato_Rx.framework */,
+				048F2F6224BDF96900D7674C /* Alamofire.framework */,
+				9DFBF8A02E1949D7C1BCB074 /* libPods-Zomato_Rx.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -510,7 +530,6 @@
 				0495066924893FDE0051C1C9 /* SwiftFormat Run Script */,
 				0495066A24893FFA0051C1C9 /* R-Swift Run Script */,
 				8E7564F2248119D4004BC5CE /* Sources */,
-				CD46E60D8AF411B7E829EDBA /* [CP] Embed Pods Frameworks */,
 				3080F4C7C0F9BC9F3C34F2F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -735,23 +754,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CD46E60D8AF411B7E829EDBA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -774,13 +776,14 @@
 				043B1DB5249BB43F0044EAAD /* HomeViewModel.swift in Sources */,
 				0495069A248B9F420051C1C9 /* Title.swift in Sources */,
 				049506AF248BA3240051C1C9 /* Reachability.swift in Sources */,
-				04D622CD24B35BAB007EBAFF /* FacebookSDK+Rx.swift in Sources */,
+				04D622CD24B35BAB007EBAFF /* FBSignIn+Rx.swift in Sources */,
 				04E8E8EB24AE31F000560CCA /* AutoScrollViewController.swift in Sources */,
 				04950694248B9EFF0051C1C9 /* RestaurantInfo.swift in Sources */,
 				043B1DB9249BB5300044EAAD /* HomeNavigator.swift in Sources */,
 				04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */,
 				0495069E248B9F6B0051C1C9 /* UserRating.swift in Sources */,
 				04950688248B9E770051C1C9 /* HasMenuStatus.swift in Sources */,
+				048F2F6924C87E3E00D7674C /* SignInError.swift in Sources */,
 				04950692248B9EE60051C1C9 /* Restaurant.swift in Sources */,
 				049506AD248BA2B20051C1C9 /* Constants.swift in Sources */,
 				043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */,
@@ -790,16 +793,20 @@
 				04950684248B9E400051C1C9 /* AllReviews.swift in Sources */,
 				04D622D124B6032F007EBAFF /* App.swift in Sources */,
 				04950686248B9E5D0051C1C9 /* BgColor.swift in Sources */,
+				04D622DF24BCB072007EBAFF /* ActivityIndicator.swift in Sources */,
 				0495067D248B9DB30051C1C9 /* APIService.swift in Sources */,
 				04D622CF24B4C5DD007EBAFF /* UIViewController+Extension.swift in Sources */,
 				049506A7248B9FF00051C1C9 /* RestaurantsRepository.swift in Sources */,
+				04D622E124BCB320007EBAFF /* SVProgressHUD+Rx.swift in Sources */,
 				0495068E248B9EB40051C1C9 /* Photos.swift in Sources */,
 				049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */,
 				04950698248B9F250051C1C9 /* Reviews.swift in Sources */,
 				8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */,
-				04D622D524B75267007EBAFF /* HomeAssembler.swift in Sources */,
+				04D622DD24BCAB93007EBAFF /* HomeUseCase.swift in Sources */,
+				04D622D524B75267007EBAFF /* HomeAssembly.swift in Sources */,
 				049506A9248BA02B0051C1C9 /* PagingInfo.swift in Sources */,
 				0495067B248B9D960051C1C9 /* APIKey.swift in Sources */,
+				04D622DB24BCA99A007EBAFF /* LoginRepository.swift in Sources */,
 				04950696248B9F140051C1C9 /* Restaurants.swift in Sources */,
 				0495067F248B9DD30051C1C9 /* APIRoute.swift in Sources */,
 				040987EE2494D06400EB220E /* HomeViewController.swift in Sources */,
@@ -809,6 +816,7 @@
 				0495066C248946C90051C1C9 /* R.generated.swift in Sources */,
 				04950681248B9DEE0051C1C9 /* APIError.swift in Sources */,
 				043B1DBB249CF93E0044EAAD /* ViewModelType.swift in Sources */,
+				048F2F6724C8468200D7674C /* GIDSignIn+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,7 +1039,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zomato_Rx.app/Zomato_Rx";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zomato.app/Zomato";
 			};
 			name = Debug;
 		};
@@ -1053,7 +1061,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zomato_Rx.app/Zomato_Rx";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zomato.app/Zomato";
 			};
 			name = Release;
 		};

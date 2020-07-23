@@ -23,11 +23,15 @@ extension SwinjectStoryboard {
         }
         .inObjectScope(.container)
 
-        defaultContainer.storyboardInitCompleted(HomeViewController.self) { _, c in
-            let assembler = Assembler([HomeAssembler()],
-                                      container: defaultContainer)
-            guard let vm = assembler.resolver.resolve(HomeViewModel.self,
-                                                      argument: c) else { return }
+        defaultContainer.register(LoginRepository.self) { _ in
+            LoginRepositoryImpl()
+        }
+        .inObjectScope(.container)
+
+        defaultContainer.storyboardInitCompleted(HomeViewController.self) { r, c in
+            let assembler = Assembler([HomeAssembly()])
+            let loginRepository = r.resolve(LoginRepository.self)!
+            guard let vm = assembler.resolver.resolve(HomeViewModel.self, arguments: c, loginRepository) else { return }
             c.bindViewModel(to: vm)
         }
 

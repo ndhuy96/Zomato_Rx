@@ -3,3 +3,4 @@
 
 # rules
 --disable elseOnSameLine,semicolons
+--disable strongOutlets,trailingCommas

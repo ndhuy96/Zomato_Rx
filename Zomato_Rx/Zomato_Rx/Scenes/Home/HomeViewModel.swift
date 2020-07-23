@@ -15,8 +15,8 @@ struct HomeViewModel: ViewModelType {
     struct Input {
         let skipTrigger: Driver<Void>
         let registerTrigger: Driver<Void>
-        let loginWithFBTrigger: Driver<UIViewController>
-        let loginWithGgTrigger: Driver<UIViewController>
+        let loginWithFBTrigger: Driver<Void>
+        let loginWithGgTrigger: Driver<Void>
     }
 
     struct Output {
@@ -25,9 +25,12 @@ struct HomeViewModel: ViewModelType {
         let register: Driver<Void>
         let loginWithFB: Driver<Void>
         let loginWithGg: Driver<Void>
+        let loading: Driver<Bool>
+        let error: Driver<Error>
     }
 
     struct Dependencies {
+        let useCase: HomeUseCaseType
         let navigator: HomeNavigatable
     }
 
@@ -58,55 +61,61 @@ struct HomeViewModel: ViewModelType {
                 self.dependencies.navigator.navigateToRegisterScreen()
             })
 
-        let loginWithFB = input.loginWithFBTrigger.asObservable()
-            .do(onNext: { vc in
-                SVProgressHUD.show()
-                let loginManager = LoginManager()
-                loginManager.logIn(permissions: [.publicProfile, .email], viewController: vc) { result in
-                    switch result {
-                    case .success(granted: _, declined: _, let token):
-                        Log.debug(message: "Successfully logged in into Facebook")
-                        self.signIntoFirebase(token)
-                    case let .failed(err):
-                        let errorMessage = "Failed to get Facebook user with error: \(err.localizedDescription)"
-                        Log.debug(message: errorMessage)
-//                        SVProgressHUD.showError(withStatus: errorMessage)
-                    case .cancelled:
-                        Log.debug(message: "Cancelled getting Facebook user")
-                        SVProgressHUD.dismiss(withDelay: 0.3)
-                    }
-                }
-            })
-            .mapToVoid()
-            .asDriverOnErrorJustComplete()
+        let activityIndicator = ActivityIndicator()
+        let errorTracker = ErrorTracker()
 
-        let loginWithGg = input.loginWithGgTrigger.asObservable()
-            .do(onNext: { vc in
+        let loginWithFB = input.loginWithFBTrigger
+            .flatMapLatest { _ -> Driver<AccessToken> in
+                self.dependencies.useCase.loginFacebook()
+                    .trackActivity(activityIndicator)
+                    .trackError(errorTracker)
+                    .asDriverOnErrorJustComplete()
+            }
+            .flatMapLatest { token -> Driver<SignInResult> in
+                let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
+                return self.dependencies.useCase.signIntoFirebase(credential)
+                    .trackActivity(activityIndicator)
+                    .trackError(errorTracker)
+                    .asDriverOnErrorJustComplete()
+            }
+            .filter { $0 == .success }
+            .do(onNext: { _ in
                 UserDefaultsManager.shared.set(.loggedIn, value: true)
-                GIDSignIn.sharedInstance()?.presentingViewController = vc
-                GIDSignIn.sharedInstance().signIn()
+                self.dependencies.navigator.navigateToTabBarScreen()
             })
             .mapToVoid()
-            .asDriverOnErrorJustComplete()
+
+        let loginWithGg = input.loginWithGgTrigger
+            .flatMapLatest { _ -> Driver<GIDAuthentication> in
+                self.dependencies.useCase.loginGoogle()
+                    .trackActivity(activityIndicator)
+                    .trackError(errorTracker)
+                    .asDriverOnErrorJustComplete()
+            }
+            .flatMapLatest { auth -> Driver<SignInResult> in
+                let credential = GoogleAuthProvider.credential(withIDToken: auth.idToken,
+                                                               accessToken: auth.accessToken)
+                return self.dependencies.useCase.signIntoFirebase(credential)
+                    .trackActivity(activityIndicator)
+                    .trackError(errorTracker)
+                    .asDriverOnErrorJustComplete()
+            }
+            .filter { $0 == .success }
+            .do(onNext: { _ in
+                UserDefaultsManager.shared.set(.loggedIn, value: true)
+                self.dependencies.navigator.navigateToTabBarScreen()
+            })
+            .mapToVoid()
+
+        let loading = activityIndicator.asDriver()
+        let errors = errorTracker.asDriver()
 
         return Output(banners: banners,
                       skip: skip,
                       register: register,
                       loginWithFB: loginWithFB,
-                      loginWithGg: loginWithGg)
-    }
-
-    fileprivate func signIntoFirebase(_ token: AccessToken) {
-        let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
-        Auth.auth().signIn(with: credential) { _, err in
-            if let err = err {
-                Log.debug(message: "Sign up error: \(err.localizedDescription)")
-//                SVProgressHUD.showError(withStatus: "Sign up error: \(err.localizedDescription)")
-                return
-            }
-            Log.debug(message: "successfully authenticated with Firebase")
-            UserDefaultsManager.shared.set(.loggedIn, value: true)
-            self.dependencies.navigator.navigateToTabBarScreen()
-        }
+                      loginWithGg: loginWithGg,
+                      loading: loading,
+                      error: errors)
     }
 }

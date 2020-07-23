@@ -10,4 +10,8 @@ final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    deinit {
+        Log.debug(message: "TabBarController deinit")
+    }
 }

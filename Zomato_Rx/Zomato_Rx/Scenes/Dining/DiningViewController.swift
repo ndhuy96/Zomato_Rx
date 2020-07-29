@@ -6,7 +6,9 @@
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 
+import FBSDKLoginKit
 import Firebase
+import GoogleSignIn
 
 final class DiningViewController: UIViewController {
     override func viewDidLoad() {
@@ -21,9 +23,19 @@ final class DiningViewController: UIViewController {
         }
     }
 
+    deinit {
+        Log.debug(message: "DiningViewController deinit")
+    }
+
     private func signOut() {
+        guard Auth.auth().currentUser != nil,
+            UserDefaultsManager.shared.get(.loggedIn) else {
+            return
+        }
         do {
             try Auth.auth().signOut()
+            GIDSignIn.sharedInstance()?.signOut()
+            LoginManager().logOut()
             UserDefaultsManager.shared.set(.loggedIn, value: false)
             App.shared.backToHomeScreen()
         } catch let signOutError as NSError {

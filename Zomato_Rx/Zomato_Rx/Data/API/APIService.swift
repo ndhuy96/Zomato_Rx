@@ -13,8 +13,6 @@ protocol APIService {
 }
 
 final class APIServiceImpl: APIService {
-    private var alamoFireManager = Session.default
-
     func request<T: Decodable>(router: APIRouter) -> Single<T> {
         if !Reachability.isConnectedToNetwork() {
             return Single.error(APIError.networkError)

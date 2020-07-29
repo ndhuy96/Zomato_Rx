@@ -6,6 +6,8 @@
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 
+import GoogleSignIn
+
 final class HomeViewController: AutoScrollViewController, AutoScrollControllerType, BindableType {
     @IBOutlet private var skipButton: UIButton!
     @IBOutlet private var registerButton: UIButton!
@@ -24,6 +26,10 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
         super.viewDidLoad()
         setupView()
         config()
+    }
+
+    deinit {
+        Log.debug(message: "HomeViewController deinit")
     }
 
     private func setupView() {
@@ -45,17 +51,16 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
 
         // CollectionView's Settings
         dishesCollectionView.dataSource = self
+
+        // Google Sign In Settings
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
 
     func bindViewModel() {
         let input = HomeViewModel.Input(skipTrigger: skipButton.rx.tap.asDriver(),
                                         registerTrigger: registerButton.rx.tap.asDriver(),
-                                        loginWithFBTrigger: loginWithFBButton.rx.tap
-                                            .map { [unowned self] _ in self }
-                                            .asDriverOnErrorJustComplete(),
-                                        loginWithGgTrigger: loginWithGgButton.rx.tap
-                                            .map { [unowned self] _ in self }
-                                            .asDriverOnErrorJustComplete())
+                                        loginWithFBTrigger: loginWithFBButton.rx.tap.asDriver(),
+                                        loginWithGgTrigger: loginWithGgButton.rx.tap.asDriver())
 
         let output = viewModel.transform(input: input)
 
@@ -80,6 +85,19 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
 
         output.loginWithGg
             .drive()
+            .disposed(by: rx.disposeBag)
+
+        output.loading
+            .drive(SVProgressHUD.rx.isAnimating)
+            .disposed(by: rx.disposeBag)
+
+        output.error
+            .drive(onNext: { [weak self] error in
+                guard let self = self,
+                    let error = error as? SignInError,
+                    error != .cancelled else { return }
+                self.showAlert(message: error.message)
+            })
             .disposed(by: rx.disposeBag)
     }
 }

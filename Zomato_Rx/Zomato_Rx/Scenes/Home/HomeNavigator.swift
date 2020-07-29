@@ -11,12 +11,8 @@ protocol HomeNavigatable {
     func navigateToRegisterScreen()
 }
 
-final class HomeNavigator: HomeNavigatable {
-    private let navigationController: UINavigationController
-
-    init(_ navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
+struct HomeNavigator: HomeNavigatable {
+    unowned var navigationController: UINavigationController
 
     func navigateToTabBarScreen() {
         App.shared.moveToTabBarScreen()

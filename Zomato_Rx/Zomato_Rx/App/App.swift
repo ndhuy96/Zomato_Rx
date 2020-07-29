@@ -35,14 +35,14 @@ final class App {
         }
         window.rootViewController = tabBarController
 
+        let moveDown = CGAffineTransform(translationX: 0, y: window.frame.height)
         UIView.animate(withDuration: 0.3,
                        animations: {
-                           snapShot?.layer.opacity = 0
-                           snapShot?.layer.transform = CATransform3DMakeScale(1, 1, 1)
+                           snapShot?.transform = moveDown
                        },
                        completion: { _ in
                            snapShot?.removeFromSuperview()
-        })
+                       })
     }
 
     func backToHomeScreen() {
@@ -60,6 +60,6 @@ final class App {
                        },
                        completion: { _ in
                            snapShot?.removeFromSuperview()
-        })
+                       })
     }
 }

@@ -30,6 +30,11 @@ class AutoScrollViewController: UIViewController {
         config()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopAutoScroll()
+    }
+
     private func config() {
         // CollectionView's Settings
         infinityCollectionView.showsVerticalScrollIndicator = false

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Okra-Medium.ttf">
+            <string>Okra-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sign up-->
+        <scene sceneID="so8-gM-qll">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="o29-pZ-Y26" customClass="RegisterViewController" customModule="Zomato" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nSL-fl-2rQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8I-95-XRH" customClass="AnimatedField" customModule="AnimatedField">
+                                <rect key="frame" x="16" y="16" width="382" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="O0m-Jn-mWo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgG-oP-2Vl" customClass="AnimatedField" customModule="AnimatedField">
+                                <rect key="frame" x="16" y="85" width="382" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="uF7-yQ-1yb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpY-7E-6zT" customClass="AnimatedField" customModule="AnimatedField">
+                                <rect key="frame" x="16" y="154" width="382" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="KWy-bn-6RO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX0-y4-7ut" customClass="AnimatedField" customModule="AnimatedField">
+                                <rect key="frame" x="16" y="223" width="382" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="UKC-Dx-69L"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwv-Ew-Zo0">
+                                <rect key="frame" x="16" y="304" width="382" height="45"/>
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.3529411764705882" blue="0.37062643788343558" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Wa0-Wc-XM6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Okra-Medium" family="Okra" pointSize="15"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncm-g2-PKf">
+                                <rect key="frame" x="16" y="357" width="382" height="26"/>
+                                <fontDescription key="fontDescription" name="Okra-Medium" family="Okra" pointSize="10"/>
+                                <state key="normal" title="Already have an account? Login.">
+                                    <color key="titleColor" red="0.96180862190000005" green="0.44248777630000002" blue="0.486394465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YpY-7E-6zT" firstAttribute="centerX" secondItem="9C2-ZI-g2d" secondAttribute="centerX" id="4tn-Ib-z5C"/>
+                            <constraint firstItem="qX0-y4-7ut" firstAttribute="leading" secondItem="9C2-ZI-g2d" secondAttribute="leading" constant="16" id="Fyc-JM-EWo"/>
+                            <constraint firstItem="Dwv-Ew-Zo0" firstAttribute="centerX" secondItem="9C2-ZI-g2d" secondAttribute="centerX" id="I7v-8X-oWc"/>
+                            <constraint firstItem="Dwv-Ew-Zo0" firstAttribute="top" secondItem="qX0-y4-7ut" secondAttribute="bottom" constant="32" id="JmP-aW-iPw"/>
+                            <constraint firstItem="qX0-y4-7ut" firstAttribute="top" secondItem="YpY-7E-6zT" secondAttribute="bottom" constant="20" id="LgN-VU-Hht"/>
+                            <constraint firstItem="cgG-oP-2Vl" firstAttribute="top" secondItem="H8I-95-XRH" secondAttribute="bottom" constant="20" id="T6w-aL-5EL"/>
+                            <constraint firstItem="ncm-g2-PKf" firstAttribute="top" secondItem="Dwv-Ew-Zo0" secondAttribute="bottom" constant="8" id="YwR-oh-10T"/>
+                            <constraint firstItem="YpY-7E-6zT" firstAttribute="leading" secondItem="9C2-ZI-g2d" secondAttribute="leading" constant="16" id="avG-1d-PWX"/>
+                            <constraint firstItem="cgG-oP-2Vl" firstAttribute="leading" secondItem="9C2-ZI-g2d" secondAttribute="leading" constant="16" id="bGs-sn-Fwo"/>
+                            <constraint firstItem="qX0-y4-7ut" firstAttribute="centerX" secondItem="9C2-ZI-g2d" secondAttribute="centerX" id="bGu-at-BFX"/>
+                            <constraint firstItem="YpY-7E-6zT" firstAttribute="top" secondItem="cgG-oP-2Vl" secondAttribute="bottom" constant="20" id="gYe-HG-4Gu"/>
+                            <constraint firstItem="ncm-g2-PKf" firstAttribute="leading" secondItem="9C2-ZI-g2d" secondAttribute="leading" constant="16" id="ivf-ep-WaX"/>
+                            <constraint firstItem="H8I-95-XRH" firstAttribute="centerX" secondItem="9C2-ZI-g2d" secondAttribute="centerX" id="lvx-es-zgs"/>
+                            <constraint firstItem="Dwv-Ew-Zo0" firstAttribute="leading" secondItem="9C2-ZI-g2d" secondAttribute="leading" constant="16" id="q1f-JF-xrs"/>
+                            <constraint firstItem="H8I-95-XRH" firstAttribute="leading" secondItem="9C2-ZI-g2d" secondAttribute="leading" constant="16" id="q8P-Bc-ztk"/>
+                            <constraint firstItem="ncm-g2-PKf" firstAttribute="centerX" secondItem="9C2-ZI-g2d" secondAttribute="centerX" id="sji-0w-Fdf"/>
+                            <constraint firstItem="cgG-oP-2Vl" firstAttribute="centerX" secondItem="9C2-ZI-g2d" secondAttribute="centerX" id="slg-7a-U8r"/>
+                            <constraint firstItem="H8I-95-XRH" firstAttribute="top" secondItem="9C2-ZI-g2d" secondAttribute="top" constant="16" id="yOJ-kA-RXL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9C2-ZI-g2d"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign up" id="Zqu-7B-2yR">
+                        <barButtonItem key="leftBarButtonItem" image="ic-down-arrow" id="mby-F1-FDJ">
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="mby-F1-FDJ" id="yGM-FS-vAM"/>
+                        <outlet property="emailTextField" destination="cgG-oP-2Vl" id="RHh-jN-Fl0"/>
+                        <outlet property="nameTextField" destination="H8I-95-XRH" id="fqr-yv-vYb"/>
+                        <outlet property="passwordTextField" destination="YpY-7E-6zT" id="6lA-IF-Cl1"/>
+                        <outlet property="registerButton" destination="Dwv-Ew-Zo0" id="6qn-2x-54k"/>
+                        <outlet property="repasswordTextField" destination="qX0-y4-7ut" id="ffd-DA-41Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Z2-nC-KCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639.13043478260875" y="-41.517857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zwb-wR-NSh">
+            <objects>
+                <navigationController storyboardIdentifier="RegisterNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="K5b-u1-sSg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Oil-Qw-nGN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Okra-SemiBold" family="Okra" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o29-pZ-Y26" kind="relationship" relationship="rootViewController" id="xKb-dA-nnF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Itf-T9-zgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271.01449275362319" y="-41.517857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-down-arrow" width="18" height="18"/>
+    </resources>
+</document>

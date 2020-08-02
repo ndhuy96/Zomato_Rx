@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - AnimatedField (2.4.4)
   - AppAuth (1.4.0):
     - AppAuth/Core (= 1.4.0)
     - AppAuth/ExternalUserAgent (= 1.4.0)
@@ -65,6 +66,7 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - IHKeyboardAvoiding (4.7)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -91,9 +93,11 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AnimatedField
   - FBSDKLoginKit
   - Firebase/Auth
   - GoogleSignIn
+  - IHKeyboardAvoiding
   - "NSObject+Rx"
   - R.swift
   - RxCocoa
@@ -107,6 +111,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AnimatedField
     - AppAuth
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -120,6 +125,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
+    - IHKeyboardAvoiding
     - nanopb
     - "NSObject+Rx"
     - PromisesObjC
@@ -136,6 +142,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  AnimatedField: af48a2d59a50b33b30446267f7f2af274296203c
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
@@ -149,6 +156,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  IHKeyboardAvoiding: 4cae0880c3975feffa278495df894c5166e71ad0
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
@@ -163,6 +171,6 @@ SPEC CHECKSUMS:
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 8806f12c2a346efcb6a4beca3740a92b5ff2afee
+PODFILE CHECKSUM: 76d59bf5189246c59feb0c21f7bf313a58b320cb
 
 COCOAPODS: 1.8.4

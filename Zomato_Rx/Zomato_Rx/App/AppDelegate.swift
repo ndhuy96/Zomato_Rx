@@ -28,29 +28,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-//    func sign(_: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//        if let error = error {
-//            Log.debug(message: error.localizedDescription)
-//            return
-//        }
-//
-//        guard let authentication = user.authentication else { return }
-//        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-//                                                       accessToken: authentication.accessToken)
-//        // When user is signed in
-//        SVProgressHUD.show()
-//        Auth.auth().signIn(with: credential) { _, error in
-//            SVProgressHUD.dismiss()
-//            if let error = error {
-//                Log.debug(message: "Google Authentification Fail \(error.localizedDescription)")
-//                return
-//            } else {
-//                Log.debug(message: "Google Authentification Success")
-//                App.shared.moveToTabBarScreen()
-//            }
-//        }
-//    }
-
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         let facebookDidHandle = ApplicationDelegate.shared
             .application(app,

@@ -14,6 +14,9 @@ enum SignInResult {
 enum SignInError: Error {
     case tokenNotFound
     case cancelled
+    case invalidEmail
+    case invalidPassword
+    case invalidRepassword
 }
 
 extension SignInError {
@@ -23,6 +26,12 @@ extension SignInError {
             return "The operation couldn’t be completed because token was not found."
         case .cancelled:
             return "The operation was cancelled."
+        case .invalidEmail:
+            return "Your email address is invalid!"
+        case .invalidPassword:
+            return "Your password is invalid!"
+        case .invalidRepassword:
+            return "Your repeat password is invalid!"
         }
     }
 }

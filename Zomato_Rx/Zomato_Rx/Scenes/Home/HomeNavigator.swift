@@ -19,7 +19,7 @@ struct HomeNavigator: HomeNavigatable {
     }
 
     func navigateToRegisterScreen() {
-        guard let vc = R.storyboard.register.registerViewController() else { return }
+        guard let vc = R.storyboard.register.registerNavigationController() else { return }
         vc.modalPresentationStyle = .fullScreen
         navigationController.present(vc, animated: true, completion: nil)
     }

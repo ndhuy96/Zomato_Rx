@@ -20,6 +20,9 @@
 		043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */; };
 		048F2F6724C8468200D7674C /* GIDSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */; };
 		048F2F6924C87E3E00D7674C /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6824C87E3E00D7674C /* SignInError.swift */; };
+		04911ECF24D5A6EC005F4C27 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04911ED124D5A6EC005F4C27 /* Register.storyboard */; };
+		04911ED324D66EA8005F4C27 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911ED224D66EA8005F4C27 /* UIDevice+Extension.swift */; };
+		04911ED524D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911ED424D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift */; };
 		0495066C248946C90051C1C9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495066B248946C90051C1C9 /* R.generated.swift */; };
 		0495066F248A8AC50051C1C9 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495066E248A8AC50051C1C9 /* TabBar.storyboard */; };
 		04950671248A8B690051C1C9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04950670248A8B690051C1C9 /* Profile.storyboard */; };
@@ -69,7 +72,6 @@
 		04D622DD24BCAB93007EBAFF /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622DC24BCAB93007EBAFF /* HomeUseCase.swift */; };
 		04D622DF24BCB072007EBAFF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622DE24BCB072007EBAFF /* ActivityIndicator.swift */; };
 		04D622E124BCB320007EBAFF /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622E024BCB320007EBAFF /* SVProgressHUD+Rx.swift */; };
-		04D90347249E69D500DC690B /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D90346249E69D500DC690B /* Register.storyboard */; };
 		04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D90348249E69FE00DC690B /* RegisterViewController.swift */; };
 		04E8E8EB24AE31F000560CCA /* AutoScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EA24AE31F000560CCA /* AutoScrollViewController.swift */; };
 		04E8E8ED24AE384A00560CCA /* AutoScrollControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EC24AE384A00560CCA /* AutoScrollControllerType.swift */; };
@@ -79,7 +81,7 @@
 		8E756506248119D7004BC5CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E756504248119D7004BC5CE /* LaunchScreen.storyboard */; };
 		8E756511248119D7004BC5CE /* Zomato_RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E756510248119D7004BC5CE /* Zomato_RxTests.swift */; };
 		8E75651C248119D7004BC5CE /* Zomato_RxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */; };
-		A4021073DAFCB63A6204D494 /* libPods-Zomato_Rx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFBF8A02E1949D7C1BCB074 /* libPods-Zomato_Rx.a */; };
+		DC177DFA5EE57C9B12924FFA /* Pods_Zomato_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,9 @@
 		048F2F6224BDF96900D7674C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GIDSignIn+Rx.swift"; sourceTree = "<group>"; };
 		048F2F6824C87E3E00D7674C /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
+		04911ED024D5A6EC005F4C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
+		04911ED224D66EA8005F4C27 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		04911ED424D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewController+AnimatedText.swift"; sourceTree = "<group>"; };
 		0495066B248946C90051C1C9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		0495066E248A8AC50051C1C9 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		04950670248A8B690051C1C9 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -163,11 +168,11 @@
 		04D622DC24BCAB93007EBAFF /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		04D622DE24BCB072007EBAFF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		04D622E024BCB320007EBAFF /* SVProgressHUD+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Rx.swift"; sourceTree = "<group>"; };
-		04D90346249E69D500DC690B /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		04D90348249E69FE00DC690B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		04E1CF9B2487ECA1004DEEA7 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		04E8E8EA24AE31F000560CCA /* AutoScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollViewController.swift; sourceTree = "<group>"; };
 		04E8E8EC24AE384A00560CCA /* AutoScrollControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollControllerType.swift; sourceTree = "<group>"; };
+		679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zomato_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A1449224C1A7635B8AE8B /* Pods-Zomato_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.debug.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		8E7564F6248119D4004BC5CE /* Zomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7564F9248119D4004BC5CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,7 +187,6 @@
 		8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zomato_RxUITests.swift; sourceTree = "<group>"; };
 		8E75651D248119D7004BC5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D17A8BE73A4C8F2C53EC3FA /* Pods-Zomato_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.release.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.release.xcconfig"; sourceTree = "<group>"; };
-		9DFBF8A02E1949D7C1BCB074 /* libPods-Zomato_Rx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zomato_Rx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4021073DAFCB63A6204D494 /* libPods-Zomato_Rx.a in Frameworks */,
+				DC177DFA5EE57C9B12924FFA /* Pods_Zomato_Rx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +352,9 @@
 		04D90345249E69B400DC690B /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				04D90346249E69D500DC690B /* Register.storyboard */,
+				04911ED124D5A6EC005F4C27 /* Register.storyboard */,
 				04D90348249E69FE00DC690B /* RegisterViewController.swift */,
+				04911ED424D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				040987EB2494CDCA00EB220E /* UIView+Designable.swift */,
 				040987EF2494EE4A00EB220E /* UIButton+Extension.swift */,
 				04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */,
+				04911ED224D66EA8005F4C27 /* UIDevice+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -450,7 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				048F2F6224BDF96900D7674C /* Alamofire.framework */,
-				9DFBF8A02E1949D7C1BCB074 /* libPods-Zomato_Rx.a */,
+				679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 				0495066A24893FFA0051C1C9 /* R-Swift Run Script */,
 				8E7564F2248119D4004BC5CE /* Sources */,
 				3080F4C7C0F9BC9F3C34F2F3 /* [CP] Copy Pods Resources */,
+				A2FEA56C1B54585131B56280 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -627,7 +634,7 @@
 			files = (
 				049506B4248BAB760051C1C9 /* Home.storyboard in Resources */,
 				0495066F248A8AC50051C1C9 /* TabBar.storyboard in Resources */,
-				04D90347249E69D500DC690B /* Register.storyboard in Resources */,
+				04911ECF24D5A6EC005F4C27 /* Register.storyboard in Resources */,
 				049506BE248BB17C0051C1C9 /* Okra-SemiBold.ttf in Resources */,
 				049506BD248BB17C0051C1C9 /* Okra-Bold.ttf in Resources */,
 				049506BF248BB17C0051C1C9 /* Okra-Regular.ttf in Resources */,
@@ -754,6 +761,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A2FEA56C1B54585131B56280 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -802,11 +826,13 @@
 				049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */,
 				04950698248B9F250051C1C9 /* Reviews.swift in Sources */,
 				8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */,
+				04911ED524D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift in Sources */,
 				04D622DD24BCAB93007EBAFF /* HomeUseCase.swift in Sources */,
 				04D622D524B75267007EBAFF /* HomeAssembly.swift in Sources */,
 				049506A9248BA02B0051C1C9 /* PagingInfo.swift in Sources */,
 				0495067B248B9D960051C1C9 /* APIKey.swift in Sources */,
 				04D622DB24BCA99A007EBAFF /* LoginRepository.swift in Sources */,
+				04911ED324D66EA8005F4C27 /* UIDevice+Extension.swift in Sources */,
 				04950696248B9F140051C1C9 /* Restaurants.swift in Sources */,
 				0495067F248B9DD30051C1C9 /* APIRoute.swift in Sources */,
 				040987EE2494D06400EB220E /* HomeViewController.swift in Sources */,
@@ -852,6 +878,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		04911ED124D5A6EC005F4C27 /* Register.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04911ED024D5A6EC005F4C27 /* Base */,
+			);
+			name = Register.storyboard;
+			sourceTree = "<group>";
+		};
 		8E756504248119D7004BC5CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

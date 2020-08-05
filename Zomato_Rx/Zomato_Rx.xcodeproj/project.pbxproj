@@ -19,10 +19,30 @@
 		043B1DBB249CF93E0044EAAD /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DBA249CF93E0044EAAD /* ViewModelType.swift */; };
 		043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */; };
 		048F2F6724C8468200D7674C /* GIDSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */; };
-		048F2F6924C87E3E00D7674C /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6824C87E3E00D7674C /* SignInError.swift */; };
+		048F2F6924C87E3E00D7674C /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6824C87E3E00D7674C /* AuthError.swift */; };
 		04911ECF24D5A6EC005F4C27 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04911ED124D5A6EC005F4C27 /* Register.storyboard */; };
 		04911ED324D66EA8005F4C27 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911ED224D66EA8005F4C27 /* UIDevice+Extension.swift */; };
 		04911ED524D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911ED424D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift */; };
+		04911ED724D99325005F4C27 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911ED624D99325005F4C27 /* RegisterViewModel.swift */; };
+		04911ED924D99332005F4C27 /* RegisterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911ED824D99332005F4C27 /* RegisterNavigator.swift */; };
+		04911EDB24D9934B005F4C27 /* RegisterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EDA24D9934B005F4C27 /* RegisterAssembly.swift */; };
+		04911EDD24D9935A005F4C27 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EDC24D9935A005F4C27 /* RegisterUseCase.swift */; };
+		04911EE024D9950F005F4C27 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04911EDF24D9950F005F4C27 /* Login.storyboard */; };
+		04911EE224D99642005F4C27 /* RegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EE124D99642005F4C27 /* RegisterRepository.swift */; };
+		04911EF524DAF8C7005F4C27 /* AnimatedField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04911EEA24DAF8C6005F4C27 /* AnimatedField.xib */; };
+		04911EF624DAF8C7005F4C27 /* AnimatedField+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EEB24DAF8C6005F4C27 /* AnimatedField+TextFieldDelegate.swift */; };
+		04911EF824DAF8C7005F4C27 /* AnimatedField+UIPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EED24DAF8C6005F4C27 /* AnimatedField+UIPickerViewDelegate.swift */; };
+		04911EF924DAF8C7005F4C27 /* AnimatedFieldAlertPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EEE24DAF8C6005F4C27 /* AnimatedFieldAlertPosition.swift */; };
+		04911EFA24DAF8C7005F4C27 /* AnimatedField+TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EEF24DAF8C6005F4C27 /* AnimatedField+TextViewDelegate.swift */; };
+		04911EFB24DAF8C7005F4C27 /* AnimatedFieldFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EF024DAF8C6005F4C27 /* AnimatedFieldFormat.swift */; };
+		04911EFC24DAF8C7005F4C27 /* AnimatedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EF124DAF8C6005F4C27 /* AnimatedField.swift */; };
+		04911EFE24DAF8C7005F4C27 /* AnimatedField+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EF324DAF8C6005F4C27 /* AnimatedField+Protocols.swift */; };
+		04911EFF24DAF8C7005F4C27 /* AnimatedFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911EF424DAF8C6005F4C27 /* AnimatedFieldType.swift */; };
+		04911F0324DAFA80005F4C27 /* IconsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911F0224DAFA80005F4C27 /* IconsLibrary.swift */; };
+		04911F0824DAFA87005F4C27 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911F0424DAFA87005F4C27 /* UIView+Shake.swift */; };
+		04911F0924DAFA87005F4C27 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911F0524DAFA87005F4C27 /* UIView+Nib.swift */; };
+		04911F0A24DAFA87005F4C27 /* String+RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911F0624DAFA87005F4C27 /* String+RegEx.swift */; };
+		04911F0B24DAFA87005F4C27 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04911F0724DAFA87005F4C27 /* Date+Format.swift */; };
 		0495066C248946C90051C1C9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495066B248946C90051C1C9 /* R.generated.swift */; };
 		0495066F248A8AC50051C1C9 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0495066E248A8AC50051C1C9 /* TabBar.storyboard */; };
 		04950671248A8B690051C1C9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04950670248A8B690051C1C9 /* Profile.storyboard */; };
@@ -115,10 +135,30 @@
 		043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		048F2F6224BDF96900D7674C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GIDSignIn+Rx.swift"; sourceTree = "<group>"; };
-		048F2F6824C87E3E00D7674C /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
+		048F2F6824C87E3E00D7674C /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		04911ED024D5A6EC005F4C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		04911ED224D66EA8005F4C27 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		04911ED424D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewController+AnimatedText.swift"; sourceTree = "<group>"; };
+		04911ED624D99325005F4C27 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		04911ED824D99332005F4C27 /* RegisterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNavigator.swift; sourceTree = "<group>"; };
+		04911EDA24D9934B005F4C27 /* RegisterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembly.swift; sourceTree = "<group>"; };
+		04911EDC24D9935A005F4C27 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		04911EDF24D9950F005F4C27 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		04911EE124D99642005F4C27 /* RegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRepository.swift; sourceTree = "<group>"; };
+		04911EEA24DAF8C6005F4C27 /* AnimatedField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimatedField.xib; sourceTree = "<group>"; };
+		04911EEB24DAF8C6005F4C27 /* AnimatedField+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedField+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		04911EED24DAF8C6005F4C27 /* AnimatedField+UIPickerViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedField+UIPickerViewDelegate.swift"; sourceTree = "<group>"; };
+		04911EEE24DAF8C6005F4C27 /* AnimatedFieldAlertPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedFieldAlertPosition.swift; sourceTree = "<group>"; };
+		04911EEF24DAF8C6005F4C27 /* AnimatedField+TextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedField+TextViewDelegate.swift"; sourceTree = "<group>"; };
+		04911EF024DAF8C6005F4C27 /* AnimatedFieldFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedFieldFormat.swift; sourceTree = "<group>"; };
+		04911EF124DAF8C6005F4C27 /* AnimatedField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedField.swift; sourceTree = "<group>"; };
+		04911EF324DAF8C6005F4C27 /* AnimatedField+Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedField+Protocols.swift"; sourceTree = "<group>"; };
+		04911EF424DAF8C6005F4C27 /* AnimatedFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedFieldType.swift; sourceTree = "<group>"; };
+		04911F0224DAFA80005F4C27 /* IconsLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsLibrary.swift; sourceTree = "<group>"; };
+		04911F0424DAFA87005F4C27 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		04911F0524DAFA87005F4C27 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		04911F0624DAFA87005F4C27 /* String+RegEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RegEx.swift"; sourceTree = "<group>"; };
+		04911F0724DAFA87005F4C27 /* Date+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		0495066B248946C90051C1C9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		0495066E248A8AC50051C1C9 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		04950670248A8B690051C1C9 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -241,9 +281,54 @@
 				04D622DE24BCB072007EBAFF /* ActivityIndicator.swift */,
 				04D622E024BCB320007EBAFF /* SVProgressHUD+Rx.swift */,
 				048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */,
-				048F2F6824C87E3E00D7674C /* SignInError.swift */,
+				048F2F6824C87E3E00D7674C /* AuthError.swift */,
 			);
 			path = RxExtensions;
+			sourceTree = "<group>";
+		};
+		04911EDE24D994FE005F4C27 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04911EDF24D9950F005F4C27 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		04911EE924DAF893005F4C27 /* AnimatedField */ = {
+			isa = PBXGroup;
+			children = (
+				04911F0124DAFA59005F4C27 /* AnimatedField+Utils */,
+				04911F0024DAFA46005F4C27 /* AnimatedField+Extensions */,
+				04911EF124DAF8C6005F4C27 /* AnimatedField.swift */,
+				04911EEA24DAF8C6005F4C27 /* AnimatedField.xib */,
+				04911EF324DAF8C6005F4C27 /* AnimatedField+Protocols.swift */,
+				04911EEB24DAF8C6005F4C27 /* AnimatedField+TextFieldDelegate.swift */,
+				04911EEF24DAF8C6005F4C27 /* AnimatedField+TextViewDelegate.swift */,
+				04911EED24DAF8C6005F4C27 /* AnimatedField+UIPickerViewDelegate.swift */,
+				04911EEE24DAF8C6005F4C27 /* AnimatedFieldAlertPosition.swift */,
+				04911EF024DAF8C6005F4C27 /* AnimatedFieldFormat.swift */,
+				04911EF424DAF8C6005F4C27 /* AnimatedFieldType.swift */,
+			);
+			path = AnimatedField;
+			sourceTree = "<group>";
+		};
+		04911F0024DAFA46005F4C27 /* AnimatedField+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04911F0724DAFA87005F4C27 /* Date+Format.swift */,
+				04911F0624DAFA87005F4C27 /* String+RegEx.swift */,
+				04911F0524DAFA87005F4C27 /* UIView+Nib.swift */,
+				04911F0424DAFA87005F4C27 /* UIView+Shake.swift */,
+			);
+			path = "AnimatedField+Extensions";
+			sourceTree = "<group>";
+		};
+		04911F0124DAFA59005F4C27 /* AnimatedField+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04911F0224DAFA80005F4C27 /* IconsLibrary.swift */,
+			);
+			path = "AnimatedField+Utils";
 			sourceTree = "<group>";
 		};
 		0495066D248A8AA30051C1C9 /* Tabbar */ = {
@@ -355,6 +440,10 @@
 				04911ED124D5A6EC005F4C27 /* Register.storyboard */,
 				04D90348249E69FE00DC690B /* RegisterViewController.swift */,
 				04911ED424D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift */,
+				04911ED624D99325005F4C27 /* RegisterViewModel.swift */,
+				04911ED824D99332005F4C27 /* RegisterNavigator.swift */,
+				04911EDA24D9934B005F4C27 /* RegisterAssembly.swift */,
+				04911EDC24D9935A005F4C27 /* RegisterUseCase.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -383,6 +472,7 @@
 		04E1CF962487EA9C004DEEA7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				04911EE924DAF893005F4C27 /* AnimatedField */,
 				049506AC248BA2B20051C1C9 /* Constants.swift */,
 				049506AA248BA09E0051C1C9 /* Log.swift */,
 				049506AE248BA3240051C1C9 /* Reachability.swift */,
@@ -398,6 +488,7 @@
 			children = (
 				049506A6248B9FF00051C1C9 /* RestaurantsRepository.swift */,
 				04D622DA24BCA99A007EBAFF /* LoginRepository.swift */,
+				04911EE124D99642005F4C27 /* RegisterRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -414,6 +505,7 @@
 		04E1CF992487EABF004DEEA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				04911EDE24D994FE005F4C27 /* Login */,
 				04D90345249E69B400DC690B /* Register */,
 				049506B2248BAB590051C1C9 /* Home */,
 				0495066D248A8AA30051C1C9 /* Tabbar */,
@@ -640,6 +732,8 @@
 				049506BF248BB17C0051C1C9 /* Okra-Regular.ttf in Resources */,
 				8E756506248119D7004BC5CE /* LaunchScreen.storyboard in Resources */,
 				04950671248A8B690051C1C9 /* Profile.storyboard in Resources */,
+				04911EE024D9950F005F4C27 /* Login.storyboard in Resources */,
+				04911EF524DAF8C7005F4C27 /* AnimatedField.xib in Resources */,
 				049506BC248BB17C0051C1C9 /* Okra-Light.ttf in Resources */,
 				04950677248B5FCA0051C1C9 /* Dining.storyboard in Resources */,
 				8E756503248119D7004BC5CE /* Assets.xcassets in Resources */,
@@ -795,6 +889,7 @@
 				0495068C248B9EA10051C1C9 /* Photo.swift in Sources */,
 				04E8E8ED24AE384A00560CCA /* AutoScrollControllerType.swift in Sources */,
 				043B1DB3249BAE510044EAAD /* DeviceInfo.swift in Sources */,
+				04911ED924D99332005F4C27 /* RegisterNavigator.swift in Sources */,
 				8E7564FE248119D4004BC5CE /* DiningViewController.swift in Sources */,
 				0495068A248B9E8C0051C1C9 /* Location.swift in Sources */,
 				043B1DB5249BB43F0044EAAD /* HomeViewModel.swift in Sources */,
@@ -806,29 +901,41 @@
 				043B1DB9249BB5300044EAAD /* HomeNavigator.swift in Sources */,
 				04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */,
 				0495069E248B9F6B0051C1C9 /* UserRating.swift in Sources */,
+				04911F0A24DAFA87005F4C27 /* String+RegEx.swift in Sources */,
+				04911F0324DAFA80005F4C27 /* IconsLibrary.swift in Sources */,
+				04911EF624DAF8C7005F4C27 /* AnimatedField+TextFieldDelegate.swift in Sources */,
 				04950688248B9E770051C1C9 /* HasMenuStatus.swift in Sources */,
-				048F2F6924C87E3E00D7674C /* SignInError.swift in Sources */,
+				04911F0B24DAFA87005F4C27 /* Date+Format.swift in Sources */,
+				048F2F6924C87E3E00D7674C /* AuthError.swift in Sources */,
 				04950692248B9EE60051C1C9 /* Restaurant.swift in Sources */,
+				04911EF824DAF8C7005F4C27 /* AnimatedField+UIPickerViewDelegate.swift in Sources */,
 				049506AD248BA2B20051C1C9 /* Constants.swift in Sources */,
 				043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */,
 				04D622D324B60EDD007EBAFF /* TabBarController.swift in Sources */,
+				04911EF924DAF8C7005F4C27 /* AnimatedFieldAlertPosition.swift in Sources */,
 				040987F02494EE4A00EB220E /* UIButton+Extension.swift in Sources */,
 				0495069C248B9F560051C1C9 /* User.swift in Sources */,
 				04950684248B9E400051C1C9 /* AllReviews.swift in Sources */,
 				04D622D124B6032F007EBAFF /* App.swift in Sources */,
+				04911EFF24DAF8C7005F4C27 /* AnimatedFieldType.swift in Sources */,
+				04911EFA24DAF8C7005F4C27 /* AnimatedField+TextViewDelegate.swift in Sources */,
 				04950686248B9E5D0051C1C9 /* BgColor.swift in Sources */,
 				04D622DF24BCB072007EBAFF /* ActivityIndicator.swift in Sources */,
+				04911EDD24D9935A005F4C27 /* RegisterUseCase.swift in Sources */,
 				0495067D248B9DB30051C1C9 /* APIService.swift in Sources */,
 				04D622CF24B4C5DD007EBAFF /* UIViewController+Extension.swift in Sources */,
 				049506A7248B9FF00051C1C9 /* RestaurantsRepository.swift in Sources */,
 				04D622E124BCB320007EBAFF /* SVProgressHUD+Rx.swift in Sources */,
+				04911EFE24DAF8C7005F4C27 /* AnimatedField+Protocols.swift in Sources */,
 				0495068E248B9EB40051C1C9 /* Photos.swift in Sources */,
+				04911EFC24DAF8C7005F4C27 /* AnimatedField.swift in Sources */,
 				049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */,
 				04950698248B9F250051C1C9 /* Reviews.swift in Sources */,
 				8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */,
 				04911ED524D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift in Sources */,
 				04D622DD24BCAB93007EBAFF /* HomeUseCase.swift in Sources */,
 				04D622D524B75267007EBAFF /* HomeAssembly.swift in Sources */,
+				04911ED724D99325005F4C27 /* RegisterViewModel.swift in Sources */,
 				049506A9248BA02B0051C1C9 /* PagingInfo.swift in Sources */,
 				0495067B248B9D960051C1C9 /* APIKey.swift in Sources */,
 				04D622DB24BCA99A007EBAFF /* LoginRepository.swift in Sources */,
@@ -838,10 +945,15 @@
 				040987EE2494D06400EB220E /* HomeViewController.swift in Sources */,
 				049506A5248B9FC80051C1C9 /* RestaurantDetail.swift in Sources */,
 				040987EC2494CDCA00EB220E /* UIView+Designable.swift in Sources */,
+				04911EDB24D9934B005F4C27 /* RegisterAssembly.swift in Sources */,
 				04D622D724B76136007EBAFF /* BindableType.swift in Sources */,
 				0495066C248946C90051C1C9 /* R.generated.swift in Sources */,
 				04950681248B9DEE0051C1C9 /* APIError.swift in Sources */,
+				04911EFB24DAF8C7005F4C27 /* AnimatedFieldFormat.swift in Sources */,
+				04911EE224D99642005F4C27 /* RegisterRepository.swift in Sources */,
+				04911F0924DAFA87005F4C27 /* UIView+Nib.swift in Sources */,
 				043B1DBB249CF93E0044EAAD /* ViewModelType.swift in Sources */,
+				04911F0824DAFA87005F4C27 /* UIView+Shake.swift in Sources */,
 				048F2F6724C8468200D7674C /* GIDSignIn+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

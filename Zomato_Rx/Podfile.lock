@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (5.2.1)
-  - AnimatedField (2.4.4)
   - AppAuth (1.4.0):
     - AppAuth/Core (= 1.4.0)
     - AppAuth/ExternalUserAgent (= 1.4.0)
@@ -93,7 +92,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - AnimatedField
   - FBSDKLoginKit
   - Firebase/Auth
   - GoogleSignIn
@@ -111,7 +109,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AnimatedField
     - AppAuth
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -142,7 +139,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-  AnimatedField: af48a2d59a50b33b30446267f7f2af274296203c
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
@@ -171,6 +167,6 @@ SPEC CHECKSUMS:
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 76d59bf5189246c59feb0c21f7bf313a58b320cb
+PODFILE CHECKSUM: 91d1960af81fcea8bd87f6bf3faa0f1c790cb653
 
 COCOAPODS: 1.8.4

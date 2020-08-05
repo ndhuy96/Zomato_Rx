@@ -149,6 +149,7 @@ opt_in_rules: # các rule được thêm vào
   - yoda_condition
 excluded: # đường dẫn bỏ qua việc kiểm tra
   - Pods
+  - Zomato_Rx/Utils/AnimatedField
   - "*.generated.swift"
 
 # hiển thị warning khi sử dụng force casting

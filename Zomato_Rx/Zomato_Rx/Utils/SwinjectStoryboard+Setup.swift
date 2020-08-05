@@ -28,15 +28,27 @@ extension SwinjectStoryboard {
         }
         .inObjectScope(.container)
 
+        defaultContainer.register(RegisterRepository.self) { _ in
+            RegisterRepositoryImpl()
+        }
+        .inObjectScope(.container)
+
         defaultContainer.storyboardInitCompleted(HomeViewController.self) { r, c in
             let assembler = Assembler([HomeAssembly()])
             let loginRepository = r.resolve(LoginRepository.self)!
-            guard let vm = assembler.resolver.resolve(HomeViewModel.self, arguments: c, loginRepository) else { return }
+            guard let vm = assembler.resolver.resolve(HomeViewModel.self,
+                                                      arguments: c,
+                                                      loginRepository) else { return }
             c.bindViewModel(to: vm)
         }
 
-        defaultContainer.storyboardInitCompleted(DiningViewController.self) { _, _ in
-//            c.api = r.resolve(RestaurantsRepository.self)
+        defaultContainer.storyboardInitCompleted(RegisterViewController.self) { r, c in
+            let assembler = Assembler([RegisterAssembly()])
+            let registerRepository = r.resolve(RegisterRepository.self)!
+            guard let vm = assembler.resolver.resolve(RegisterViewModel.self,
+                                                      arguments: c,
+                                                      registerRepository) else { return }
+            c.bindViewModel(to: vm)
         }
     }
 }

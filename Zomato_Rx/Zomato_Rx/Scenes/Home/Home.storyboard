@@ -219,10 +219,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="bdW-b5-7mk"/>
                     <connections>
+                        <outlet property="continueWithEmailButton" destination="DFn-fM-cA6" id="mhe-AA-hRI"/>
                         <outlet property="dishesCollectionView" destination="PHL-LA-WmQ" id="VLD-it-qBB"/>
                         <outlet property="loginWithFBButton" destination="Int-em-94V" id="eb8-DW-xqG"/>
                         <outlet property="loginWithGgButton" destination="BU7-xi-9f6" id="Lc6-PF-bZi"/>
-                        <outlet property="registerButton" destination="DFn-fM-cA6" id="mhe-AA-hRI"/>
                         <outlet property="skipButton" destination="7jE-aZ-jBb" id="v9b-d4-8Wq"/>
                     </connections>
                 </viewController>

@@ -98,11 +98,11 @@ extension RegisterViewController: AnimatedFieldDataSource {
 
     func animatedFieldValidationError(_ animatedField: AnimatedField) -> String? {
         if animatedField == emailTextField {
-            return SignInError.invalidEmail.message
+            return AuthError.invalidEmail.message
         } else if animatedField == passwordTextField {
-            return SignInError.invalidPassword.message
+            return AuthError.invalidPassword.message
         } else if animatedField == repasswordTextField {
-            return SignInError.invalidRepassword.message
+            return AuthError.invalidRepassword.message
         }
         return nil
     }

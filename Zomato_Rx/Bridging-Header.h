@@ -14,5 +14,4 @@
 @import SwinjectStoryboard;
 @import NSObject_Rx;
 @import SVProgressHUD;
-@import AnimatedField;
 @import IHKeyboardAvoiding;

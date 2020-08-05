@@ -20,9 +20,9 @@ extension Reactive where Base: LoginManager {
                     singleEvent(.success(token))
                 case let .failed(err):
                     Log.debug(message: "Failed to login Facebook with error: \(err.localizedDescription)")
-                    singleEvent(.error(SignInError.tokenNotFound))
+                    singleEvent(.error(AuthError.tokenNotFound))
                 case .cancelled:
-                    singleEvent(.error(SignInError.cancelled))
+                    singleEvent(.error(AuthError.cancelled))
                 }
             }
 

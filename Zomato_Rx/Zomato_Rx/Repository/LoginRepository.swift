@@ -14,7 +14,7 @@ import GoogleSignIn
 protocol LoginRepository {
     func loginFacebook(_ vc: UIViewController) -> Single<AccessToken>
     func loginGoogle() -> Single<GIDAuthentication>
-    func signIntoFirebase(_ credential: AuthCredential) -> Single<SignInResult>
+    func signIntoFirebase(_ credential: AuthCredential) -> Single<AuthResult>
 }
 
 final class LoginRepositoryImpl: LoginRepository {
@@ -32,19 +32,19 @@ final class LoginRepositoryImpl: LoginRepository {
                     singleEvent(.success(user.authentication))
                 }, onError: { err in
                     Log.debug(message: "Failed to login Google with error: \(err.localizedDescription)")
-                    singleEvent(.error(err))
+                    singleEvent(.error(AuthError.tokenNotFound))
                 })
                 .disposed(by: disposeBag)
             return Disposables.create()
         }
     }
 
-    func signIntoFirebase(_ credential: AuthCredential) -> Single<SignInResult> {
-        return Single<SignInResult>.create { singleEvent in
+    func signIntoFirebase(_ credential: AuthCredential) -> Single<AuthResult> {
+        return Single<AuthResult>.create { singleEvent in
             Auth.auth().signIn(with: credential) { _, err in
                 if let err = err {
-                    Log.debug(message: "Sign up error: \(err.localizedDescription)")
-                    singleEvent(.error(err))
+                    Log.debug(message: "Sign in error: \(err.localizedDescription)")
+                    singleEvent(.error(AuthError.cannotLogin))
                     return
                 }
                 Log.debug(message: "successfully authenticated with Firebase")

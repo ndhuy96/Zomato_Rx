@@ -1,5 +1,6 @@
 # file options
 --exclude Pods
+--exclude Zomato_Rx/Utils/AnimatedField
 
 # rules
 --disable elseOnSameLine,semicolons

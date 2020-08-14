@@ -6,26 +6,32 @@
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 
-enum SignInResult {
+enum AuthResult {
     case success
     case failure
 }
 
-enum SignInError: Error {
+enum AuthError: Error {
     case tokenNotFound
     case cancelled
+    case cannotLogin
+    case cannotRegister
     case invalidEmail
     case invalidPassword
     case invalidRepassword
 }
 
-extension SignInError {
+extension AuthError {
     var message: String {
         switch self {
         case .tokenNotFound:
             return "The operation couldn’t be completed because token was not found."
         case .cancelled:
             return "The operation was cancelled."
+        case .cannotLogin:
+            return "The login process couldn't be completed. Please try again!"
+        case .cannotRegister:
+            return "The register process couldn't be completed. Please try again!"
         case .invalidEmail:
             return "Your email address is invalid!"
         case .invalidPassword:

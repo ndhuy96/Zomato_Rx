@@ -10,7 +10,7 @@ import GoogleSignIn
 
 final class HomeViewController: AutoScrollViewController, AutoScrollControllerType, BindableType {
     @IBOutlet private var skipButton: UIButton!
-    @IBOutlet private var registerButton: UIButton!
+    @IBOutlet private var continueWithEmailButton: UIButton!
     @IBOutlet private var loginWithFBButton: UIButton!
     @IBOutlet private var loginWithGgButton: UIButton!
     @IBOutlet private var dishesCollectionView: InfinityCollectionView!
@@ -58,7 +58,7 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
 
     func bindViewModel() {
         let input = HomeViewModel.Input(skipTrigger: skipButton.rx.tap.asDriver(),
-                                        registerTrigger: registerButton.rx.tap.asDriver(),
+                                        continueWithEmailTrigger: continueWithEmailButton.rx.tap.asDriver(),
                                         loginWithFBTrigger: loginWithFBButton.rx.tap.asDriver(),
                                         loginWithGgTrigger: loginWithGgButton.rx.tap.asDriver())
 
@@ -75,7 +75,7 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
             .drive()
             .disposed(by: rx.disposeBag)
 
-        output.register
+        output.continueWithEmail
             .drive()
             .disposed(by: rx.disposeBag)
 
@@ -94,7 +94,7 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
         output.error
             .drive(onNext: { [weak self] error in
                 guard let self = self,
-                    let error = error as? SignInError,
+                    let error = error as? AuthError,
                     error != .cancelled else { return }
                 self.showAlert(message: error.message)
             })

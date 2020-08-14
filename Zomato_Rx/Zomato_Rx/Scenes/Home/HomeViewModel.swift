@@ -14,7 +14,7 @@ import GoogleSignIn
 struct HomeViewModel: ViewModelType {
     struct Input {
         let skipTrigger: Driver<Void>
-        let registerTrigger: Driver<Void>
+        let continueWithEmailTrigger: Driver<Void>
         let loginWithFBTrigger: Driver<Void>
         let loginWithGgTrigger: Driver<Void>
     }
@@ -22,7 +22,7 @@ struct HomeViewModel: ViewModelType {
     struct Output {
         let banners: Driver<[String]>
         let skip: Driver<Void>
-        let register: Driver<Void>
+        let continueWithEmail: Driver<Void>
         let loginWithFB: Driver<Void>
         let loginWithGg: Driver<Void>
         let loading: Driver<Bool>
@@ -56,7 +56,7 @@ struct HomeViewModel: ViewModelType {
                 self.dependencies.navigator.navigateToTabBarScreen()
             })
 
-        let register = input.registerTrigger
+        let continueWithEmail = input.continueWithEmailTrigger
             .do(onNext: {
                 self.dependencies.navigator.navigateToRegisterScreen()
             })
@@ -71,7 +71,7 @@ struct HomeViewModel: ViewModelType {
                     .trackError(errorTracker)
                     .asDriverOnErrorJustComplete()
             }
-            .flatMapLatest { token -> Driver<SignInResult> in
+            .flatMapLatest { token -> Driver<AuthResult> in
                 let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
                 return self.dependencies.useCase.signIntoFirebase(credential)
                     .trackActivity(activityIndicator)
@@ -92,7 +92,7 @@ struct HomeViewModel: ViewModelType {
                     .trackError(errorTracker)
                     .asDriverOnErrorJustComplete()
             }
-            .flatMapLatest { auth -> Driver<SignInResult> in
+            .flatMapLatest { auth -> Driver<AuthResult> in
                 let credential = GoogleAuthProvider.credential(withIDToken: auth.idToken,
                                                                accessToken: auth.accessToken)
                 return self.dependencies.useCase.signIntoFirebase(credential)
@@ -112,7 +112,7 @@ struct HomeViewModel: ViewModelType {
 
         return Output(banners: banners,
                       skip: skip,
-                      register: register,
+                      continueWithEmail: continueWithEmail,
                       loginWithFB: loginWithFB,
                       loginWithGg: loginWithGg,
                       loading: loading,

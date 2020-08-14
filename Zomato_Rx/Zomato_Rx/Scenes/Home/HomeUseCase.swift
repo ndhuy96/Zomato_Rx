@@ -13,7 +13,7 @@ import GoogleSignIn
 protocol HomeUseCaseType {
     func loginFacebook() -> Single<AccessToken>
     func loginGoogle() -> Single<GIDAuthentication>
-    func signIntoFirebase(_ credential: AuthCredential) -> Single<SignInResult>
+    func signIntoFirebase(_ credential: AuthCredential) -> Single<AuthResult>
 }
 
 struct HomeUseCase: HomeUseCaseType {
@@ -28,7 +28,7 @@ struct HomeUseCase: HomeUseCaseType {
         return repository.loginGoogle()
     }
 
-    func signIntoFirebase(_ credential: AuthCredential) -> Single<SignInResult> {
+    func signIntoFirebase(_ credential: AuthCredential) -> Single<AuthResult> {
         return repository.signIntoFirebase(credential)
     }
 }

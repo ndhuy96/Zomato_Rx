@@ -30,6 +30,11 @@ class AutoScrollViewController: UIViewController {
         config()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setAutoScrollSpeed(kAutoScrollSpeed)
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         stopAutoScroll()
@@ -42,8 +47,6 @@ class AutoScrollViewController: UIViewController {
         infinityCollectionView.scrollsToTop = false
         infinityCollectionView.isUserInteractionEnabled = false
         infinityCollectionView.numberOfSets = kCollectionViewNumberOfSets
-
-        setAutoScrollSpeed(kAutoScrollSpeed)
     }
 
     private func setAutoScrollSpeed(_ autoScrollSpeed: CGFloat) {

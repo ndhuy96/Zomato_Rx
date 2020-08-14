@@ -21,28 +21,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8I-95-XRH" customClass="AnimatedField" customModule="AnimatedField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8I-95-XRH" customClass="AnimatedField" customModule="Zomato" customModuleProvider="target">
                                 <rect key="frame" x="16" y="16" width="382" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="O0m-Jn-mWo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgG-oP-2Vl" customClass="AnimatedField" customModule="AnimatedField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgG-oP-2Vl" customClass="AnimatedField" customModule="Zomato" customModuleProvider="target">
                                 <rect key="frame" x="16" y="85" width="382" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="uF7-yQ-1yb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpY-7E-6zT" customClass="AnimatedField" customModule="AnimatedField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpY-7E-6zT" customClass="AnimatedField" customModule="Zomato" customModuleProvider="target">
                                 <rect key="frame" x="16" y="154" width="382" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="KWy-bn-6RO"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX0-y4-7ut" customClass="AnimatedField" customModule="AnimatedField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX0-y4-7ut" customClass="AnimatedField" customModule="Zomato" customModuleProvider="target">
                                 <rect key="frame" x="16" y="223" width="382" height="49"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -103,6 +103,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="mby-F1-FDJ" id="yGM-FS-vAM"/>
+                        <outlet property="continueWithLoginButton" destination="ncm-g2-PKf" id="P1W-fh-DNw"/>
                         <outlet property="emailTextField" destination="cgG-oP-2Vl" id="RHh-jN-Fl0"/>
                         <outlet property="nameTextField" destination="H8I-95-XRH" id="fqr-yv-vYb"/>
                         <outlet property="passwordTextField" destination="YpY-7E-6zT" id="6lA-IF-Cl1"/>

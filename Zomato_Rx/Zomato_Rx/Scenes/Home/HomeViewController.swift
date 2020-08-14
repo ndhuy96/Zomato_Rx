@@ -45,12 +45,11 @@ final class HomeViewController: AutoScrollViewController, AutoScrollControllerTy
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = kCollectionViewLineSpacing
         layout.scrollDirection = .horizontal
-        let widthContent = UIScreen.main.bounds.width
-        layout.itemSize = CGSize(width: widthContent, height: widthContent)
         dishesCollectionView.collectionViewLayout = layout
 
         // CollectionView's Settings
         dishesCollectionView.dataSource = self
+        dishesCollectionView.delegate = self
 
         // Google Sign In Settings
         GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -118,5 +117,12 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.configCell(item)
         }
         return cell
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
+        let widthContent = UIScreen.main.bounds.width
+        return CGSize(width: widthContent, height: dishesCollectionView.frame.height)
     }
 }

@@ -24,8 +24,7 @@ final class RegisterViewController: UIViewController, BindableType {
     }
 
     private func config() {
-        guard let navController = navigationController else { return }
-        navController.navigationBar.shadowImage = UIImage()
+        setNavigationBarWithoutBottomLine()
         hideKeyboardWhenTap()
 
         // RegisterButton

@@ -7,21 +7,85 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Okra-Medium.ttf">
+            <string>Okra-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="d8T-Ie-BBD">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Yu5-47-3Rl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Login" id="Yu5-47-3Rl" customClass="LoginViewController" customModule="Zomato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b3X-ZW-iyO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvx-d8-wmq" customClass="AnimatedField" customModule="Zomato" customModuleProvider="target">
+                                <rect key="frame" x="16" y="60" width="382" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="HJa-Dr-rp9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-Gr-Wx3" customClass="AnimatedField" customModule="Zomato" customModuleProvider="target">
+                                <rect key="frame" x="16" y="129" width="382" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="3p1-6X-2Wa"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHH-Lo-PZ2">
+                                <rect key="frame" x="16" y="263" width="382" height="26"/>
+                                <fontDescription key="fontDescription" name="Okra-Medium" family="Okra" pointSize="10"/>
+                                <state key="normal" title="Don't have an account? Signup.">
+                                    <color key="titleColor" red="0.96180862190000005" green="0.44248777630000002" blue="0.486394465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPI-GD-NSx">
+                                <rect key="frame" x="16" y="210" width="382" height="45"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.35294117650000001" blue="0.37062643789999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Bk7-QJ-VCx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Okra-Medium" family="Okra" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fvx-d8-wmq" firstAttribute="centerX" secondItem="zVq-Qc-3Q7" secondAttribute="centerX" id="4L0-9O-K95"/>
+                            <constraint firstItem="vPI-GD-NSx" firstAttribute="centerX" secondItem="zVq-Qc-3Q7" secondAttribute="centerX" id="63p-Cz-xAN"/>
+                            <constraint firstItem="1Yg-Gr-Wx3" firstAttribute="top" secondItem="Fvx-d8-wmq" secondAttribute="bottom" constant="20" id="Nbj-O3-MDV"/>
+                            <constraint firstItem="Fvx-d8-wmq" firstAttribute="leading" secondItem="zVq-Qc-3Q7" secondAttribute="leading" constant="16" id="OD0-ec-AeA"/>
+                            <constraint firstItem="FHH-Lo-PZ2" firstAttribute="centerX" secondItem="zVq-Qc-3Q7" secondAttribute="centerX" id="Riu-Cf-HRf"/>
+                            <constraint firstItem="FHH-Lo-PZ2" firstAttribute="leading" secondItem="zVq-Qc-3Q7" secondAttribute="leading" constant="16" id="ZFx-IF-0ni"/>
+                            <constraint firstItem="1Yg-Gr-Wx3" firstAttribute="leading" secondItem="zVq-Qc-3Q7" secondAttribute="leading" constant="16" id="bCq-St-c4c"/>
+                            <constraint firstItem="vPI-GD-NSx" firstAttribute="leading" secondItem="zVq-Qc-3Q7" secondAttribute="leading" constant="16" id="fNM-45-81Y"/>
+                            <constraint firstItem="Fvx-d8-wmq" firstAttribute="top" secondItem="zVq-Qc-3Q7" secondAttribute="top" constant="16" id="mPE-o1-8c4"/>
+                            <constraint firstItem="vPI-GD-NSx" firstAttribute="top" secondItem="1Yg-Gr-Wx3" secondAttribute="bottom" constant="32" id="oFB-ES-LME"/>
+                            <constraint firstItem="FHH-Lo-PZ2" firstAttribute="top" secondItem="vPI-GD-NSx" secondAttribute="bottom" constant="8" id="ofW-Au-SAH"/>
+                            <constraint firstItem="1Yg-Gr-Wx3" firstAttribute="centerX" secondItem="zVq-Qc-3Q7" secondAttribute="centerX" id="uV4-tH-CVJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zVq-Qc-3Q7"/>
                     </view>
+                    <connections>
+                        <outlet property="continueWithSignUpButton" destination="FHH-Lo-PZ2" id="nvc-8c-NVE"/>
+                        <outlet property="emailTextField" destination="Fvx-d8-wmq" id="icC-Ng-yOB"/>
+                        <outlet property="loginButton" destination="vPI-GD-NSx" id="tPe-zT-6MW"/>
+                        <outlet property="passwordTextField" destination="1Yg-Gr-Wx3" id="Ayc-Db-Rj3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AaR-pE-17C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="119"/>
+            <point key="canvasLocation" x="160.86956521739131" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>

@@ -24,6 +24,7 @@ extension RegisterViewController: AnimatedFieldDelegate {
         nameTextField.dataSource = self
         nameTextField.delegate = self
         nameTextField.type = .username(4, 30)
+        _ = nameTextField.becomeFirstResponder()
 
         // EmailTextField
         emailTextField.format = format

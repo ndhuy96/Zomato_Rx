@@ -63,7 +63,7 @@ struct RegisterViewModel: ViewModelType {
                     .trackActivity(activityIndicator)
                     .trackError(errorTracker)
                     .asDriverOnErrorJustComplete()
-                return Driver.combineLatest(accountInfo, validUserName) { ($0, $1) }.asDriver()
+                return Driver.combineLatest(accountInfo, validUserName) { ($0, $1) }
             }
             .flatMapLatest { userInfo -> Driver<AuthResult> in
                 let (userData, userName) = userInfo

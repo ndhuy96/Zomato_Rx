@@ -18,6 +18,8 @@
 		043B1DB9249BB5300044EAAD /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DB8249BB5300044EAAD /* HomeNavigator.swift */; };
 		043B1DBB249CF93E0044EAAD /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DBA249CF93E0044EAAD /* ViewModelType.swift */; };
 		043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */; };
+		04427F0124E6D62900E3B5DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04427F0024E6D62900E3B5DC /* LoginViewController.swift */; };
+		04427F0324E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04427F0224E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift */; };
 		048F2F6724C8468200D7674C /* GIDSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */; };
 		048F2F6924C87E3E00D7674C /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6824C87E3E00D7674C /* AuthError.swift */; };
 		04911ECF24D5A6EC005F4C27 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04911ED124D5A6EC005F4C27 /* Register.storyboard */; };
@@ -133,6 +135,8 @@
 		043B1DB8249BB5300044EAAD /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		043B1DBA249CF93E0044EAAD /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		04427F0024E6D62900E3B5DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04427F0224E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+AnimatedText.swift"; sourceTree = "<group>"; };
 		048F2F6224BDF96900D7674C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GIDSignIn+Rx.swift"; sourceTree = "<group>"; };
 		048F2F6824C87E3E00D7674C /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				04911EDF24D9950F005F4C27 /* Login.storyboard */,
+				04427F0024E6D62900E3B5DC /* LoginViewController.swift */,
+				04427F0224E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -900,6 +906,7 @@
 				04950694248B9EFF0051C1C9 /* RestaurantInfo.swift in Sources */,
 				043B1DB9249BB5300044EAAD /* HomeNavigator.swift in Sources */,
 				04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */,
+				04427F0124E6D62900E3B5DC /* LoginViewController.swift in Sources */,
 				0495069E248B9F6B0051C1C9 /* UserRating.swift in Sources */,
 				04911F0A24DAFA87005F4C27 /* String+RegEx.swift in Sources */,
 				04911F0324DAFA80005F4C27 /* IconsLibrary.swift in Sources */,
@@ -918,6 +925,7 @@
 				04950684248B9E400051C1C9 /* AllReviews.swift in Sources */,
 				04D622D124B6032F007EBAFF /* App.swift in Sources */,
 				04911EFF24DAF8C7005F4C27 /* AnimatedFieldType.swift in Sources */,
+				04427F0324E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift in Sources */,
 				04911EFA24DAF8C7005F4C27 /* AnimatedField+TextViewDelegate.swift in Sources */,
 				04950686248B9E5D0051C1C9 /* BgColor.swift in Sources */,
 				04D622DF24BCB072007EBAFF /* ActivityIndicator.swift in Sources */,

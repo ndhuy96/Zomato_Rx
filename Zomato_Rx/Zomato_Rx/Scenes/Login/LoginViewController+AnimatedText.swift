@@ -9,31 +9,16 @@
 // swiftlint:disable force_unwrapping
 extension LoginViewController: AnimatedFieldDelegate {
     func setupAnimatedTextField() {
-        // AnimatedFieldFormat
-        var format = AnimatedFieldFormat()
-        format.titleFont = UIFont(name: R.font.okraLight.fontName, size: 12)!
-        format.alertFont = UIFont(name: R.font.okraMedium.fontName, size: 12)!
-        format.textFont = UIFont(name: R.font.okraLight.fontName, size: 14)!
-        format.alertColor = .red
-        format.alertFieldActive = false
-        format.titleAlwaysVisible = true
-
         // EmailTextField
-        emailTextField.format = format
-        emailTextField.placeholder = "Email"
-        emailTextField.dataSource = self
-        emailTextField.delegate = self
-        emailTextField.type = .email
+        emailTextField.setFormat(type: .email,
+                                 placeHolder: "Email",
+                                 vc: self)
         _ = emailTextField.becomeFirstResponder()
 
         // PasswordTextField
-        passwordTextField.format = format
-        passwordTextField.placeholder = "Password"
-        passwordTextField.dataSource = self
-        passwordTextField.delegate = self
-        passwordTextField.type = .password(6, 30)
-        passwordTextField.isSecure = true
-        passwordTextField.showVisibleButton = true
+        passwordTextField.setFormat(type: .password(6, 30),
+                                    placeHolder: "Password",
+                                    vc: self)
     }
 
     func animatedFieldShouldReturn(_ animatedField: AnimatedField) -> Bool {

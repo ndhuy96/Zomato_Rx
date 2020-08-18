@@ -9,46 +9,26 @@
 // swiftlint:disable force_unwrapping
 extension RegisterViewController: AnimatedFieldDelegate {
     func setupAnimatedTextField() {
-        // AnimatedFieldFormat
-        var format = AnimatedFieldFormat()
-        format.titleFont = UIFont(name: R.font.okraLight.fontName, size: 12)!
-        format.alertFont = UIFont(name: R.font.okraMedium.fontName, size: 12)!
-        format.textFont = UIFont(name: R.font.okraLight.fontName, size: 14)!
-        format.alertColor = .red
-        format.alertFieldActive = false
-        format.titleAlwaysVisible = true
-
         // NameTextField
-        nameTextField.format = format
-        nameTextField.placeholder = "Name"
-        nameTextField.dataSource = self
-        nameTextField.delegate = self
-        nameTextField.type = .username(4, 30)
+        nameTextField.setFormat(type: .username(4, 30),
+                                placeHolder: "Name",
+                                vc: self)
         _ = nameTextField.becomeFirstResponder()
 
         // EmailTextField
-        emailTextField.format = format
-        emailTextField.placeholder = "Email"
-        emailTextField.dataSource = self
-        emailTextField.delegate = self
-        emailTextField.type = .email
+        emailTextField.setFormat(type: .email,
+                                 placeHolder: "Email",
+                                 vc: self)
 
         // PasswordTextField
-        passwordTextField.format = format
-        passwordTextField.placeholder = "New password (min 6, max 30)"
-        passwordTextField.dataSource = self
-        passwordTextField.delegate = self
-        passwordTextField.type = .password(6, 30)
-        passwordTextField.isSecure = true
-        passwordTextField.showVisibleButton = true
+        passwordTextField.setFormat(type: .password(6, 30),
+                                    placeHolder: "New password (min 6, max 30)",
+                                    vc: self)
 
         // RepasswordTextField
-        repasswordTextField.format = format
-        repasswordTextField.placeholder = "Repeat password"
-        repasswordTextField.dataSource = self
-        repasswordTextField.delegate = self
-        repasswordTextField.type = .password(6, 30)
-        repasswordTextField.isSecure = true
+        repasswordTextField.setFormat(type: .password(6, 30),
+                                      placeHolder: "Repeat password",
+                                      vc: self)
     }
 
     func animatedFieldDidBeginEditing(_ animatedField: AnimatedField) {

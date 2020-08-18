@@ -103,6 +103,7 @@
 		8E756506248119D7004BC5CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E756504248119D7004BC5CE /* LaunchScreen.storyboard */; };
 		8E756511248119D7004BC5CE /* Zomato_RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E756510248119D7004BC5CE /* Zomato_RxTests.swift */; };
 		8E75651C248119D7004BC5CE /* Zomato_RxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */; };
+		8EF4129B24EB6B8100849F05 /* AnimatedField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4129A24EB6B8100849F05 /* AnimatedField+Extension.swift */; };
 		DC177DFA5EE57C9B12924FFA /* Pods_Zomato_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */; };
 /* End PBXBuildFile section */
 
@@ -230,6 +231,7 @@
 		8E756517248119D7004BC5CE /* Zomato_RxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zomato_RxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zomato_RxUITests.swift; sourceTree = "<group>"; };
 		8E75651D248119D7004BC5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EF4129A24EB6B8100849F05 /* AnimatedField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatedField+Extension.swift"; sourceTree = "<group>"; };
 		9D17A8BE73A4C8F2C53EC3FA /* Pods-Zomato_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.release.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -314,6 +316,7 @@
 				04911EEE24DAF8C6005F4C27 /* AnimatedFieldAlertPosition.swift */,
 				04911EF024DAF8C6005F4C27 /* AnimatedFieldFormat.swift */,
 				04911EF424DAF8C6005F4C27 /* AnimatedFieldType.swift */,
+				8EF4129A24EB6B8100849F05 /* AnimatedField+Extension.swift */,
 			);
 			path = AnimatedField;
 			sourceTree = "<group>";
@@ -936,6 +939,7 @@
 				04D622E124BCB320007EBAFF /* SVProgressHUD+Rx.swift in Sources */,
 				04911EFE24DAF8C7005F4C27 /* AnimatedField+Protocols.swift in Sources */,
 				0495068E248B9EB40051C1C9 /* Photos.swift in Sources */,
+				8EF4129B24EB6B8100849F05 /* AnimatedField+Extension.swift in Sources */,
 				04911EFC24DAF8C7005F4C27 /* AnimatedField.swift in Sources */,
 				049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */,
 				04950698248B9F250051C1C9 /* Reviews.swift in Sources */,

@@ -20,6 +20,10 @@
 		043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */; };
 		04427F0124E6D62900E3B5DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04427F0024E6D62900E3B5DC /* LoginViewController.swift */; };
 		04427F0324E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04427F0224E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift */; };
+		04427F0524E7A56200E3B5DC /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04427F0424E7A56200E3B5DC /* LoginUseCase.swift */; };
+		04427F0724E7A57200E3B5DC /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04427F0624E7A57200E3B5DC /* LoginNavigator.swift */; };
+		04427F0924E7A58700E3B5DC /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04427F0824E7A58700E3B5DC /* LoginAssembly.swift */; };
+		04427F0B24E7A59A00E3B5DC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04427F0A24E7A59A00E3B5DC /* LoginViewModel.swift */; };
 		048F2F6724C8468200D7674C /* GIDSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */; };
 		048F2F6924C87E3E00D7674C /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F2F6824C87E3E00D7674C /* AuthError.swift */; };
 		04911ECF24D5A6EC005F4C27 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04911ED124D5A6EC005F4C27 /* Register.storyboard */; };
@@ -97,13 +101,13 @@
 		04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D90348249E69FE00DC690B /* RegisterViewController.swift */; };
 		04E8E8EB24AE31F000560CCA /* AutoScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EA24AE31F000560CCA /* AutoScrollViewController.swift */; };
 		04E8E8ED24AE384A00560CCA /* AutoScrollControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EC24AE384A00560CCA /* AutoScrollControllerType.swift */; };
+		04FE78A524ED6E7700914CA1 /* AnimatedField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE78A424ED6E7700914CA1 /* AnimatedField+Extension.swift */; };
 		8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564F9248119D4004BC5CE /* AppDelegate.swift */; };
 		8E7564FE248119D4004BC5CE /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564FD248119D4004BC5CE /* DiningViewController.swift */; };
 		8E756503248119D7004BC5CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E756502248119D7004BC5CE /* Assets.xcassets */; };
 		8E756506248119D7004BC5CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E756504248119D7004BC5CE /* LaunchScreen.storyboard */; };
 		8E756511248119D7004BC5CE /* Zomato_RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E756510248119D7004BC5CE /* Zomato_RxTests.swift */; };
 		8E75651C248119D7004BC5CE /* Zomato_RxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */; };
-		8EF4129B24EB6B8100849F05 /* AnimatedField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4129A24EB6B8100849F05 /* AnimatedField+Extension.swift */; };
 		DC177DFA5EE57C9B12924FFA /* Pods_Zomato_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,8 +140,13 @@
 		043B1DB8249BB5300044EAAD /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		043B1DBA249CF93E0044EAAD /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		043B1DBC249D0C9B0044EAAD /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		043D8DD024EC1BB6008D2C64 /* AnimatedField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatedField+Extension.swift"; sourceTree = "<group>"; };
 		04427F0024E6D62900E3B5DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04427F0224E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+AnimatedText.swift"; sourceTree = "<group>"; };
+		04427F0424E7A56200E3B5DC /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		04427F0624E7A57200E3B5DC /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
+		04427F0824E7A58700E3B5DC /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		04427F0A24E7A59A00E3B5DC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		048F2F6224BDF96900D7674C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GIDSignIn+Rx.swift"; sourceTree = "<group>"; };
 		048F2F6824C87E3E00D7674C /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -217,6 +226,7 @@
 		04E1CF9B2487ECA1004DEEA7 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		04E8E8EA24AE31F000560CCA /* AutoScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollViewController.swift; sourceTree = "<group>"; };
 		04E8E8EC24AE384A00560CCA /* AutoScrollControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollControllerType.swift; sourceTree = "<group>"; };
+		04FE78A424ED6E7700914CA1 /* AnimatedField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedField+Extension.swift"; sourceTree = "<group>"; };
 		679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zomato_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A1449224C1A7635B8AE8B /* Pods-Zomato_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.debug.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		8E7564F6248119D4004BC5CE /* Zomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,7 +241,6 @@
 		8E756517248119D7004BC5CE /* Zomato_RxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zomato_RxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zomato_RxUITests.swift; sourceTree = "<group>"; };
 		8E75651D248119D7004BC5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EF4129A24EB6B8100849F05 /* AnimatedField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatedField+Extension.swift"; sourceTree = "<group>"; };
 		9D17A8BE73A4C8F2C53EC3FA /* Pods-Zomato_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.release.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -298,6 +307,10 @@
 				04911EDF24D9950F005F4C27 /* Login.storyboard */,
 				04427F0024E6D62900E3B5DC /* LoginViewController.swift */,
 				04427F0224E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift */,
+				04427F0424E7A56200E3B5DC /* LoginUseCase.swift */,
+				04427F0624E7A57200E3B5DC /* LoginNavigator.swift */,
+				04427F0824E7A58700E3B5DC /* LoginAssembly.swift */,
+				04427F0A24E7A59A00E3B5DC /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -305,6 +318,7 @@
 		04911EE924DAF893005F4C27 /* AnimatedField */ = {
 			isa = PBXGroup;
 			children = (
+				04FE78A424ED6E7700914CA1 /* AnimatedField+Extension.swift */,
 				04911F0124DAFA59005F4C27 /* AnimatedField+Utils */,
 				04911F0024DAFA46005F4C27 /* AnimatedField+Extensions */,
 				04911EF124DAF8C6005F4C27 /* AnimatedField.swift */,
@@ -316,7 +330,6 @@
 				04911EEE24DAF8C6005F4C27 /* AnimatedFieldAlertPosition.swift */,
 				04911EF024DAF8C6005F4C27 /* AnimatedFieldFormat.swift */,
 				04911EF424DAF8C6005F4C27 /* AnimatedFieldType.swift */,
-				8EF4129A24EB6B8100849F05 /* AnimatedField+Extension.swift */,
 			);
 			path = AnimatedField;
 			sourceTree = "<group>";
@@ -544,6 +557,14 @@
 			path = AutoScrollViewController;
 			sourceTree = "<group>";
 		};
+		04FE78A124ED6AF500914CA1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				043D8DD024EC1BB6008D2C64 /* AnimatedField+Extension.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		461C7642511ABAA5C92B9317 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +595,7 @@
 				8E7564F7248119D4004BC5CE /* Products */,
 				461C7642511ABAA5C92B9317 /* Pods */,
 				73E8093090330A9015A66BD5 /* Frameworks */,
+				04FE78A124ED6AF500914CA1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -895,6 +917,7 @@
 				04D622D924B994B6007EBAFF /* UserDefaultsManager.swift in Sources */,
 				043B1DB0249BAD970044EAAD /* DishesCell.swift in Sources */,
 				049506AB248BA09E0051C1C9 /* Log.swift in Sources */,
+				04427F0924E7A58700E3B5DC /* LoginAssembly.swift in Sources */,
 				0495068C248B9EA10051C1C9 /* Photo.swift in Sources */,
 				04E8E8ED24AE384A00560CCA /* AutoScrollControllerType.swift in Sources */,
 				043B1DB3249BAE510044EAAD /* DeviceInfo.swift in Sources */,
@@ -911,6 +934,7 @@
 				04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */,
 				04427F0124E6D62900E3B5DC /* LoginViewController.swift in Sources */,
 				0495069E248B9F6B0051C1C9 /* UserRating.swift in Sources */,
+				04427F0524E7A56200E3B5DC /* LoginUseCase.swift in Sources */,
 				04911F0A24DAFA87005F4C27 /* String+RegEx.swift in Sources */,
 				04911F0324DAFA80005F4C27 /* IconsLibrary.swift in Sources */,
 				04911EF624DAF8C7005F4C27 /* AnimatedField+TextFieldDelegate.swift in Sources */,
@@ -922,6 +946,7 @@
 				049506AD248BA2B20051C1C9 /* Constants.swift in Sources */,
 				043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */,
 				04D622D324B60EDD007EBAFF /* TabBarController.swift in Sources */,
+				04427F0724E7A57200E3B5DC /* LoginNavigator.swift in Sources */,
 				04911EF924DAF8C7005F4C27 /* AnimatedFieldAlertPosition.swift in Sources */,
 				040987F02494EE4A00EB220E /* UIButton+Extension.swift in Sources */,
 				0495069C248B9F560051C1C9 /* User.swift in Sources */,
@@ -931,6 +956,7 @@
 				04427F0324E6D86C00E3B5DC /* LoginViewController+AnimatedText.swift in Sources */,
 				04911EFA24DAF8C7005F4C27 /* AnimatedField+TextViewDelegate.swift in Sources */,
 				04950686248B9E5D0051C1C9 /* BgColor.swift in Sources */,
+				04427F0B24E7A59A00E3B5DC /* LoginViewModel.swift in Sources */,
 				04D622DF24BCB072007EBAFF /* ActivityIndicator.swift in Sources */,
 				04911EDD24D9935A005F4C27 /* RegisterUseCase.swift in Sources */,
 				0495067D248B9DB30051C1C9 /* APIService.swift in Sources */,
@@ -939,7 +965,6 @@
 				04D622E124BCB320007EBAFF /* SVProgressHUD+Rx.swift in Sources */,
 				04911EFE24DAF8C7005F4C27 /* AnimatedField+Protocols.swift in Sources */,
 				0495068E248B9EB40051C1C9 /* Photos.swift in Sources */,
-				8EF4129B24EB6B8100849F05 /* AnimatedField+Extension.swift in Sources */,
 				04911EFC24DAF8C7005F4C27 /* AnimatedField.swift in Sources */,
 				049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */,
 				04950698248B9F250051C1C9 /* Reviews.swift in Sources */,
@@ -947,6 +972,7 @@
 				04911ED524D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift in Sources */,
 				04D622DD24BCAB93007EBAFF /* HomeUseCase.swift in Sources */,
 				04D622D524B75267007EBAFF /* HomeAssembly.swift in Sources */,
+				04FE78A524ED6E7700914CA1 /* AnimatedField+Extension.swift in Sources */,
 				04911ED724D99325005F4C27 /* RegisterViewModel.swift in Sources */,
 				049506A9248BA02B0051C1C9 /* PagingInfo.swift in Sources */,
 				0495067B248B9D960051C1C9 /* APIKey.swift in Sources */,

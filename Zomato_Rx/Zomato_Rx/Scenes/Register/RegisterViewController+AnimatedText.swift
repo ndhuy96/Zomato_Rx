@@ -10,7 +10,7 @@
 extension RegisterViewController: AnimatedFieldDelegate {
     func setupAnimatedTextField() {
         // NameTextField
-        nameTextField.setFormat(type: .username(4, 30),
+        nameTextField.setFormat(type: .username(6, 30),
                                 placeHolder: "Name",
                                 vc: self)
         _ = nameTextField.becomeFirstResponder()

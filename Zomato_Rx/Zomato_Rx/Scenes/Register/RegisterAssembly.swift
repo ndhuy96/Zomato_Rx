@@ -11,8 +11,9 @@
 final class RegisterAssembly: Assembly {
     func assemble(container: Container) {
         container.register(RegisterViewModel.self) {
-            (_, c: RegisterViewController, registerRepository: RegisterRepository) in
-            let registerNavigator = RegisterNavigator(navigationController: c.navigationController!)
+            (_, c: RegisterViewController, registerRepository: RegisterRepository, loginRepository: LoginRepository) in
+            let registerNavigator = RegisterNavigator(navigationController: c.navigationController!,
+                                                      loginRepository: loginRepository)
             let registerUseCase = RegisterUseCase(repository: registerRepository)
             return RegisterViewModel(dependencies: RegisterViewModel.Dependencies(useCase: registerUseCase,
                                                                                   navigator: registerNavigator))

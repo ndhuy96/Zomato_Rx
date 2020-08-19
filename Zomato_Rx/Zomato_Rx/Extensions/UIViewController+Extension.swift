@@ -35,4 +35,29 @@ extension UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
+
+    func setNavigationBarWithoutBottomLine() {
+        guard let navController = navigationController else { return }
+        navController.navigationBar.shadowImage = UIImage()
+    }
+
+    func addBackButton(with image: UIImage) {
+        let backButton = UIButton()
+        backButton.setImage(image, for: .normal)
+        backButton.sizeToFit()
+        backButton.addTarget(self,
+                             action: #selector(backButtonClick),
+                             for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: backButton)
+        navigationItem.leftBarButtonItem = barButton
+
+        // Setting a custom back button disable the swipe back feature.
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
+
+    @objc
+    func backButtonClick() {
+        navigationController?.popViewController(animated: true)
+    }
 }

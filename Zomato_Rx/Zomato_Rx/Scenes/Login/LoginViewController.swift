@@ -58,8 +58,7 @@ final class LoginViewController: UIViewController, BindableType {
 
         output.error
             .drive(onNext: { [weak self] error in
-                guard let self = self else { return }
-                self.showAlert(message: error.localizedDescription)
+                self?.showAlert(message: error.localizedDescription)
             })
             .disposed(by: rx.disposeBag)
     }

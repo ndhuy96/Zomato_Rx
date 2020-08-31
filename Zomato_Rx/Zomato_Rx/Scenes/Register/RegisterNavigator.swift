@@ -14,6 +14,7 @@ protocol RegisterNavigatable {
 
 struct RegisterNavigator: RegisterNavigatable {
     unowned var navigationController: UINavigationController
+    var loginRepository: LoginRepository
 
     func goBack() {
         navigationController.dismiss(animated: true)
@@ -25,6 +26,13 @@ struct RegisterNavigator: RegisterNavigatable {
 
     func navigateToLoginScreen() {
         guard let vc = R.storyboard.login.loginViewController() else { return }
+        let assembler = Assembler([LoginAssembly()])
+
+        guard let vm = assembler.resolver.resolve(LoginViewModel.self,
+                                                  arguments: loginRepository,
+                                                  navigationController) else { return }
+        vc.bindViewModel(to: vm)
+
         navigationController.pushViewController(vc, animated: true)
     }
 }

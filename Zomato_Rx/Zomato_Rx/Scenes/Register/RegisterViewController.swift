@@ -32,6 +32,10 @@ final class RegisterViewController: UIViewController, BindableType {
         registerButton.alpha = 0.3
     }
 
+    deinit {
+        Log.debug(message: "RegisterViewController deinit")
+    }
+
     func bindViewModel() {
         let input = RegisterViewModel.Input(username: nameTextField.textField.rx.text.orEmpty.asDriver(),
                                             email: emailTextField.textField.rx.text.orEmpty.asDriver(),

@@ -2,7 +2,7 @@
 //  AnimatedField+Extension.swift
 //  Zomato_Rx
 //
-//  Created by Nguyen Duc Huy B on 8/18/20.
+//  Created by Nguyen Duc Huy on 8/19/20.
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 

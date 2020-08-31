@@ -45,9 +45,11 @@ extension SwinjectStoryboard {
         defaultContainer.storyboardInitCompleted(RegisterViewController.self) { r, c in
             let assembler = Assembler([RegisterAssembly()])
             let registerRepository = r.resolve(RegisterRepository.self)!
+            let loginRepository = r.resolve(LoginRepository.self)!
             guard let vm = assembler.resolver.resolve(RegisterViewModel.self,
                                                       arguments: c,
-                                                      registerRepository) else { return }
+                                                      registerRepository,
+                                                      loginRepository) else { return }
             c.bindViewModel(to: vm)
         }
     }

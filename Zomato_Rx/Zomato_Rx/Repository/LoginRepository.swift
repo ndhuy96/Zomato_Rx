@@ -14,6 +14,7 @@ import GoogleSignIn
 protocol LoginRepository {
     func loginFacebook(_ vc: UIViewController) -> Single<AccessToken>
     func loginGoogle() -> Single<GIDAuthentication>
+    func loginFirebase(email: String, password: String) -> Single<AuthResult>
     func signIntoFirebase(_ credential: AuthCredential) -> Single<AuthResult>
 }
 
@@ -35,6 +36,21 @@ final class LoginRepositoryImpl: LoginRepository {
                     singleEvent(.error(AuthError.tokenNotFound))
                 })
                 .disposed(by: disposeBag)
+            return Disposables.create()
+        }
+    }
+
+    func loginFirebase(email: String, password: String) -> Single<AuthResult> {
+        return Single<AuthResult>.create { singleEvent in
+            Auth.auth().signIn(withEmail: email, password: password) { _, err in
+                if let err = err {
+                    Log.debug(message: "Login to Firebase error: \(err.localizedDescription)")
+                    singleEvent(.error(err))
+                    return
+                }
+                Log.debug(message: "Login to Firebase successfully")
+                singleEvent(.success(.success))
+            }
             return Disposables.create()
         }
     }

@@ -6,40 +6,37 @@
 //  Copyright © 2020 nguyen.duc.huyb. All rights reserved.
 //
 
-import FBSDKLoginKit
-import Firebase
-import GoogleSignIn
-
 final class DiningViewController: UIViewController {
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var cuisineTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        config()
     }
 
-    @IBAction func handleSignOutButtonTapped(_: Any) {
-        showAlert(message: "Do you want to sign out of Zomato?", okMessage: "Sign Out") { [weak self] in
-            self?.signOut()
-            return
-        }
+    private func config() {
+        locationButton.titleLabel?.numberOfLines = 1
+        locationButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        locationButton.titleLabel?.lineBreakMode = .byClipping
+
+        cuisineTableView.delegate = self
+        cuisineTableView.dataSource = self
+    }
+}
+
+extension DiningViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
+        return 100
     }
 
-    deinit {
-        Log.debug(message: "DiningViewController deinit")
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return 10
     }
 
-    private func signOut() {
-        guard Auth.auth().currentUser != nil,
-            UserDefaultsManager.shared.get(.loggedIn) else {
-            return
-        }
-        do {
-            try Auth.auth().signOut()
-            GIDSignIn.sharedInstance()?.signOut()
-            LoginManager().logOut()
-            UserDefaultsManager.shared.set(.loggedIn, value: false)
-            App.shared.backToHomeScreen()
-        } catch let signOutError as NSError {
-            Log.debug(message: "Error signing out: \(signOutError)")
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt _: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(CuisineCell.self)
+        cell.configCell()
+        return cell
     }
 }

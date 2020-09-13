@@ -11,6 +11,8 @@
 		040987EE2494D06400EB220E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040987ED2494D06400EB220E /* HomeViewController.swift */; };
 		040987F02494EE4A00EB220E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040987EF2494EE4A00EB220E /* UIButton+Extension.swift */; };
 		040B510D24A793660028FEA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040B510C24A793660028FEA0 /* GoogleService-Info.plist */; };
+		04264A00250E2C8E008CE0B0 /* CuisineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042649FF250E2C8E008CE0B0 /* CuisineCell.swift */; };
+		04264A02250E3401008CE0B0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04264A01250E3401008CE0B0 /* UITableView+Extension.swift */; };
 		043B1DAD249BABF80044EAAD /* InfinityCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DAC249BABF80044EAAD /* InfinityCollectionView.swift */; };
 		043B1DB0249BAD970044EAAD /* DishesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DAF249BAD970044EAAD /* DishesCell.swift */; };
 		043B1DB3249BAE510044EAAD /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B1DB2249BAE510044EAAD /* DeviceInfo.swift */; };
@@ -133,6 +135,8 @@
 		040987ED2494D06400EB220E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		040987EF2494EE4A00EB220E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		040B510C24A793660028FEA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		042649FF250E2C8E008CE0B0 /* CuisineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineCell.swift; sourceTree = "<group>"; };
+		04264A01250E3401008CE0B0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		043B1DAC249BABF80044EAAD /* InfinityCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityCollectionView.swift; sourceTree = "<group>"; };
 		043B1DAF249BAD970044EAAD /* DishesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesCell.swift; sourceTree = "<group>"; };
 		043B1DB2249BAE510044EAAD /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
@@ -487,6 +491,7 @@
 				040987EF2494EE4A00EB220E /* UIButton+Extension.swift */,
 				04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */,
 				04911ED224D66EA8005F4C27 /* UIDevice+Extension.swift */,
+				04264A01250E3401008CE0B0 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 			children = (
 				04950676248B5FCA0051C1C9 /* Dining.storyboard */,
 				8E7564FD248119D4004BC5CE /* DiningViewController.swift */,
+				042649FF250E2C8E008CE0B0 /* CuisineCell.swift */,
 			);
 			path = Dining;
 			sourceTree = "<group>";
@@ -962,10 +968,12 @@
 				0495067D248B9DB30051C1C9 /* APIService.swift in Sources */,
 				04D622CF24B4C5DD007EBAFF /* UIViewController+Extension.swift in Sources */,
 				049506A7248B9FF00051C1C9 /* RestaurantsRepository.swift in Sources */,
+				04264A00250E2C8E008CE0B0 /* CuisineCell.swift in Sources */,
 				04D622E124BCB320007EBAFF /* SVProgressHUD+Rx.swift in Sources */,
 				04911EFE24DAF8C7005F4C27 /* AnimatedField+Protocols.swift in Sources */,
 				0495068E248B9EB40051C1C9 /* Photos.swift in Sources */,
 				04911EFC24DAF8C7005F4C27 /* AnimatedField.swift in Sources */,
+				04264A02250E3401008CE0B0 /* UITableView+Extension.swift in Sources */,
 				049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */,
 				04950698248B9F250051C1C9 /* Reviews.swift in Sources */,
 				8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */,

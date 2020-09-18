@@ -23,6 +23,7 @@ def pods
   pod 'NSObject+Rx'
   pod 'SVProgressHUD',:modular_headers => true
   pod 'IHKeyboardAvoiding'
+  pod 'Kingfisher', '~> 5.15'
 
 end
 

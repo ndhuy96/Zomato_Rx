@@ -33,7 +33,7 @@ final class LoginRepositoryImpl: LoginRepository {
                     singleEvent(.success(user.authentication))
                 }, onError: { err in
                     Log.debug(message: "Failed to login Google with error: \(err.localizedDescription)")
-                    singleEvent(.error(AuthError.tokenNotFound))
+                    singleEvent(.error(AuthError.cancelled))
                 })
                 .disposed(by: disposeBag)
             return Disposables.create()

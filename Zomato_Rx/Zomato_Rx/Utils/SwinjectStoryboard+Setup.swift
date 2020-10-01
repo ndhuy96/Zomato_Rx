@@ -52,5 +52,14 @@ extension SwinjectStoryboard {
                                                       loginRepository) else { return }
             c.bindViewModel(to: vm)
         }
+
+        defaultContainer.storyboardInitCompleted(DiningViewController.self) { r, c in
+            let assembler = Assembler([DiningAssembly()])
+            let restaurantsRepository = r.resolve(RestaurantsRepository.self)!
+            guard let vm = assembler.resolver.resolve(DiningViewModel.self,
+                                                      arguments: c,
+                                                      restaurantsRepository) else { return }
+            c.bindViewModel(to: vm)
+        }
     }
 }

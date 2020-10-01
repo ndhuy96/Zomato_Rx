@@ -74,7 +74,7 @@
 		0495069A248B9F420051C1C9 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04950699248B9F420051C1C9 /* Title.swift */; };
 		0495069C248B9F560051C1C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495069B248B9F560051C1C9 /* User.swift */; };
 		0495069E248B9F6B0051C1C9 /* UserRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495069D248B9F6B0051C1C9 /* UserRating.swift */; };
-		049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495069F248B9F850051C1C9 /* JSONAny.swift */; };
+		049506A0248B9F850051C1C9 /* ValueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495069F248B9F850051C1C9 /* ValueWrapper.swift */; };
 		049506A3248B9FAD0051C1C9 /* ListRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049506A2248B9FAD0051C1C9 /* ListRestaurants.swift */; };
 		049506A5248B9FC80051C1C9 /* RestaurantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049506A4248B9FC80051C1C9 /* RestaurantDetail.swift */; };
 		049506A7248B9FF00051C1C9 /* RestaurantsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049506A6248B9FF00051C1C9 /* RestaurantsRepository.swift */; };
@@ -89,6 +89,13 @@
 		049506BD248BB17C0051C1C9 /* Okra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506B8248BB17C0051C1C9 /* Okra-Bold.ttf */; };
 		049506BE248BB17C0051C1C9 /* Okra-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506B9248BB17C0051C1C9 /* Okra-SemiBold.ttf */; };
 		049506BF248BB17C0051C1C9 /* Okra-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049506BA248BB17C0051C1C9 /* Okra-Regular.ttf */; };
+		049DE04D251A43FB008CEC3D /* DiningNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE04C251A43FB008CEC3D /* DiningNavigator.swift */; };
+		049DE04F251A45AB008CEC3D /* DiningUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE04E251A45AB008CEC3D /* DiningUseCase.swift */; };
+		049DE051251A466C008CEC3D /* DiningAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE050251A466C008CEC3D /* DiningAssembly.swift */; };
+		049DE053251A46AF008CEC3D /* DiningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE052251A46AF008CEC3D /* DiningViewModel.swift */; };
+		049DE056251A4A31008CEC3D /* ViewModelType+LoadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE055251A4A31008CEC3D /* ViewModelType+LoadMore.swift */; };
+		049DE058251A54CD008CEC3D /* LoadMoreTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE057251A54CD008CEC3D /* LoadMoreTableView.swift */; };
+		049DE05A251A555C008CEC3D /* RefreshAutoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE059251A555C008CEC3D /* RefreshAutoFooter.swift */; };
 		04D622CD24B35BAB007EBAFF /* FBSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622CC24B35BAB007EBAFF /* FBSignIn+Rx.swift */; };
 		04D622CF24B4C5DD007EBAFF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */; };
 		04D622D124B6032F007EBAFF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D622D024B6032F007EBAFF /* App.swift */; };
@@ -103,6 +110,7 @@
 		04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D90348249E69FE00DC690B /* RegisterViewController.swift */; };
 		04E8E8EB24AE31F000560CCA /* AutoScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EA24AE31F000560CCA /* AutoScrollViewController.swift */; };
 		04E8E8ED24AE384A00560CCA /* AutoScrollControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8E8EC24AE384A00560CCA /* AutoScrollControllerType.swift */; };
+		04FB221825223C7B0005D872 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB221725223C7B0005D872 /* UIColor+Extension.swift */; };
 		04FE78A524ED6E7700914CA1 /* AnimatedField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE78A424ED6E7700914CA1 /* AnimatedField+Extension.swift */; };
 		8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564F9248119D4004BC5CE /* AppDelegate.swift */; };
 		8E7564FE248119D4004BC5CE /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7564FD248119D4004BC5CE /* DiningViewController.swift */; };
@@ -110,7 +118,7 @@
 		8E756506248119D7004BC5CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E756504248119D7004BC5CE /* LaunchScreen.storyboard */; };
 		8E756511248119D7004BC5CE /* Zomato_RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E756510248119D7004BC5CE /* Zomato_RxTests.swift */; };
 		8E75651C248119D7004BC5CE /* Zomato_RxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */; };
-		DC177DFA5EE57C9B12924FFA /* Pods_Zomato_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */; };
+		AFFED8BC6595FFE5CD0925CF /* Pods_Zomato_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64DF16630ADF8739CF342E8 /* Pods_Zomato_Rx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,7 +208,7 @@
 		04950699248B9F420051C1C9 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		0495069B248B9F560051C1C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0495069D248B9F6B0051C1C9 /* UserRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRating.swift; sourceTree = "<group>"; };
-		0495069F248B9F850051C1C9 /* JSONAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAny.swift; sourceTree = "<group>"; };
+		0495069F248B9F850051C1C9 /* ValueWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueWrapper.swift; sourceTree = "<group>"; };
 		049506A2248B9FAD0051C1C9 /* ListRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRestaurants.swift; sourceTree = "<group>"; };
 		049506A4248B9FC80051C1C9 /* RestaurantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetail.swift; sourceTree = "<group>"; };
 		049506A6248B9FF00051C1C9 /* RestaurantsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsRepository.swift; sourceTree = "<group>"; };
@@ -215,6 +223,13 @@
 		049506B8248BB17C0051C1C9 /* Okra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-Bold.ttf"; sourceTree = "<group>"; };
 		049506B9248BB17C0051C1C9 /* Okra-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-SemiBold.ttf"; sourceTree = "<group>"; };
 		049506BA248BB17C0051C1C9 /* Okra-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Okra-Regular.ttf"; sourceTree = "<group>"; };
+		049DE04C251A43FB008CEC3D /* DiningNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningNavigator.swift; sourceTree = "<group>"; };
+		049DE04E251A45AB008CEC3D /* DiningUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningUseCase.swift; sourceTree = "<group>"; };
+		049DE050251A466C008CEC3D /* DiningAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningAssembly.swift; sourceTree = "<group>"; };
+		049DE052251A46AF008CEC3D /* DiningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningViewModel.swift; sourceTree = "<group>"; };
+		049DE055251A4A31008CEC3D /* ViewModelType+LoadMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelType+LoadMore.swift"; sourceTree = "<group>"; };
+		049DE057251A54CD008CEC3D /* LoadMoreTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreTableView.swift; sourceTree = "<group>"; };
+		049DE059251A555C008CEC3D /* RefreshAutoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAutoFooter.swift; sourceTree = "<group>"; };
 		04D622CC24B35BAB007EBAFF /* FBSignIn+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBSignIn+Rx.swift"; sourceTree = "<group>"; };
 		04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		04D622D024B6032F007EBAFF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -230,8 +245,8 @@
 		04E1CF9B2487ECA1004DEEA7 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		04E8E8EA24AE31F000560CCA /* AutoScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollViewController.swift; sourceTree = "<group>"; };
 		04E8E8EC24AE384A00560CCA /* AutoScrollControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrollControllerType.swift; sourceTree = "<group>"; };
+		04FB221725223C7B0005D872 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		04FE78A424ED6E7700914CA1 /* AnimatedField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedField+Extension.swift"; sourceTree = "<group>"; };
-		679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zomato_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A1449224C1A7635B8AE8B /* Pods-Zomato_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.debug.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		8E7564F6248119D4004BC5CE /* Zomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7564F9248119D4004BC5CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +261,7 @@
 		8E75651B248119D7004BC5CE /* Zomato_RxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zomato_RxUITests.swift; sourceTree = "<group>"; };
 		8E75651D248119D7004BC5CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D17A8BE73A4C8F2C53EC3FA /* Pods-Zomato_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zomato_Rx.release.xcconfig"; path = "Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx.release.xcconfig"; sourceTree = "<group>"; };
+		B64DF16630ADF8739CF342E8 /* Pods_Zomato_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zomato_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC177DFA5EE57C9B12924FFA /* Pods_Zomato_Rx.framework in Frameworks */,
+				AFFED8BC6595FFE5CD0925CF /* Pods_Zomato_Rx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,9 +301,8 @@
 		043B1DB1249BAE320044EAAD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				049DE054251A499D008CEC3D /* Support */,
 				04E8E8EE24AE385D00560CCA /* AutoScrollViewController */,
-				043B1DBA249CF93E0044EAAD /* ViewModelType.swift */,
-				04D622D624B76136007EBAFF /* BindableType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -301,6 +316,7 @@
 				04D622E024BCB320007EBAFF /* SVProgressHUD+Rx.swift */,
 				048F2F6624C8468200D7674C /* GIDSignIn+Rx.swift */,
 				048F2F6824C87E3E00D7674C /* AuthError.swift */,
+				049DE055251A4A31008CEC3D /* ViewModelType+LoadMore.swift */,
 			);
 			path = RxExtensions;
 			sourceTree = "<group>";
@@ -386,7 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				04950682248B9E300051C1C9 /* Restaurants */,
-				0495069F248B9F850051C1C9 /* JSONAny.swift */,
+				0495069F248B9F850051C1C9 /* ValueWrapper.swift */,
 				049506A8248BA02B0051C1C9 /* PagingInfo.swift */,
 			);
 			path = Model;
@@ -460,6 +476,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		049DE04B251A43DB008CEC3D /* CuisineCell */ = {
+			isa = PBXGroup;
+			children = (
+				042649FF250E2C8E008CE0B0 /* CuisineCell.swift */,
+			);
+			path = CuisineCell;
+			sourceTree = "<group>";
+		};
+		049DE054251A499D008CEC3D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				043B1DBA249CF93E0044EAAD /* ViewModelType.swift */,
+				04D622D624B76136007EBAFF /* BindableType.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		04D90345249E69B400DC690B /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +525,7 @@
 				04D622CE24B4C5DD007EBAFF /* UIViewController+Extension.swift */,
 				04911ED224D66EA8005F4C27 /* UIDevice+Extension.swift */,
 				04264A01250E3401008CE0B0 /* UITableView+Extension.swift */,
+				04FB221725223C7B0005D872 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -506,6 +540,8 @@
 				049506B0248BA3810051C1C9 /* SwinjectStoryboard+Setup.swift */,
 				043B1DB2249BAE510044EAAD /* DeviceInfo.swift */,
 				04D622D824B994B6007EBAFF /* UserDefaultsManager.swift */,
+				049DE057251A54CD008CEC3D /* LoadMoreTableView.swift */,
+				049DE059251A555C008CEC3D /* RefreshAutoFooter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -548,7 +584,11 @@
 			children = (
 				04950676248B5FCA0051C1C9 /* Dining.storyboard */,
 				8E7564FD248119D4004BC5CE /* DiningViewController.swift */,
-				042649FF250E2C8E008CE0B0 /* CuisineCell.swift */,
+				049DE04B251A43DB008CEC3D /* CuisineCell */,
+				049DE04C251A43FB008CEC3D /* DiningNavigator.swift */,
+				049DE04E251A45AB008CEC3D /* DiningUseCase.swift */,
+				049DE050251A466C008CEC3D /* DiningAssembly.swift */,
+				049DE052251A46AF008CEC3D /* DiningViewModel.swift */,
 			);
 			path = Dining;
 			sourceTree = "<group>";
@@ -584,7 +624,7 @@
 			isa = PBXGroup;
 			children = (
 				048F2F6224BDF96900D7674C /* Alamofire.framework */,
-				679D0AC65B528A62545F4D7B /* Pods_Zomato_Rx.framework */,
+				B64DF16630ADF8739CF342E8 /* Pods_Zomato_Rx.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -666,7 +706,7 @@
 				0495066A24893FFA0051C1C9 /* R-Swift Run Script */,
 				8E7564F2248119D4004BC5CE /* Sources */,
 				3080F4C7C0F9BC9F3C34F2F3 /* [CP] Copy Pods Resources */,
-				A2FEA56C1B54585131B56280 /* [CP] Embed Pods Frameworks */,
+				936D538017C3C6B3608DBC5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -870,6 +910,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		936D538017C3C6B3608DBC5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9987FFC2247A2DD83943C872 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -892,23 +949,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A2FEA56C1B54585131B56280 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zomato_Rx/Pods-Zomato_Rx-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -916,6 +956,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049DE058251A54CD008CEC3D /* LoadMoreTableView.swift in Sources */,
+				049DE051251A466C008CEC3D /* DiningAssembly.swift in Sources */,
 				043B1DAD249BABF80044EAAD /* InfinityCollectionView.swift in Sources */,
 				049506A3248B9FAD0051C1C9 /* ListRestaurants.swift in Sources */,
 				049506B1248BA3810051C1C9 /* SwinjectStoryboard+Setup.swift in Sources */,
@@ -932,6 +974,7 @@
 				0495068A248B9E8C0051C1C9 /* Location.swift in Sources */,
 				043B1DB5249BB43F0044EAAD /* HomeViewModel.swift in Sources */,
 				0495069A248B9F420051C1C9 /* Title.swift in Sources */,
+				049DE04D251A43FB008CEC3D /* DiningNavigator.swift in Sources */,
 				049506AF248BA3240051C1C9 /* Reachability.swift in Sources */,
 				04D622CD24B35BAB007EBAFF /* FBSignIn+Rx.swift in Sources */,
 				04E8E8EB24AE31F000560CCA /* AutoScrollViewController.swift in Sources */,
@@ -940,6 +983,7 @@
 				04D90349249E69FE00DC690B /* RegisterViewController.swift in Sources */,
 				04427F0124E6D62900E3B5DC /* LoginViewController.swift in Sources */,
 				0495069E248B9F6B0051C1C9 /* UserRating.swift in Sources */,
+				049DE04F251A45AB008CEC3D /* DiningUseCase.swift in Sources */,
 				04427F0524E7A56200E3B5DC /* LoginUseCase.swift in Sources */,
 				04911F0A24DAFA87005F4C27 /* String+RegEx.swift in Sources */,
 				04911F0324DAFA80005F4C27 /* IconsLibrary.swift in Sources */,
@@ -951,6 +995,7 @@
 				04911EF824DAF8C7005F4C27 /* AnimatedField+UIPickerViewDelegate.swift in Sources */,
 				049506AD248BA2B20051C1C9 /* Constants.swift in Sources */,
 				043B1DBD249D0C9B0044EAAD /* ErrorTracker.swift in Sources */,
+				04FB221825223C7B0005D872 /* UIColor+Extension.swift in Sources */,
 				04D622D324B60EDD007EBAFF /* TabBarController.swift in Sources */,
 				04427F0724E7A57200E3B5DC /* LoginNavigator.swift in Sources */,
 				04911EF924DAF8C7005F4C27 /* AnimatedFieldAlertPosition.swift in Sources */,
@@ -970,11 +1015,12 @@
 				049506A7248B9FF00051C1C9 /* RestaurantsRepository.swift in Sources */,
 				04264A00250E2C8E008CE0B0 /* CuisineCell.swift in Sources */,
 				04D622E124BCB320007EBAFF /* SVProgressHUD+Rx.swift in Sources */,
+				049DE053251A46AF008CEC3D /* DiningViewModel.swift in Sources */,
 				04911EFE24DAF8C7005F4C27 /* AnimatedField+Protocols.swift in Sources */,
 				0495068E248B9EB40051C1C9 /* Photos.swift in Sources */,
 				04911EFC24DAF8C7005F4C27 /* AnimatedField.swift in Sources */,
 				04264A02250E3401008CE0B0 /* UITableView+Extension.swift in Sources */,
-				049506A0248B9F850051C1C9 /* JSONAny.swift in Sources */,
+				049506A0248B9F850051C1C9 /* ValueWrapper.swift in Sources */,
 				04950698248B9F250051C1C9 /* Reviews.swift in Sources */,
 				8E7564FA248119D4004BC5CE /* AppDelegate.swift in Sources */,
 				04911ED524D98DD0005F4C27 /* RegisterViewController+AnimatedText.swift in Sources */,
@@ -992,11 +1038,13 @@
 				049506A5248B9FC80051C1C9 /* RestaurantDetail.swift in Sources */,
 				040987EC2494CDCA00EB220E /* UIView+Designable.swift in Sources */,
 				04911EDB24D9934B005F4C27 /* RegisterAssembly.swift in Sources */,
+				049DE05A251A555C008CEC3D /* RefreshAutoFooter.swift in Sources */,
 				04D622D724B76136007EBAFF /* BindableType.swift in Sources */,
 				0495066C248946C90051C1C9 /* R.generated.swift in Sources */,
 				04950681248B9DEE0051C1C9 /* APIError.swift in Sources */,
 				04911EFB24DAF8C7005F4C27 /* AnimatedFieldFormat.swift in Sources */,
 				04911EE224D99642005F4C27 /* RegisterRepository.swift in Sources */,
+				049DE056251A4A31008CEC3D /* ViewModelType+LoadMore.swift in Sources */,
 				04911F0924DAFA87005F4C27 /* UIView+Nib.swift in Sources */,
 				043B1DBB249CF93E0044EAAD /* ViewModelType.swift in Sources */,
 				04911F0824DAFA87005F4C27 /* UIView+Shake.swift in Sources */,

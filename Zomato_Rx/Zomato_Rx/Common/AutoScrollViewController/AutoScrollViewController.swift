@@ -42,10 +42,10 @@ class AutoScrollViewController: UIViewController {
 
     private func config() {
         // CollectionView's Settings
-        infinityCollectionView.showsVerticalScrollIndicator = false
-        infinityCollectionView.showsHorizontalScrollIndicator = false
+        infinityCollectionView.showsVerticalScrollIndicator = true
+        infinityCollectionView.showsHorizontalScrollIndicator = true
         infinityCollectionView.scrollsToTop = false
-        infinityCollectionView.isUserInteractionEnabled = false
+        infinityCollectionView.isUserInteractionEnabled = true
         infinityCollectionView.numberOfSets = kCollectionViewNumberOfSets
     }
 

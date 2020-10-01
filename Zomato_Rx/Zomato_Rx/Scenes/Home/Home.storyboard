@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="64" id="Nfk-fb-zN0"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PHL-LA-WmQ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PHL-LA-WmQ" customClass="InfinityCollectionView" customModule="Zomato" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="184" width="414" height="461.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hPg-iW-jyL">

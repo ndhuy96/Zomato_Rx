@@ -24,6 +24,7 @@ def pods
   pod 'SVProgressHUD',:modular_headers => true
   pod 'IHKeyboardAvoiding'
   pod 'Kingfisher', '~> 5.15'
+  pod 'MJRefresh'
 
 end
 
